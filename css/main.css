@@ -1,6 +1,10 @@
 body {
   background: #e7dada;
-  margin: 0; }
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: hidden;
+  overflow-x: hidden; }
 
 h2 {
   letter-spacing: 1px;

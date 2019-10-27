@@ -18,7 +18,6 @@ let flavorLiquid = document.querySelector('.main__cup__body__liquid__flavor')
 let label = document.querySelector('.main__cup__body__label')
 // CIRCLE TOP COLOR
 let circleLiquid = document.querySelector('.main__machine__top__circle__liquid')
-// let activeButton = 0
 let straw = document.querySelector('.main__cup__straw')
 // TRASH
 let trash = document.querySelector('.board__footer__trash')
@@ -76,7 +75,6 @@ sizeButton.forEach(sizeButton => {
         stickSound.play()
         setTimeout(() => {
             boardSize.classList.add("next-board")
-            // distrib.Child(distrib.children).style.background = "pink"
         }, 100);
         boardTitle.querySelector('.size').classList.add("hidden")
         boardTitle.querySelector(".label").classList.remove("hidden")
@@ -91,12 +89,10 @@ labelButton.forEach(labelButton => {
     labelButton.addEventListener('click', () => {
         stickSound.play()
         label.style.background = labelButton.getAttribute("data")
-        // circleLiquid.style.background = labelButton.getAttribute("data")
         activeButton = strawButton
         // boardStraw.classList.remove("hidden")
         setTimeout(() => {
             boardLabel.classList.add("next-board")
-            // distrib.Child(distrib.children).style.background = "pink"
         }, 100);
         boardTitle.querySelector('.label').classList.add("hidden")
         boardTitle.querySelector(".straw").classList.add("hidden")
@@ -114,11 +110,6 @@ flavorButton.forEach(flavorButton => {
         flavorLiquid.classList.remove("flavor-animation")
         distribLiquid.classList.remove('distrib-animation')
         flavorButton.style.background = flavorButton.getAttribute("data")
-        // if (activeButton != 0) {
-        //     activeButton.style.background = "#4e4444"
-        // }
-        // activeButton = flavorButton
-
         circleLiquid.style.background = flavorButton.getAttribute("data")
         flavorLiquid.style.background = flavorButton.getAttribute("data")
         distribLiquid.style.background = flavorButton.getAttribute("data")
@@ -135,9 +126,6 @@ flavorButton.forEach(flavorButton => {
         // boardFlavor.classList.add("hidden")
         boardTopping.classList.remove("hidden")
         boardStraw.classList.add("hidden")
-        // menuButton.querySelector(".topping").style.color = "#282323"
-        // menuButton.querySelector(".flavor").style.color = "white"
-        // menuButton.querySelector(".straw").style.color = "white"
     })
 })
 
@@ -168,11 +156,6 @@ toppingButton.forEach(toppingButton => {
         boardTitle.querySelector(".topping").classList.add("hidden")
         boardStraw.classList.remove("hidden")
         boardFlavor.classList.add("hidden")
-        // boardTopping.classList.add("hidden")
-        // menuButton.querySelector(".topping").style.color = "white"
-        // menuButton.querySelector(".flavor").style.color = "white"
-        // menuButton.querySelector(".straw").style.color = "#282323"
-        // distrib.classList.add("hidden")
     })
 })
 
@@ -217,10 +200,6 @@ strawButton.forEach(strawButton => {
             distribBot.style.width = "0px"
             boardStraw.classList.add("next-board")
         }, 100);
-        // strawButton.style.border = "solid 0.5px white"
-        // if (activeButton != 0) {
-        //     activeButton.style.border = "0"
-        // }
         activeButton = strawButton
         // boardStraw.classList.remove("hidden")
         boardTitle.querySelector(".done").classList.remove("hidden")

@@ -41,6 +41,10 @@ $strawcherry:repeating-linear-gradient(20deg, $lychee, $lychee 10px, $cherry 10p
 body {
     background: $backgroud;
     margin: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-y:hidden;
+    overflow-x:hidden;
 }
 
 // TYPO
