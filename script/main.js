@@ -35,8 +35,10 @@ let multiButton = document.querySelector('.multi')
 // SOUND 
 
 var servSound = new Audio('audio/serv.mp3');
-var toppingSound = new Audio('audio/topping.wav');
+var toppingSound = new Audio('audio/toppingBubble.mp3');
 var bubbleSound = new Audio('audio/bubble.mp3');
+var stickSound = new Audio('audio/stick.mp3');
+var strawSound = new Audio('audio/straw2.mp3')
 // let open = new Audio ('../audio/open.wav');
 
 flavorButton.forEach(flavorButton => {
@@ -76,7 +78,9 @@ flavorButton.forEach(flavorButton => {
 
 toppingButton.forEach(toppingButton => {
     toppingButton.addEventListener('click', () => {
-        toppingSound.play()
+        setTimeout(() =>{
+            toppingSound.play()
+        },200)
         distribTopping.classList.remove("distrib-topping")
         circleLiquid.style.background = toppingButton.getAttribute("data")
         toppingButton.style.background = toppingButton.getAttribute("data")
@@ -135,6 +139,7 @@ trash.addEventListener('click', function () {
 
 strawButton.forEach(strawButton => {
     strawButton.addEventListener('click', () => {
+        strawSound.play()
         straw.classList.add("straw-animation")
         straw.style.background = strawButton.getAttribute("data")
         circleLiquid.style.background = "white"
@@ -160,6 +165,7 @@ strawButton.forEach(strawButton => {
 
 labelButton.forEach(labelButton => {
     labelButton.addEventListener('click', () => {
+        stickSound.play()
         label.style.background = labelButton.getAttribute("data")
         // circleLiquid.style.background = labelButton.getAttribute("data")
         activeButton = strawButton
