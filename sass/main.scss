@@ -1,0 +1,921 @@
+// COLOR PALETTE
+
+$backgroud:rgb(231, 218, 218);
+$board:rgb(182, 162, 162);
+$coffee:rgba(156, 132, 109, 1);
+$button:#4e4444;
+
+// COLOR PALETTE > MACHINE
+
+$machine-top:white;
+$machine-middle:#BCB0AF;
+$machine-support:#282323;
+$machine-bot:white;
+$machine-button:#282323;
+$darkcoffee:rgb(146, 133, 133);
+
+// COLOR PALETTE > CUP
+$cup:rgba(255, 255, 255, 0.2);
+$cup-top:rgba(255, 255, 255, 0.3);
+
+// COLOR PALETTE > FLAVOR
+$berry:rgba(144, 161, 218, 1);
+$taro : rgba(208, 192, 228, 1);
+$matcha:rgb(143, 173, 117);
+$mango:rgba(255, 157, 65, 1);
+$coffee:rgba(156, 132, 109, 1);
+$cherry:rgba(255, 91, 91, 1);
+$lychee:rgba(255, 190, 179, 1);
+
+// COLOR PALETTE > BUBBLES
+$tapioca:#462713;
+$jelly:#fb8fc5;
+$multi:linear-gradient(-45deg, $tapioca 50%, $jelly 50%);
+
+// COLOR PALETTE > STRAW
+$strawberry:repeating-linear-gradient(20deg, white, white 10px, $berry 10px, $berry 20px);
+$strawmango:repeating-linear-gradient(20deg, $coffee, $coffee 10px, $mango 10px, $mango 20px);
+$strawcherry:repeating-linear-gradient(20deg, $lychee, $lychee 10px, $cherry 10px, $cherry 20px);
+
+body {
+    background: $backgroud;
+    margin: 0;
+}
+
+
+//MAIN
+
+.main {
+    --width_cup: 180px;
+    --height_cup: 270px;
+    --width_machine: 500px;
+    --height_machine: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100vw;
+    height: 65vh;
+
+    &__machine {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: var(--width_machine);
+        height: var(--height_machine);
+
+        // background: blue;
+        &__top {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: var(--width_machine);
+            height: calc(var(--height_machine) - 440px);
+            background: $machine-top;
+            border-radius: 10px;
+            z-index: 10;
+
+            &__button-1 {
+                position: absolute;
+                top: 35px;
+                left: 25px;
+                height: 30px;
+                width: 30px;
+                background: $machine-button;
+                border-radius: 90px;
+            }
+
+            &__button-2 {
+                position: absolute;
+                top: 35px;
+                left: 70px;
+                height: 30px;
+                width: 30px;
+                background: $machine-button;
+                border-radius: 90px;
+            }
+
+            &__square-1 {
+                position: absolute;
+                top: 63px;
+                left: 35px;
+                height: 10px;
+                width: 10px;
+                background: $machine-middle;
+            }
+
+            &__square-2 {
+                position: absolute;
+                top: 63px;
+                left: 80px;
+                height: 10px;
+                width: 10px;
+                background: $machine-middle;
+            }
+
+            &__circle {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 70px;
+                width: 70px;
+                background: $machine-button;
+                border-radius: 90px;
+
+                &__liquid {
+                    width: 80%;
+                    height: 80%;
+                    background: white;
+                    border-radius: 90px;
+                }
+            }
+        }
+
+        &__middle {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            width: calc(var(--width_machine) - 10%);
+            height: calc(var(--height_machine) - 170px);
+            background: $machine-middle;
+
+            // BUBBLE TEA CUP
+            &__distrib {
+                top: 0;
+                position: absolute;
+                // background:red;
+                width: 100px;
+                // width: 105px;
+                height: 55px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                &__top {
+                    width: 100%;
+                    height: 45%;
+                    background: $machine-button;
+                    z-index: 10;
+                }
+
+                &__middle {
+                    width: 80%;
+                    height: 35%;
+                    background: $machine-button;
+                    border-radius: 0px 0px 15px 15px;
+                    z-index: 10;
+                }
+
+                &__bot {
+                    width: 20%;
+                    height: 20%;
+                    background: $machine-button;
+                    z-index: 10;
+                }
+
+                // DISTRIB LIQUID
+
+                &__liquid {
+                    width: 10px;
+                    top: 55px;
+                    position: absolute;
+                }
+
+                // DISTRIB BUBBLE
+
+                &__topping {
+                    top: -100px;
+                    display: flex;
+                    justify-content: center;
+                    position: absolute;
+                    // background-color: red;
+                    width: 140px;
+                    height: 85px;
+                    z-index: 2;
+                    opacity: 0;
+
+                    &__bubble {
+                        bottom: 0px;
+                        position: absolute;
+                        height: 20px;
+                        width: 20px;
+                        border-radius: 90px;
+                        animation-name: bubble-move;
+                        animation-iteration-count: infinite;
+                        animation-duration: 4s;
+                        z-index: 7;
+
+                        &__tapioca {
+                            background-color: $tapioca;
+                        }
+
+                        &__jelly {
+                            background: $jelly;
+                            border-radius: 5px;
+                        }
+
+                        &::before {
+                            position: absolute;
+                            top: 4px;
+                            left: 4px;
+                            height: 4px;
+                            width: 4px;
+                            opacity: 0.8;
+                            content: "";
+                            background: #FFF;
+                            border-radius: 50% 50% 50% 50%;
+                            z-index: 8;
+                        }
+
+                        &::after {
+                            position: absolute;
+                            top: 8px;
+                            left: 8px;
+                            height: 2px;
+                            width: 2px;
+                            opacity: 0.6;
+                            content: "";
+                            background: #FFF;
+                            border-radius: 50% 50% 50% 50%;
+                            z-index: 8;
+                        }
+                    }
+
+                    &__bubble-1 {
+                        bottom: 4px;
+                        right: 24px;
+                        animation: bubble-move 4s infinite ease-out, normal;
+                        opacity: 0.6;
+                    }
+
+                    &__bubble-2 {
+                        left: 24px;
+                        animation: bubble-move 4s infinite ease-out, normal;
+                        opacity: 0.8;
+                    }
+
+                    &__bubble-3 {
+                        bottom: 30px;
+                        right: 18px;
+                        animation: bubble-move 4s infinite ease-out, normal;
+                        opacity: 0.8;
+                    }
+
+                    &__bubble-4 {
+                        bottom: 28px;
+                        left: 16px;
+                        animation: bubble-move 4s infinite ease-out, normal;
+                    }
+
+                    &__bubble-5 {
+                        opacity: 0.8;
+                        bottom: 25px;
+                        left: 50px;
+                        animation: bubble-move 4s infinite ease-out, normal;
+                    }
+
+                    &__bubble-6 {
+                        bottom: 40px;
+                        left: 75px;
+                        animation: bubble-move 4s infinite ease-out, normal;
+                    }
+
+                    &__bubble-7 {
+                        bottom: 50px;
+                        left: 35px;
+                        animation: bubble-move 4s infinite ease-out, normal;
+                        opacity: 0.5;
+                    }
+                }
+            }
+
+            &__bg {
+                width: 90%;
+                height: 80%;
+                background: $darkcoffee;
+                border-radius: 20px 20px 0px 0px;
+            }
+        }
+
+        &__support {
+            width: calc(var(--width_machine) - 5%);
+            height: calc(var(--height_machine) - 535px);
+            background: $machine-support;
+            border-radius: 10px;
+        }
+
+        &__bot {
+            width: var(--width_machine);
+            height: calc(var(--height_machine) - 505px);
+            background: $machine-bot;
+        }
+    }
+
+    // BUBBLE TEA CUP CONTAINER
+
+    &__cup {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        position: absolute;
+        width: var(--width_cup);
+        height: var(--height_cup);
+        margin-top: -60px;
+        z-index: 3;
+
+        &__top {
+            width: calc(var(--width_cup) + 15px);
+            height: calc(var(--height_cup) - 260px);
+            background-color: $cup-top;
+            border-radius: 3px;
+            // border: solid 0.4px rgb(195, 195, 195);
+            z-index: 1;
+        }
+
+        &__shine {
+            position: absolute;
+            top: 18px;
+            right: 10px;
+            width: 10px;
+            border-top: 235px solid rgb(255, 255, 255);
+            border-left: -25px solid transparent;
+            border-right: 27px solid transparent;
+            border-radius: 0 0 0 4px;
+            opacity: 0.2;
+            z-index: 10;
+        }
+
+        &__body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: animation;
+            background: $cup;
+            width: var(--width_cup);
+            height: calc(var(--height_cup) - 18px);
+            clip-path: polygon(1% 0%, 100% 0%, 85% 100%, 15% 100%);
+
+            &__label {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: var(--width_cup);
+                height: 65px;
+                opacity: 1;
+                z-index: 1;
+            }
+
+            &__contain {
+                position: absolute;
+                width: 40px;
+                height: 40px;
+                z-index: 1;
+
+                &__logo {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            &__liquid {
+                margin-top: calc(var(--height_cup) - 258px);
+                position: absolute;
+                width: calc(var(--width_cup) - 15px);
+                height: calc(var(--height_cup) - 50px);
+                clip-path: polygon(1% 0%, 100% 0%, 85% 100%, 15% 100%);
+                // opacity: 0.9;
+
+                &__flavor {
+                    width: 100%;
+                    height: 100%;
+                    transform: translateY(100%);
+                }
+            }
+        }
+
+        &__bot {
+            width: calc(var(--width_cup) - 70px);
+            height: calc(var(--height_cup) - 262px);
+            background-color: $cup-top;
+        }
+
+        &__straw {
+            bottom: calc(var(--height_cup) - 258px);
+            position: absolute;
+            transform: rotate(10deg);
+            width: 17px;
+            height: 310px;
+            right: 35px;
+        }
+    }
+}
+
+//BOARD
+
+// BOARD FLAVOR
+
+.board {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 100vw;
+    height: 35vh;
+    background: $board;
+
+    &__title {
+        // background: yellow;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 40px;
+        width: 100%;
+        height: 50%;
+        animation-name: board-title;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+
+        //TYPO
+        & h1 {
+            font-family: 'Fjalla One', sans-serif;
+            // bottom: 0px;
+            font-size: 20px;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: white;
+            margin: 0;
+        }
+    }
+
+    &__flavor {
+        position: absolute;
+        // background: red;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 53%;
+
+        &__button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0px 18px 0px 18px;
+            width: 75px;
+            height: 75px;
+            background-color: $button;
+            border-radius: 90px;
+            transition: 0.3s;
+
+            & h2 {
+                font-family: 'Fjalla One', sans-serif;
+                text-transform: uppercase;
+                font-size: 10px;
+                color: white;
+                letter-spacing: 1px;
+
+                &:hover {
+                    scale: (0.50);
+                }
+            }
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.08);
+            }
+
+            &:nth-child(1):hover {
+                background-color: $matcha;
+            }
+
+            &:nth-child(2):hover {
+                background-color: $berry;
+            }
+
+            &:nth-child(3):hover {
+                background-color: rgba(208, 192, 228, 1);
+            }
+
+            &:nth-child(4):hover {
+                background-color: $coffee;
+            }
+
+            &:nth-child(5):hover {
+                background-color: $mango;
+            }
+
+            &:nth-child(6):hover {
+                background-color: $lychee;
+            }
+
+            &:nth-child(7):hover {
+                background-color: $cherry;
+            }
+        }
+    }
+
+    &__topping {
+        position: absolute;
+        animation-name: board-button;
+        animation-duration: 3s;
+        animation-iteration-count: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 53%;
+
+        &__button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0px 18px 0px 18px;
+            width: 70px;
+            height: 85px;
+            background-color: $button;
+            border-radius: 0 15px 0 15px;
+            transition: 0.3s;
+
+            & h2 {
+                font-family: 'Fjalla One', sans-serif;
+                text-transform: uppercase;
+                font-size: 10px;
+                color: white;
+                letter-spacing: 1px;
+
+                &:hover {
+                    scale: (0.50);
+                }
+            }
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.08);
+            }
+
+            &:nth-child(1):hover {
+                background-color: $tapioca;
+            }
+
+            &:nth-child(2):hover {
+                background-color: $jelly;
+            }
+            &:nth-child(3):hover {
+                background : linear-gradient(-45deg, #462713 50%, #fb8fc5 50%);
+            }
+        }
+
+    }
+
+    &__straw {
+        position: absolute;
+        animation-name: board-button;
+        animation-duration: 3s;
+        animation-iteration-count: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 53%;
+
+        &__button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0px 18px 0px 18px;
+            width: 12px;
+            height: 75px;
+            // background-color: $button;
+            border-radius: 2px;
+
+            &:hover {
+                cursor: pointer;
+                border: solid 0.5px white;
+            }
+
+            &__berry {
+                background: $strawberry;
+            }
+
+            &__taro{
+                background: repeating-linear-gradient(20deg, white, white 10px, rgba(208, 192, 228, 1) 10px, rgba(208, 192, 228, 1) 20px);
+            }
+
+            &__mango{
+                background: repeating-linear-gradient(20deg, white, white 10px, rgba(255, 157, 65, 1) 10px, rgba(255, 157, 65, 1) 20px);
+            }
+
+            &__lychee{
+                background: repeating-linear-gradient(20deg, white, white 10px, rgba(255, 190, 179, 0.8) 10px, rgba(255, 190, 179, 0.8) 20px);
+            }
+            &__cherry{
+                background: repeating-linear-gradient(20deg, white, white 10px, rgba(255, 91, 91, 0.8) 10px, rgba(255, 91, 91, 0.8) 20px);
+            }
+
+            &__jelly{
+                background: repeating-linear-gradient(20deg, white, white 10px, #fb8fc5 10px, #fb8fc5 20px);
+            }
+
+            &__tapioca{
+                background: repeating-linear-gradient(20deg, white, white 10px, #462713 10px, #462713 20px);
+            }
+
+            &__berry-taro {
+                background: repeating-linear-gradient(20deg, rgba(144, 161, 218, 1), rgba(144, 161, 218, 1) 10px, rgba(208, 192, 228, 1) 10px, rgba(208, 192, 228, 1) 20px);
+            }
+
+            &__cherry-lychee {
+                background: $strawcherry;
+            }
+        }
+    }
+
+    &__label {
+        position: absolute;
+        animation-name: board-button;
+        animation-duration: 3s;
+        animation-iteration-count: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 53%;
+
+        &__button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0px 18px 0px 18px;
+            width: 70px;
+            height: 25px;
+            // background-color: $button;
+            border-radius: 2px;
+            &:nth-child(1){
+                background:$berry;
+            }
+            &:nth-child(2){
+                background:rgb(208, 192, 228);
+            }
+            &:nth-child(3){
+                background:$mango;
+            }
+            &:nth-child(4){
+                background:$lychee;
+            }
+            &:nth-child(5){
+                background:$cherry;
+            }
+            &:nth-child(6){
+                background:#282323;
+            }
+            &:hover {
+                cursor: pointer;
+                border: solid 0.5px white;
+            }
+        }
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        width: 100%;
+        height: 50%;
+        margin-bottom: 40px;
+
+        &__trash {
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            margin-bottom: 5px;
+            margin-left: 15px;
+        }
+
+        & img {
+            width: 100%;
+            height: 100%;
+
+            &:hover {
+                transition: 0.3s;
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+
+
+//animations
+//animation for add liquid on the cup
+.flavor-animation {
+    animation-name: flavor;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+
+//animation for distrib liquid on the cup
+.distrib-animation {
+    animation-timing-function: linear;
+    animation-name: distrib-liquid;
+    animation-duration: 6.5s;
+}
+
+//topping animation{
+.distrib-topping {
+    animation-name: bubble-rain;
+    animation-iteration-count: 1;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-delay: 1.5s;
+}
+
+//straw animation{
+.straw-animation {
+    animation-name: straw;
+    animation-iteration-count: 1;
+    animation-duration: 1s;
+}
+
+//display none
+.hidden {
+    display: none;
+}
+
+//animation bye
+.next-board{
+    animation-name: next-board;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+//change distrib
+.change-distrib{
+    animation-name: change-distrib;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+//KEYFRAMES ANIMATIONS
+
+//Liquid animation inside the cup
+@keyframes flavor {
+    0% {
+        transform: translateY(100%);
+        animation-timing-function: cubic-bezier(0.5, 1, 0.5, 1);
+    }
+
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+//Liquid distrib animation from the machine
+@keyframes distrib-liquid {
+    0% {
+        height: 0px;
+        animation-timing-function: cubic-bezier(0.3, 1, 0.3, 1);
+    }
+
+    20% {
+        height: calc(var(--height_cup) + 43px);
+        animation-timing-function: cubic-bezier(0.5, 1, 0.5, 1);
+    }
+
+    20% {
+        height: calc(var(--height_cup) + 43px);
+        animation-timing-function: cubic-bezier(1, 1, 1, 1);
+    }
+
+    50% {
+        animation-timing-function: cubic-bezier(0.2, 1, 0.2, 1);
+        top: 55px;
+    }
+
+    80% {
+        opacity: 0.5;
+    }
+
+    95% {
+        height: 40px;
+        opacity: 0;
+    }
+
+    100% {
+        animation-timing-function: cubic-bezier(0.1, 1, 0.1, 1);
+        opacity: 0;
+        top: 250px;
+        height: 0px;
+    }
+
+
+}
+
+
+//animation button from board
+
+@keyframes board-button {
+    0% {
+        transform: translateX(-100%)
+    }
+
+    // 50% {
+    //     transform: scale(1.03)
+    // }
+
+    100% {
+        transform: translateX(0%)
+    }
+}
+
+//animation next
+
+@keyframes next-board {
+    0% {
+        transform: translateX(0%)
+    }
+
+    // 50% {
+    //     transform: scale(1.03)
+    // }
+
+    100% {
+        transform: translateX(100%)
+    }
+}
+
+//animation bubble move
+
+@keyframes bubble-move {
+    50% {
+        transform: translate(0, -5px) rotate(20deg);
+    }
+
+    100% {
+        transform: translateY(0, 0px) rotate(0deg);
+    }
+}
+
+//animation bubble rain for cup
+
+@keyframes bubble-rain {
+    0% {
+        transform: translateY(0px);
+        opacity : 1;
+    }
+
+    70% {
+        transform: translateY(380px);
+        opacity : 1;
+    }
+
+    100% {
+        transform: translateY(375px);
+        opacity : 1;
+    }
+}
+
+//STRAW ANIMATION
+
+@keyframes straw {
+    0% {
+        transform: translate(0, -4px) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(0, 0px) rotate(0deg);
+    }
+}
+
+//TITLE animation
+
+@keyframes board-title{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+// remove distrib
+
+@keyframes change-distrib{
+    0%{
+        transform: translateY(0%);
+    }
+    50%{transform: translateY(-100%);
+        width: 100px;
+    }
+    60%{transform: translateY(-100%);
+        width: 200px;
+    }
+    100%{transform: translateY(0%);
+        width: 200px;
+    }
+}
