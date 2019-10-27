@@ -1,4 +1,14 @@
+// MAIN
+let main = document.querySelector('.main')
+
+// CUP SIZE
+let cup = document.querySelector('.main__cup')
+let largeSize = document.querySelector(".largeSize")
+let mediumSize = document.querySelector(".mediumSize")
+let smallSize = document.querySelector(".smallSize")
+
 // BUTTON
+let sizeButton = document.querySelectorAll('.board__size__button')
 let flavorButton = document.querySelectorAll('.board__flavor__button')
 let toppingButton = document.querySelectorAll(".board__topping__button")
 let strawButton = document.querySelectorAll(".board__straw__button")
@@ -14,6 +24,7 @@ let straw = document.querySelector('.main__cup__straw')
 let trash = document.querySelector('.board__footer__trash')
 // BOARD
 let boardTitle = document.querySelector('.board__title')
+let boardSize = document.querySelector('.board__size')
 let boardFlavor = document.querySelector('.board__flavor')
 let boardTopping = document.querySelector('.board__topping')
 let boardStraw = document.querySelector('.board__straw')
@@ -38,8 +49,40 @@ var servSound = new Audio('audio/serv2.mp3');
 var toppingSound = new Audio('audio/topping.wav');
 var bubbleSound = new Audio('audio/bubble.mp3');
 var stickSound = new Audio('audio/stick.mp3');
-var trashSound = new Audio('audio/trash.wav')
+var trashSound = new Audio('audio/trash.wav');
 // let open = new Audio ('../audio/open.wav');
+
+// CUP SIZE
+
+largeSize.addEventListener('click' , () =>{
+    cup.classList.remove('hidden')
+    main.style.setProperty('--height_cup' , "270px")
+})
+
+mediumSize.addEventListener('click' , () =>{
+    cup.classList.remove('hidden')
+    main.style.setProperty('--height_cup' , "240px")
+})
+
+smallSize.addEventListener('click' , () =>{
+    cup.classList.remove('hidden')
+    main.style.setProperty('--height_cup' , "210px")
+})
+
+
+sizeButton.forEach(sizeButton => {
+    sizeButton.addEventListener('click', () => {
+        stickSound.play()
+        setTimeout(() => {
+            boardSize.classList.add("next-board")
+            // distrib.Child(distrib.children).style.background = "pink"
+        }, 100);
+        boardTitle.querySelector('.size').classList.add("hidden")
+        boardTitle.querySelector(".label").classList.remove("hidden")
+        boardLabel.classList.remove("hidden")
+        boardSize.classList.add("hidden")
+    })
+})
 
 // LABEL
 

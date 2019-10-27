@@ -140,7 +140,7 @@ body {
             width: calc(var(--width_machine) - 10%);
             height: calc(var(--height_machine) - 170px);
             background: $machine-middle;
-             // DISTRIB LIQUID
+            // DISTRIB LIQUID
 
             &__liquid {
                 // background : red;
@@ -351,7 +351,7 @@ body {
             right: 5%;
             width: 20%;
             height: 87%;
-            border-radius : 0px 0px 0px 5px;
+            border-radius: 0px 0px 0px 5px;
             clip-path: polygon(0% 0%, 100% 0%, 30% 100%, 0% 100%);
             opacity: 0.2;
             z-index: 10;
@@ -391,7 +391,7 @@ body {
             }
 
             &__liquid {
-                bottom : 12.5px;
+                bottom: 12.5px;
                 position: absolute;
                 width: 90%;
                 height: 77%;
@@ -413,7 +413,7 @@ body {
         }
 
         &__straw {
-            bottom: calc(var(--height_cup) - 95%);
+            bottom: calc(var(--height_cup) - 94%);
             position: absolute;
             transform: rotate(10deg);
             width: 9%;
@@ -445,7 +445,7 @@ body {
         width: 100%;
         height: 50%;
         animation-name: board-title;
-        animation-duration: 2s;
+        animation-duration: 1s;
         animation-iteration-count: 1;
 
         //TYPO
@@ -457,6 +457,72 @@ body {
             text-transform: uppercase;
             color: white;
             margin: 0;
+        }
+    }
+
+    &__size {
+        position: absolute;
+        animation-name: board-title;
+        animation-duration: 2s;
+        animation-iteration-count: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 53%;
+
+        &__button {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            margin: 0px 25px 0px 25px;
+            width: 70px;
+            height: 135px;
+            // background-color: $button;
+            &:hover{
+                transform: scale(1.03);
+                // transition: s;
+            }
+            & h2{
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                font-family: 'Fjalla One', sans-serif;
+                color: white;
+                font-size: 10px;
+                bottom: 0px;
+            }
+            &__top{
+                width: 110%;
+                height: 5px;
+                background: $cup-top;
+            }
+            &__middle{
+                &__large{
+                    width: 100%;
+                    height: 90px;
+                    clip-path: polygon(1% 0%, 100% 0%, 85% 100%, 15% 100%);
+                    background: $cup;
+                }
+                &__medium{
+                    width: 100%;
+                    height: 75px;
+                    clip-path: polygon(1% 0%, 100% 0%, 85% 100%, 15% 100%);
+                    background: $cup;
+                }
+                &__small{
+                    width: 100%;
+                    height: 60px;
+                    clip-path: polygon(1% 0%, 100% 0%, 85% 100%, 15% 100%);
+                    background: $cup;
+                }
+            }
+            &__bot{
+                width: 60%;
+                height: 5px;
+                background: $cup-top;
+            }
         }
     }
 
@@ -576,8 +642,9 @@ body {
             &:nth-child(2):hover {
                 background-color: $jelly;
             }
+
             &:nth-child(3):hover {
-                background : linear-gradient(-45deg, #462713 50%, #fb8fc5 50%);
+                background: linear-gradient(-45deg, #462713 50%, #fb8fc5 50%);
             }
         }
 
@@ -613,26 +680,27 @@ body {
                 background: $strawberry;
             }
 
-            &__taro{
+            &__taro {
                 background: repeating-linear-gradient(20deg, white, white 10px, rgba(208, 192, 228, 1) 10px, rgba(208, 192, 228, 1) 20px);
             }
 
-            &__mango{
+            &__mango {
                 background: repeating-linear-gradient(20deg, white, white 10px, rgba(255, 157, 65, 1) 10px, rgba(255, 157, 65, 1) 20px);
             }
 
-            &__lychee{
+            &__lychee {
                 background: repeating-linear-gradient(20deg, white, white 10px, rgba(255, 190, 179, 0.8) 10px, rgba(255, 190, 179, 0.8) 20px);
             }
-            &__cherry{
+
+            &__cherry {
                 background: repeating-linear-gradient(20deg, white, white 10px, rgba(255, 91, 91, 0.8) 10px, rgba(255, 91, 91, 0.8) 20px);
             }
 
-            &__jelly{
+            &__jelly {
                 background: repeating-linear-gradient(20deg, white, white 10px, #fb8fc5 10px, #fb8fc5 20px);
             }
 
-            &__tapioca{
+            &__tapioca {
                 background: repeating-linear-gradient(20deg, white, white 10px, #462713 10px, #462713 20px);
             }
 
@@ -666,24 +734,31 @@ body {
             height: 25px;
             // background-color: $button;
             border-radius: 2px;
-            &:nth-child(1){
-                background:$berry;
+
+            &:nth-child(1) {
+                background: $berry;
             }
-            &:nth-child(2){
-                background:rgb(208, 192, 228);
+
+            &:nth-child(2) {
+                background: rgb(208, 192, 228);
             }
-            &:nth-child(3){
-                background:$mango;
+
+            &:nth-child(3) {
+                background: $mango;
             }
-            &:nth-child(4){
-                background:$lychee;
+
+            &:nth-child(4) {
+                background: $lychee;
             }
-            &:nth-child(5){
-                background:$cherry;
+
+            &:nth-child(5) {
+                background: $cherry;
             }
-            &:nth-child(6){
-                background:#282323;
+
+            &:nth-child(6) {
+                background: #282323;
             }
+
             &:hover {
                 cursor: pointer;
                 border: solid 0.5px white;
@@ -697,14 +772,13 @@ body {
         align-items: flex-end;
         width: 100%;
         height: 50%;
-        margin-bottom: 40px;
+        margin-bottom: 25px;
 
         &__trash {
             cursor: pointer;
             width: 30px;
             height: 30px;
             margin-bottom: 5px;
-            margin-left: 15px;
         }
 
         & img {
@@ -761,7 +835,7 @@ body {
 }
 
 //animation bye
-.next-board{
+.next-board {
     animation-name: next-board;
     animation-duration: 3s;
     animation-iteration-count: 1;
@@ -769,7 +843,7 @@ body {
 }
 
 //change distrib
-.change-distrib{
+.change-distrib {
     animation-name: change-distrib;
     animation-duration: 1.5s;
     animation-iteration-count: 1;
@@ -803,7 +877,7 @@ body {
     }
 
     20% {
-        bottom : 12px;
+        bottom: 12px;
         height: 82%;
         animation-timing-function: cubic-bezier(1, 1, 1, 1);
     }
@@ -814,7 +888,7 @@ body {
     }
 
     80% {
-        bottom : calc(--var(height_cup) - 10%); 
+        bottom: calc(--var(height_cup) - 10%);
         opacity: 0.5;
     }
 
@@ -883,17 +957,17 @@ body {
 @keyframes bubble-rain {
     0% {
         transform: translateY(0px);
-        opacity : 1;
+        opacity: 1;
     }
 
     70% {
         transform: translateY(380px);
-        opacity : 1;
+        opacity: 1;
     }
 
     100% {
         transform: translateY(375px);
-        opacity : 1;
+        opacity: 1;
     }
 }
 
@@ -911,28 +985,35 @@ body {
 
 //TITLE animation
 
-@keyframes board-title{
-    0%{
+@keyframes board-title {
+    0% {
         opacity: 0;
     }
-    100%{
+
+    100% {
         opacity: 1;
     }
 }
 
 // remove distrib
 
-@keyframes change-distrib{
-    0%{
+@keyframes change-distrib {
+    0% {
         transform: translateY(0%);
     }
-    50%{transform: translateY(-100%);
+
+    50% {
+        transform: translateY(-100%);
         width: 100px;
     }
-    60%{transform: translateY(-100%);
+
+    60% {
+        transform: translateY(-100%);
         width: 200px;
     }
-    100%{transform: translateY(0%);
+
+    100% {
+        transform: translateY(0%);
         width: 200px;
     }
 }
