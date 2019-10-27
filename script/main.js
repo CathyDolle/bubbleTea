@@ -34,12 +34,14 @@ let multiButton = document.querySelector('.multi')
 
 // SOUND 
 
-var serv = new Audio('audio/serv.mp3');
+var servSound = new Audio('audio/serv.mp3');
+var toppingSound = new Audio('audio/topping.wav');
+var bubbleSound = new Audio('audio/bubble.mp3');
 // let open = new Audio ('../audio/open.wav');
 
 flavorButton.forEach(flavorButton => {
     flavorButton.addEventListener('click', () => {
-        serv.play()
+        servSound.play()
         flavorLiquid.classList.remove("flavor-animation")
         distribLiquid.classList.remove('distrib-animation')
         flavorButton.style.background = flavorButton.getAttribute("data")
@@ -74,6 +76,7 @@ flavorButton.forEach(flavorButton => {
 
 toppingButton.forEach(toppingButton => {
     toppingButton.addEventListener('click', () => {
+        toppingSound.play()
         distribTopping.classList.remove("distrib-topping")
         circleLiquid.style.background = toppingButton.getAttribute("data")
         toppingButton.style.background = toppingButton.getAttribute("data")
