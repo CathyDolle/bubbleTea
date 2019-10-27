@@ -420,6 +420,7 @@ a {
                 width: 90%;
                 height: 77%;
                 clip-path: polygon(1% 0%, 100% 0%, 85% 100%, 15% 100%);
+                -webkit-clip-path:polygon(1% 0%, 100% 0%, 85% 100%, 15% 100%);
                 // opacity: 0.9;
 
                 &__flavor {
