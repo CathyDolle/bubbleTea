@@ -707,7 +707,7 @@ a {
             align-items: center;
             margin: 0px 18px 0px 18px;
             width: 12px;
-            height: 75px;
+            height: 90px;
             // background-color: $button;
             border-radius: 2px;
 
@@ -1206,8 +1206,8 @@ a {
 
     .board__label__button {
         width: 35px;
-        height: 25px;
-        margin: 0px 15px 0px 15px;
+        height: 35px;
+        margin: 0px 10px 0px 10px;    
     }
 
     .board__flavor__button {
@@ -1305,7 +1305,7 @@ a {
     }
 
     20% {
-        bottom: 25px;
+        bottom: 12px;
         height: 80%;
         animation-timing-function: cubic-bezier(1, 1, 1, 1);
     }
@@ -1321,14 +1321,14 @@ a {
     }
 
     95% {
-        height: 35%;
+        height: 5%;
         opacity: 0;
     }
 
     100% {
         animation-timing-function: cubic-bezier(0.1, 1, 0.1, 1);
         opacity: 0;
-        top: 60%;
+        top: 50%;
         height: 0px;
     }
 
