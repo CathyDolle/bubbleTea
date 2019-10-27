@@ -37,25 +37,55 @@ a {
   align-items: flex-end;
   width: 100vw;
   height: 65vh; }
-  .main__window {
+  .main__left {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 35%;
     height: 65vh; }
-    .main__window__form {
+    .main__left__window {
       width: var(--width_window);
       height: var(--height_window);
-      background: linear-gradient(#c8dcff, #eeeffc);
-      border: 10px solid #282323; }
-    .main__window__glass {
+      overflow: hidden; }
+      .main__left__window__bg {
+        animation-name: window-background;
+        animation-duration: 200s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: backwards;
+        height: 100%;
+        width: 200%; }
+        .main__left__window__bg img {
+          height: 100%; }
+    .main__left__glass {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       position: absolute;
       width: var(--width_window);
       height: var(--height_window);
-      background: rgba(255, 255, 255, 0.445);
+      background: rgba(255, 255, 255, 0.3);
       border: 10px solid #282323; }
-  .main__music {
+      .main__left__glass__reflect {
+        background: rgba(255, 255, 255, 0.3);
+        height: 100%;
+        width: 100%;
+        clip-path: polygon(56% 0, 81% 0, 0 59%, 0 40%); }
+      .main__left__glass__reflect-2 {
+        position: absolute;
+        background: rgba(255, 255, 255, 0.3);
+        height: 100%;
+        width: 100%;
+        clip-path: polygon(95% 0, 85% 0, 0 62%, 0 69%); }
+    .main__left__plant {
+      z-index: 10;
+      bottom: -20;
+      height: 320px;
+      position: absolute; }
+      .main__left__plant img {
+        height: 100%; }
+  .main__right {
     width: 35%;
     height: 65vh; }
   .main__machine {
@@ -643,6 +673,13 @@ a {
   animation-iteration-count: 1;
   animation-fill-mode: forwards; }
 
+@keyframes window-background {
+  0% {
+    transform: translateX(0%); }
+  50% {
+    transform: translateX(-73%); }
+  100% {
+    transform: translateX(0%); } }
 @keyframes flavor {
   0% {
     transform: translateY(100%);
@@ -721,6 +758,11 @@ a {
   100% {
     transform: translateY(0%);
     width: 200px; } }
+@media (max-width: 1100px) {
+  .main__left {
+    display: none; }
+  .main__right {
+    display: none; } }
 @media (max-width: 812px) {
   a {
     font-size: 10px; }
@@ -730,6 +772,10 @@ a {
     --height_cup: 160px;
     --width_machine: 300px;
     --height_machine: 330px; }
+    .main__left {
+      display: none; }
+    .main__right {
+      display: none; }
     .main__cup {
       margin-top: -36px; }
       .main__cup__top {

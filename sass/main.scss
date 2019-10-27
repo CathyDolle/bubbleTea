@@ -41,7 +41,8 @@ $strawcherry:repeating-linear-gradient(20deg, $lychee, $lychee 10px, $cherry 10p
 
 // COLOR PALETTE > WINDOW
 $sky : linear-gradient(#c8dcff, #eeeffc);
-$glass : rgba(255, 255, 255, 0.445);
+$glass : rgba(255, 255, 255, 0.3);
+$glass-reflect : rgba(255, 255, 255, 0.3);
 
 body {
     margin: 0;
@@ -91,7 +92,7 @@ a {
     width: 100vw;
     height: 65vh;
 
-    &__window {
+    &__left {
         position: relative;
         display: flex;
         justify-content: center;
@@ -100,23 +101,63 @@ a {
         height: 65vh;
 
         // background: red;
-        &__form {
+        &__window {
             width: var(--width_window);
             height: var(--height_window);
-            background: $sky;
-            border: 10px solid $dark-coffee;
+            // background: $sky;
+            overflow: hidden;
+            &__bg{
+                animation-name: window-background;
+                animation-duration: 200s;
+                animation-iteration-count: infinite;
+                animation-fill-mode: backwards;
+                height: 100%;
+                width: 200%;
+                // background: red;
+                & img{
+                    height: 100%;
+                }
+            }
         }
 
         &__glass {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             position: absolute;
             width: var(--width_window);
             height: var(--height_window);
             background: $glass;
             border: 10px solid $dark-coffee;
+            &__reflect{
+                background: $glass-reflect;
+                height: 100%;
+                width: 100%;
+                clip-path: polygon(56% 0, 81% 0, 0 59%, 0 40%);
+            }
+            &__reflect-2{
+                position: absolute;
+                background: $glass-reflect;
+                height: 100%;
+                width: 100%;
+                clip-path: polygon(95% 0, 85% 0, 0 62%, 0 69%);      
+            }
+        }
+        &__plant{
+            z-index: 10;
+            bottom: -20;
+            // width: 70px;
+            height: 320px;
+            // background:red;
+            position: absolute;
+            & img{
+                height: 100%;
+            }
         }
     }
 
-    &__music {
+    &__right {
         width: 35%;
         height: 65vh;
         // background: blue;
@@ -973,6 +1014,20 @@ a {
 
 //KEYFRAMES ANIMATIONS
 
+//WINDOW BACKGROUND ANIMATION
+
+@keyframes window-background{
+    0%{
+        transform: translateX(0%);
+    }
+    50%{
+        transform: translateX(-73%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
 //Liquid animation inside the cup
 @keyframes flavor {
     0% {
@@ -1140,6 +1195,16 @@ a {
 }
 
 // RESPONSIVE 
+@media (max-width:1100px){
+    .main{
+        &__left{
+            display: none;
+        }
+        &__right{
+            display: none;
+        }
+    }
+}
 
 @media (max-width: 812px) {
 
@@ -1154,6 +1219,14 @@ a {
         --height_cup: 160px;
         --width_machine: 300px;
         --height_machine: 330px;
+
+        &__left{
+            display: none;
+        }
+
+        &__right{
+            display: none;
+        }
 
         &__cup {
             margin-top: -36px;
