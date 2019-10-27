@@ -4,7 +4,7 @@ body {
 
 .main {
   --width_cup: 180px;
-  --height_cup: 270px;
+  --height_cup: 210px;
   --width_machine: 500px;
   --height_machine: 550px;
   display: flex;
@@ -79,6 +79,10 @@ body {
       width: calc(var(--width_machine) - 10%);
       height: calc(var(--height_machine) - 170px);
       background: #BCB0AF; }
+      .main__machine__middle__liquid {
+        width: 10px;
+        top: 55px;
+        position: absolute; }
       .main__machine__middle__distrib {
         top: 0;
         position: absolute;
@@ -103,10 +107,6 @@ body {
           height: 20%;
           background: #282323;
           z-index: 10; }
-        .main__machine__middle__distrib__liquid {
-          width: 10px;
-          top: 55px;
-          position: absolute; }
         .main__machine__middle__distrib__topping {
           top: -100px;
           display: flex;
@@ -209,22 +209,22 @@ body {
     margin-top: -60px;
     z-index: 3; }
     .main__cup__top {
-      width: calc(var(--width_cup) + 15px);
-      height: calc(var(--height_cup) - 260px);
+      width: 110%;
+      height: 12px;
       background-color: rgba(255, 255, 255, 0.3);
       border-radius: 3px;
       z-index: 1; }
     .main__cup__shine {
       position: absolute;
-      top: 18px;
-      right: 10px;
-      width: 10px;
-      border-top: 235px solid white;
-      border-left: -25px solid transparent;
-      border-right: 27px solid transparent;
-      border-radius: 0 0 0 4px;
+      top: 7%;
+      right: 5%;
+      width: 20%;
+      height: 87%;
+      border-radius: 0px 0px 0px 5px;
+      clip-path: polygon(0% 0%, 100% 0%, 30% 100%, 0% 100%);
       opacity: 0.2;
-      z-index: 10; }
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.7); }
     .main__cup__body {
       display: flex;
       align-items: center;
@@ -232,7 +232,7 @@ body {
       overflow: animation;
       background: rgba(255, 255, 255, 0.2);
       width: var(--width_cup);
-      height: calc(var(--height_cup) - 18px);
+      height: calc(var(--height_cup) - 7%);
       clip-path: polygon(1% 0%, 100% 0%, 85% 100%, 15% 100%); }
       .main__cup__body__label {
         display: flex;
@@ -251,26 +251,26 @@ body {
           width: 100%;
           height: 100%; }
       .main__cup__body__liquid {
-        margin-top: calc(var(--height_cup) - 258px);
+        bottom: 12.5px;
         position: absolute;
-        width: calc(var(--width_cup) - 15px);
-        height: calc(var(--height_cup) - 50px);
+        width: 90%;
+        height: 77%;
         clip-path: polygon(1% 0%, 100% 0%, 85% 100%, 15% 100%); }
         .main__cup__body__liquid__flavor {
           width: 100%;
           height: 100%;
           transform: translateY(100%); }
     .main__cup__bot {
-      width: calc(var(--width_cup) - 70px);
-      height: calc(var(--height_cup) - 262px);
+      width: 60%;
+      height: 7px;
       background-color: rgba(255, 255, 255, 0.3); }
     .main__cup__straw {
-      bottom: calc(var(--height_cup) - 258px);
+      bottom: calc(var(--height_cup) - 95%);
       position: absolute;
       transform: rotate(10deg);
-      width: 17px;
-      height: 310px;
-      right: 35px; }
+      width: 9%;
+      height: 112%;
+      right: 25%; }
 
 .board {
   display: flex;
@@ -299,6 +299,9 @@ body {
       margin: 0; }
   .board__flavor {
     position: absolute;
+    animation-name: board-button;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -519,23 +522,25 @@ body {
     height: 0px;
     animation-timing-function: cubic-bezier(0.3, 1, 0.3, 1); }
   20% {
-    height: calc(var(--height_cup) + 43px);
+    height: 82%;
     animation-timing-function: cubic-bezier(0.5, 1, 0.5, 1); }
   20% {
-    height: calc(var(--height_cup) + 43px);
+    bottom: 12px;
+    height: 82%;
     animation-timing-function: cubic-bezier(1, 1, 1, 1); }
   50% {
     animation-timing-function: cubic-bezier(0.2, 1, 0.2, 1);
     top: 55px; }
   80% {
+    bottom: calc(--var(height_cup) - 10%);
     opacity: 0.5; }
   95% {
-    height: 40px;
+    height: 35%;
     opacity: 0; }
   100% {
     animation-timing-function: cubic-bezier(0.1, 1, 0.1, 1);
     opacity: 0;
-    top: 250px;
+    top: 60%;
     height: 0px; } }
 @keyframes board-button {
   0% {

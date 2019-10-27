@@ -17,6 +17,7 @@ $darkcoffee:rgb(146, 133, 133);
 // COLOR PALETTE > CUP
 $cup:rgba(255, 255, 255, 0.2);
 $cup-top:rgba(255, 255, 255, 0.3);
+$shine : rgba(255, 255, 255, 0.7);
 
 // COLOR PALETTE > FLAVOR
 $berry:rgba(144, 161, 218, 1);
@@ -47,7 +48,7 @@ body {
 
 .main {
     --width_cup: 180px;
-    --height_cup: 270px;
+    --height_cup: 210px;
     --width_machine: 500px;
     --height_machine: 550px;
     display: flex;
@@ -139,6 +140,15 @@ body {
             width: calc(var(--width_machine) - 10%);
             height: calc(var(--height_machine) - 170px);
             background: $machine-middle;
+             // DISTRIB LIQUID
+
+            &__liquid {
+                // background : red;
+                // height : 81%;
+                width: 10px;
+                top: 55px;
+                position: absolute;
+            }
 
             // BUBBLE TEA CUP
             &__distrib {
@@ -176,11 +186,13 @@ body {
 
                 // DISTRIB LIQUID
 
-                &__liquid {
-                    width: 10px;
-                    top: 55px;
-                    position: absolute;
-                }
+                // &__liquid {
+                //     background : red;
+                //     height : 100%;
+                //     width: 10px;
+                //     top: 55px;
+                //     position: absolute;
+                // }
 
                 // DISTRIB BUBBLE
 
@@ -325,8 +337,8 @@ body {
         z-index: 3;
 
         &__top {
-            width: calc(var(--width_cup) + 15px);
-            height: calc(var(--height_cup) - 260px);
+            width: 110%;
+            height: 12px;
             background-color: $cup-top;
             border-radius: 3px;
             // border: solid 0.4px rgb(195, 195, 195);
@@ -335,15 +347,15 @@ body {
 
         &__shine {
             position: absolute;
-            top: 18px;
-            right: 10px;
-            width: 10px;
-            border-top: 235px solid rgb(255, 255, 255);
-            border-left: -25px solid transparent;
-            border-right: 27px solid transparent;
-            border-radius: 0 0 0 4px;
+            top: 7%;
+            right: 5%;
+            width: 20%;
+            height: 87%;
+            border-radius : 0px 0px 0px 5px;
+            clip-path: polygon(0% 0%, 100% 0%, 30% 100%, 0% 100%);
             opacity: 0.2;
             z-index: 10;
+            background: $shine;
         }
 
         &__body {
@@ -353,7 +365,7 @@ body {
             overflow: animation;
             background: $cup;
             width: var(--width_cup);
-            height: calc(var(--height_cup) - 18px);
+            height: calc(var(--height_cup) - 7%);
             clip-path: polygon(1% 0%, 100% 0%, 85% 100%, 15% 100%);
 
             &__label {
@@ -379,10 +391,10 @@ body {
             }
 
             &__liquid {
-                margin-top: calc(var(--height_cup) - 258px);
+                bottom : 12.5px;
                 position: absolute;
-                width: calc(var(--width_cup) - 15px);
-                height: calc(var(--height_cup) - 50px);
+                width: 90%;
+                height: 77%;
                 clip-path: polygon(1% 0%, 100% 0%, 85% 100%, 15% 100%);
                 // opacity: 0.9;
 
@@ -395,18 +407,18 @@ body {
         }
 
         &__bot {
-            width: calc(var(--width_cup) - 70px);
-            height: calc(var(--height_cup) - 262px);
+            width: 60%;
+            height: 7px;
             background-color: $cup-top;
         }
 
         &__straw {
-            bottom: calc(var(--height_cup) - 258px);
+            bottom: calc(var(--height_cup) - 95%);
             position: absolute;
             transform: rotate(10deg);
-            width: 17px;
-            height: 310px;
-            right: 35px;
+            width: 9%;
+            height: 112%;
+            right: 25%;
         }
     }
 }
@@ -450,6 +462,9 @@ body {
 
     &__flavor {
         position: absolute;
+        animation-name: board-button;
+        animation-duration: 3s;
+        animation-iteration-count: 1;
         // background: red;
         display: flex;
         justify-content: center;
@@ -783,12 +798,13 @@ body {
     }
 
     20% {
-        height: calc(var(--height_cup) + 43px);
+        height: 82%;
         animation-timing-function: cubic-bezier(0.5, 1, 0.5, 1);
     }
 
     20% {
-        height: calc(var(--height_cup) + 43px);
+        bottom : 12px;
+        height: 82%;
         animation-timing-function: cubic-bezier(1, 1, 1, 1);
     }
 
@@ -798,18 +814,19 @@ body {
     }
 
     80% {
+        bottom : calc(--var(height_cup) - 10%); 
         opacity: 0.5;
     }
 
     95% {
-        height: 40px;
+        height: 35%;
         opacity: 0;
     }
 
     100% {
         animation-timing-function: cubic-bezier(0.1, 1, 0.1, 1);
         opacity: 0;
-        top: 250px;
+        top: 60%;
         height: 0px;
     }
 

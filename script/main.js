@@ -8,7 +8,7 @@ let flavorLiquid = document.querySelector('.main__cup__body__liquid__flavor')
 let label = document.querySelector('.main__cup__body__label')
 // CIRCLE TOP COLOR
 let circleLiquid = document.querySelector('.main__machine__top__circle__liquid')
-let activeButton = 0
+// let activeButton = 0
 let straw = document.querySelector('.main__cup__straw')
 // TRASH
 let trash = document.querySelector('.board__footer__trash')
@@ -22,7 +22,7 @@ let boardLabel = document.querySelector('.board__label')
 let distrib = document.querySelector('.main__machine__middle__distrib')
 let bubble = document.querySelectorAll('.main__machine__middle__distrib__topping__bubble')
 let distribBot = document.querySelector('.main__machine__middle__distrib__bot')
-let distribLiquid = document.querySelector('.main__machine__middle__distrib__liquid')
+let distribLiquid = document.querySelector('.main__machine__middle__liquid')
 let distribTopping = document.querySelector('.main__machine__middle__distrib__topping')
 // DISTRIB BUBBLES 
 let tapioca = document.querySelector('.topping__tapioca')
@@ -41,16 +41,39 @@ var stickSound = new Audio('audio/stick.mp3');
 var trashSound = new Audio('audio/trash.wav')
 // let open = new Audio ('../audio/open.wav');
 
+// LABEL
+
+labelButton.forEach(labelButton => {
+    labelButton.addEventListener('click', () => {
+        stickSound.play()
+        label.style.background = labelButton.getAttribute("data")
+        // circleLiquid.style.background = labelButton.getAttribute("data")
+        activeButton = strawButton
+        // boardStraw.classList.remove("hidden")
+        setTimeout(() => {
+            boardLabel.classList.add("next-board")
+            // distrib.Child(distrib.children).style.background = "pink"
+        }, 100);
+        boardTitle.querySelector('.label').classList.add("hidden")
+        boardTitle.querySelector(".straw").classList.add("hidden")
+        boardTitle.querySelector(".flavor").classList.remove("hidden")
+        boardFlavor.classList.remove("hidden")
+        boardLabel.classList.add("hidden")
+    })
+})
+
+// FLAVOR
+
 flavorButton.forEach(flavorButton => {
     flavorButton.addEventListener('click', () => {
         servSound.play()
         flavorLiquid.classList.remove("flavor-animation")
         distribLiquid.classList.remove('distrib-animation')
         flavorButton.style.background = flavorButton.getAttribute("data")
-        if (activeButton != 0) {
-            activeButton.style.background = "#4e4444"
-        }
-        activeButton = flavorButton
+        // if (activeButton != 0) {
+        //     activeButton.style.background = "#4e4444"
+        // }
+        // activeButton = flavorButton
 
         circleLiquid.style.background = flavorButton.getAttribute("data")
         flavorLiquid.style.background = flavorButton.getAttribute("data")
@@ -84,10 +107,10 @@ toppingButton.forEach(toppingButton => {
         distribTopping.classList.remove("distrib-topping")
         circleLiquid.style.background = toppingButton.getAttribute("data")
         toppingButton.style.background = toppingButton.getAttribute("data")
-        if (activeButton != 0) {
-            activeButton.style.background = "#4e4444"
-        }
-        activeButton = toppingButton
+        // if (activeButton != 0) {
+        //     activeButton.style.background = "#4e4444"
+        // }
+        // activeButton = toppingButton
         setTimeout(() => {
             distrib.classList.add("change-distrib")
             // distrib.style.width = "230px"
@@ -155,25 +178,10 @@ strawButton.forEach(strawButton => {
         // }
         activeButton = strawButton
         // boardStraw.classList.remove("hidden")
-        boardTitle.querySelector('.label').classList.remove("hidden")
+        boardTitle.querySelector('.label').classList.add("hidden")
         boardTitle.querySelector(".straw").classList.add("hidden")
         boardFlavor.classList.add("hidden")
-        boardLabel.classList.remove("hidden")
+        boardLabel.classList.add("hidden")
     })
 })
 
-// LABEL
-
-labelButton.forEach(labelButton => {
-    labelButton.addEventListener('click', () => {
-        stickSound.play()
-        label.style.background = labelButton.getAttribute("data")
-        // circleLiquid.style.background = labelButton.getAttribute("data")
-        activeButton = strawButton
-        // boardStraw.classList.remove("hidden")
-        boardTitle.querySelector('.label').classList.remove("hidden")
-        boardTitle.querySelector(".straw").classList.add("hidden")
-        boardFlavor.classList.add("hidden")
-        boardLabel.classList.remove("hidden")
-    })
-})

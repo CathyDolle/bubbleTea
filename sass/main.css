@@ -4,7 +4,7 @@ body {
 }
 .main {
   --width_cup: 180px;
-  --height_cup: 270px;
+  --height_cup: 200px;
   --width_machine: 500px;
   --height_machine: 550px;
   display: flex;
@@ -27,7 +27,7 @@ body {
   align-items: center;
   width: var(--width_machine);
   height: calc(var(--height_machine) - 440px);
-  background: white;
+  background: #fff;
   border-radius: 10px;
   z-index: 10;
 }
@@ -129,11 +129,8 @@ body {
   position: absolute;
   width: 140px;
   height: 85px;
-  animation-name: bubble-rain;
-  animation-iteration-count: 1;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
-  z-index: 5;
+  z-index: 2;
+  opacity: 0;
 }
 .main__machine__middle__distrib__topping__bubble {
   bottom: 0px;
@@ -200,6 +197,7 @@ body {
   animation: bubble-move 4s infinite ease-out, normal;
 }
 .main__machine__middle__distrib__topping__bubble-5 {
+  opacity: 0.8;
   bottom: 25px;
   left: 50px;
   animation: bubble-move 4s infinite ease-out, normal;
@@ -230,7 +228,7 @@ body {
 .main__machine__bot {
   width: var(--width_machine);
   height: calc(var(--height_machine) - 505px);
-  background: white;
+  background: #fff;
 }
 .main__cup {
   display: flex;
@@ -240,11 +238,12 @@ body {
   width: var(--width_cup);
   height: var(--height_cup);
   margin-top: -60px;
+  z-index: 3;
 }
 .main__cup__top {
-  width: calc(var(--width_cup) + 15px);
-  height: calc(var(--height_cup) - 260px);
-  background-color: rgba(255, 255, 255, 0.6);
+  width: 110%;
+  height: 5%;
+  background-color: rgba(255, 255, 255, 0.3);
   border-radius: 3px;
   z-index: 1;
 }
@@ -253,31 +252,30 @@ body {
   top: 18px;
   right: 10px;
   width: 10px;
-  border-top: 235px solid #fff;
-  border-left: -25px solid transparent;
-  border-right: 27px solid transparent;
+  height: 70%;
   border-radius: 0 0 0 4px;
-  opacity: 0.3;
+  opacity: 0.2;
   z-index: 10;
+  background: rgba(255, 255, 255, 0.3);
 }
 .main__cup__body {
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: animation;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.2);
   width: var(--width_cup);
-  height: calc(var(--height_cup) - 18px);
+  height: calc(var(--height_cup) - 7%);
   clip-path: polygon(1% 0%, 100% 0%, 85% 100%, 15% 100%);
 }
 .main__cup__body__label {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #ffbeb3;
   width: var(--width_cup);
   height: 65px;
-  opacity: 0.2;
+  opacity: 1;
+  z-index: 1;
 }
 .main__cup__body__contain {
   position: absolute;
@@ -302,26 +300,23 @@ body {
   transform: translateY(100%);
 }
 .main__cup__bot {
-  width: calc(var(--width_cup) - 70px);
-  height: calc(var(--height_cup) - 262px);
-  background-color: rgba(255, 255, 255, 0.6);
+  width: 60%;
+  height: 3%;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 .main__cup__straw {
   bottom: calc(var(--height_cup) - 258px);
   position: absolute;
-  background: repeating-linear-gradient(
-    20deg,
-    #ffbeb3,
-    #ffbeb3 10px,
-    #ff5b5b 10px,
-    #ff5b5b 20px
-  );
   transform: rotate(10deg);
-  width: 16px;
-  height: 320px;
+  width: 17px;
+  height: 310px;
   right: 35px;
 }
 .board {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
   width: 100vw;
   height: 35vh;
   background: #b6a2a2;
@@ -329,24 +324,32 @@ body {
 .board__title {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  margin-top: 40px;
   width: 100%;
-  height: 15%;
+  height: 50%;
+  animation-name: board-title;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
 }
 .board__title h1 {
   font-family: "Fjalla One", sans-serif;
-  font-size: 25px;
+  font-size: 20px;
   letter-spacing: 5px;
   text-transform: uppercase;
   color: white;
   margin: 0;
 }
 .board__flavor {
+  position: absolute;
+  animation-name: board-button;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 50%;
+  height: 53%;
 }
 .board__flavor__button {
   display: flex;
@@ -380,40 +383,219 @@ body {
   background-color: #90a1da;
 }
 .board__flavor__button:nth-child(3):hover {
-  background-color: #9c846d;
+  background-color: #d0c0e4;
 }
 .board__flavor__button:nth-child(4):hover {
-  background-color: #ff9d41;
+  background-color: #9c846d;
 }
 .board__flavor__button:nth-child(5):hover {
-  background-color: #ffbeb3;
+  background-color: #ff9d41;
 }
 .board__flavor__button:nth-child(6):hover {
+  background-color: #ffbeb3;
+}
+.board__flavor__button:nth-child(7):hover {
   background-color: #ff5b5b;
 }
-.board__menu {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  width: 100%;
-  height: 15%;
-}
-.board__menu__button {
-  cursor: pointer;
-  margin: 0px 15px 0px 15px;
-}
-.board__menu__button h2 {
-  text-transform: uppercase;
-  font-size: 12px;
-  color: white;
-  font-family: "Fjalla One", sans-serif;
-}
-.board__footer {
+.board__topping {
+  position: absolute;
+  animation-name: board-button;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 15%;
+  height: 53%;
+}
+.board__topping__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 18px 0px 18px;
+  width: 70px;
+  height: 85px;
+  background-color: #4e4444;
+  border-radius: 0 15px 0 15px;
+  transition: 0.3s;
+}
+.board__topping__button h2 {
+  font-family: "Fjalla One", sans-serif;
+  text-transform: uppercase;
+  font-size: 10px;
+  color: white;
+  letter-spacing: 1px;
+}
+.board__topping__button h2:hover {
+  scale: 0.5;
+}
+.board__topping__button:hover {
+  cursor: pointer;
+  transform: scale(1.08);
+}
+.board__topping__button:nth-child(1):hover {
+  background-color: #462713;
+}
+.board__topping__button:nth-child(2):hover {
+  background-color: #fb8fc5;
+}
+.board__topping__button:nth-child(3):hover {
+  background: linear-gradient(-45deg, #462713 50%, #fb8fc5 50%);
+}
+.board__straw {
+  position: absolute;
+  animation-name: board-button;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 53%;
+}
+.board__straw__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 18px 0px 18px;
+  width: 12px;
+  height: 75px;
+  border-radius: 2px;
+}
+.board__straw__button:hover {
+  cursor: pointer;
+  border: solid 0.5px white;
+}
+.board__straw__button__berry {
+  background: repeating-linear-gradient(
+    20deg,
+    white,
+    white 10px,
+    #90a1da 10px,
+    #90a1da 20px
+  );
+}
+.board__straw__button__taro {
+  background: repeating-linear-gradient(
+    20deg,
+    white,
+    white 10px,
+    #d0c0e4 10px,
+    #d0c0e4 20px
+  );
+}
+.board__straw__button__mango {
+  background: repeating-linear-gradient(
+    20deg,
+    white,
+    white 10px,
+    #ff9d41 10px,
+    #ff9d41 20px
+  );
+}
+.board__straw__button__lychee {
+  background: repeating-linear-gradient(
+    20deg,
+    white,
+    white 10px,
+    rgba(255, 190, 179, 0.8) 10px,
+    rgba(255, 190, 179, 0.8) 20px
+  );
+}
+.board__straw__button__cherry {
+  background: repeating-linear-gradient(
+    20deg,
+    white,
+    white 10px,
+    rgba(255, 91, 91, 0.8) 10px,
+    rgba(255, 91, 91, 0.8) 20px
+  );
+}
+.board__straw__button__jelly {
+  background: repeating-linear-gradient(
+    20deg,
+    white,
+    white 10px,
+    #fb8fc5 10px,
+    #fb8fc5 20px
+  );
+}
+.board__straw__button__tapioca {
+  background: repeating-linear-gradient(
+    20deg,
+    white,
+    white 10px,
+    #462713 10px,
+    #462713 20px
+  );
+}
+.board__straw__button__berry-taro {
+  background: repeating-linear-gradient(
+    20deg,
+    #90a1da,
+    #90a1da 10px,
+    #d0c0e4 10px,
+    #d0c0e4 20px
+  );
+}
+.board__straw__button__cherry-lychee {
+  background: repeating-linear-gradient(
+    20deg,
+    #ffbeb3,
+    #ffbeb3 10px,
+    #ff5b5b 10px,
+    #ff5b5b 20px
+  );
+}
+.board__label {
+  position: absolute;
+  animation-name: board-button;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 53%;
+}
+.board__label__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 18px 0px 18px;
+  width: 70px;
+  height: 25px;
+  border-radius: 2px;
+}
+.board__label__button:nth-child(1) {
+  background: #90a1da;
+}
+.board__label__button:nth-child(2) {
+  background: #d0c0e4;
+}
+.board__label__button:nth-child(3) {
+  background: #ff9d41;
+}
+.board__label__button:nth-child(4) {
+  background: #ffbeb3;
+}
+.board__label__button:nth-child(5) {
+  background: #ff5b5b;
+}
+.board__label__button:nth-child(6) {
+  background: #282323;
+}
+.board__label__button:hover {
+  cursor: pointer;
+  border: solid 0.5px white;
+}
+.board__footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 50%;
+  margin-bottom: 40px;
 }
 .board__footer__trash {
   cursor: pointer;
@@ -426,6 +608,10 @@ body {
   width: 100%;
   height: 100%;
 }
+.board__footer img:hover {
+  transition: 0.3s;
+  transform: scale(1.1);
+}
 .flavor-animation {
   animation-name: flavor;
   animation-duration: 4s;
@@ -437,12 +623,33 @@ body {
 .distrib-animation {
   animation-timing-function: linear;
   animation-name: distrib-liquid;
-  animation-duration: 6s;
+  animation-duration: 6.5s;
 }
-.circle-animation {
-  animation-timing-function: linear;
-  animation-name: circle-top;
-  animation-duration: 5s;
+.distrib-topping {
+  animation-name: bubble-rain;
+  animation-iteration-count: 1;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-delay: 1.5s;
+}
+.straw-animation {
+  animation-name: straw;
+  animation-iteration-count: 1;
+  animation-duration: 1s;
+}
+.hidden {
+  display: none;
+}
+.next-board {
+  animation-name: next-board;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.change-distrib {
+  animation-name: change-distrib;
+  animation-duration: 1.5s;
+  animation-iteration-count: 1;
   animation-fill-mode: forwards;
 }
 @keyframes flavor {
@@ -465,47 +672,40 @@ body {
   }
   20% {
     height: calc(var(--height_cup) + 43px);
-    animation-timing-function: cubic-bezier(0.5, 1, 0.5, 1);
+    animation-timing-function: cubic-bezier(1, 1, 1, 1);
   }
   50% {
-    animation-timing-function: cubic-bezier(0.35, 1, 0.35, 1);
+    animation-timing-function: cubic-bezier(0.2, 1, 0.2, 1);
     top: 55px;
   }
   80% {
-    animation-timing-function: cubic-bezier(0.4, 1, 0.4, 1);
     opacity: 0.5;
+  }
+  95% {
+    height: 40px;
+    opacity: 0;
   }
   100% {
     animation-timing-function: cubic-bezier(0.1, 1, 0.1, 1);
     opacity: 0;
-    top: 300px;
-    height: 40px;
+    top: 250px;
+    height: 0px;
   }
 }
-@keyframes circle-top {
+@keyframes board-button {
   0% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 1;
+    transform: translateX(-100%);
   }
   100% {
-    opacity: 1;
-    background-color: white;
+    transform: translateX(0%);
   }
 }
-@keyframes button-board {
+@keyframes next-board {
   0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.03);
+    transform: translateX(0%);
   }
   100% {
-    transform: scale(1);
+    transform: translateX(100%);
   }
 }
 @keyframes bubble-move {
@@ -519,11 +719,47 @@ body {
 @keyframes bubble-rain {
   0% {
     transform: translateY(0px);
+    opacity: 1;
   }
   70% {
     transform: translateY(380px);
+    opacity: 1;
   }
   100% {
     transform: translateY(375px);
+    opacity: 1;
+  }
+}
+@keyframes straw {
+  0% {
+    transform: translate(0, -4px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(0, 0px) rotate(0deg);
+  }
+}
+@keyframes board-title {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes change-distrib {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-100%);
+    width: 100px;
+  }
+  60% {
+    transform: translateY(-100%);
+    width: 200px;
+  }
+  100% {
+    transform: translateY(0%);
+    width: 200px;
   }
 }
