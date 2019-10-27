@@ -43,8 +43,8 @@ body {
     margin: 0;
     width: 100vw;
     height: 100vh;
-    overflow-y:hidden;
-    overflow-x:hidden;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 // TYPO
@@ -64,7 +64,8 @@ a {
     font-family: 'Fjalla One', sans-serif;
     color: $button;
     font-size: 12px;
-    &:hover{
+
+    &:hover {
         cursor: pointer;
         color: white;
     }
@@ -106,7 +107,7 @@ a {
                 position: absolute;
                 top: 32%;
                 left: 5%;
-                height: 27%;
+                height: 28%;
                 width: 6%;
                 background: $machine-button;
                 border-radius: 90px;
@@ -116,7 +117,7 @@ a {
                 position: absolute;
                 top: 32%;
                 left: 14%;
-                height: 27%;
+                height: 28%;
                 width: 6%;
                 background: $machine-button;
                 border-radius: 90px;
@@ -144,8 +145,8 @@ a {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                height: 70px;
-                width: 70px;
+                height: 65%;
+                width: 14%;
                 background: $machine-button;
                 border-radius: 90px;
 
@@ -163,8 +164,8 @@ a {
             display: flex;
             justify-content: center;
             align-items: flex-end;
-            width: calc(var(--width_machine) - 10%);
-            height: calc(var(--height_machine) - 170px);
+            width: 90%;
+            height: 70%;
             background: $machine-middle;
             // DISTRIB LIQUID
 
@@ -337,15 +338,15 @@ a {
         }
 
         &__support {
-            width: calc(var(--width_machine) - 5%);
-            height: calc(var(--height_machine) - 535px);
+            width: 95%;
+            height: 2.5%;
             background: $machine-support;
             border-radius: 10px;
         }
 
         &__bot {
             width: var(--width_machine);
-            height: calc(var(--height_machine) - 505px);
+            height: 8.5%;
             background: $machine-bot;
         }
     }
@@ -424,7 +425,7 @@ a {
                 width: 90%;
                 height: 77%;
                 clip-path: polygon(1% 0%, 100% 0%, 85% 100%, 15% 100%);
-                -webkit-clip-path:polygon(1% 0%, 100% 0%, 85% 100%, 15% 100%);
+                -webkit-clip-path: polygon(1% 0%, 100% 0%, 85% 100%, 15% 100%);
                 // opacity: 0.9;
 
                 &__flavor {
@@ -1097,5 +1098,126 @@ a {
     100% {
         transform: translateY(0%);
         width: 200px;
+    }
+}
+
+// RESPONSIVE 
+
+@media (max-width: 768px) {
+    //TYPO
+    a{
+        font-size: 10px;
+    }
+
+    // MACHINE + CUP
+    .main {
+        --width_cup: 180px;
+        --height_cup: 210px;
+        --width_machine: 300px;
+        --height_machine: 330px;
+    }
+
+
+    //BOARD
+
+    .board {
+        display: flex;
+        // background: black;
+    }
+
+    .board__size__button {
+        height: 80px;
+        width: 40px;
+
+        & h2 {
+            font-size: 8px;
+        }
+
+        &__top {
+            height: 2px;
+        }
+
+        &__bot {
+            height: 2px;
+        }
+
+        &__middle {
+            &__large {
+                height: 50px;
+            }
+
+            &__medium {
+                height: 45px;
+            }
+
+            &__small {
+                height: 40px;
+            }
+        }
+    }
+
+    .board__title {
+        // background: blue;
+        margin-top: 25px;
+
+        & h1 {
+            font-size: 12px;
+        }
+    }
+
+    .board__label__button {
+        width: 35px;
+        height: 25px;
+        margin: 0px 15px 0px 15px;
+    }
+
+    .board__flavor__button {
+        width: 35px;
+        height: 35px;
+        margin: 0px 5px 0px 5px;
+
+        & h2 {
+            font-size: 6px;
+        }
+    }
+
+    .board__topping__button {
+        margin: 0px 15px 0px 15px;
+        width: 50px;
+        height: 65px;
+        & h2{
+            font-size: 8px;
+        }
+    }
+
+    .board__straw__button {
+        margin: 0px 11px 0px 11px;
+        width: 8px;
+        height: 65px;
+    }
+
+    .board__footer {
+        // background-color: red;
+        margin-bottom: 15px;
+
+        &__trash {
+            width: 20px;
+            height: 20px;
+        }
+    }
+    .board__done{
+        &__text{
+            width: 90%;
+            height: 70%; 
+            & p{
+                font-size: 10px;
+                line-height: 14px;
+            }
+        }
+        &__social{
+            & a{
+                margin: 0px 5px 0px 5px;
+            }
+        }
     }
 }
