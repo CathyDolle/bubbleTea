@@ -43,6 +43,28 @@ body {
     margin: 0;
 }
 
+// TYPO
+h2 {
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'Fjalla One', sans-serif;
+    color: white;
+    font-size: 10px;
+}
+
+a {
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-family: 'Fjalla One', sans-serif;
+    color: $button;
+    font-size: 12px;
+    &:hover{
+        cursor: pointer;
+        color: white;
+    }
+}
 
 //MAIN
 
@@ -71,46 +93,46 @@ body {
             justify-content: center;
             align-items: center;
             width: var(--width_machine);
-            height: calc(var(--height_machine) - 440px);
+            height: calc(var(--height_machine) - 80%);
             background: $machine-top;
             border-radius: 10px;
             z-index: 10;
 
             &__button-1 {
                 position: absolute;
-                top: 35px;
-                left: 25px;
-                height: 30px;
-                width: 30px;
+                top: 32%;
+                left: 5%;
+                height: 27%;
+                width: 6%;
                 background: $machine-button;
                 border-radius: 90px;
             }
 
             &__button-2 {
                 position: absolute;
-                top: 35px;
-                left: 70px;
-                height: 30px;
-                width: 30px;
+                top: 32%;
+                left: 14%;
+                height: 27%;
+                width: 6%;
                 background: $machine-button;
                 border-radius: 90px;
             }
 
             &__square-1 {
                 position: absolute;
-                top: 63px;
-                left: 35px;
-                height: 10px;
-                width: 10px;
+                top: 57%;
+                left: 7%;
+                height: 9%;
+                width: 2%;
                 background: $machine-middle;
             }
 
             &__square-2 {
                 position: absolute;
-                top: 63px;
-                left: 80px;
-                height: 10px;
-                width: 10px;
+                top: 57%;
+                left: 16%;
+                height: 9%;
+                width: 2%;
                 background: $machine-middle;
             }
 
@@ -353,6 +375,7 @@ body {
             height: 87%;
             border-radius: 0px 0px 0px 5px;
             clip-path: polygon(0% 0%, 100% 0%, 30% 100%, 0% 100%);
+            -webkit-clip-path: polygon(0% 0%, 100% 0%, 30% 100%, 0% 100%);
             opacity: 0.2;
             z-index: 10;
             background: $shine;
@@ -362,11 +385,12 @@ body {
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: animation;
+            // overflow: animation;
             background: $cup;
             width: var(--width_cup);
             height: calc(var(--height_cup) - 7%);
             clip-path: polygon(1% 0%, 100% 0%, 85% 100%, 15% 100%);
+            -webkit-clip-path: polygon(1% 0%, 100% 0%, 85% 100%, 15% 100%);
 
             &__label {
                 display: flex;
@@ -480,12 +504,14 @@ body {
             margin: 0px 25px 0px 25px;
             width: 70px;
             height: 135px;
+
             // background-color: $button;
-            &:hover{
+            &:hover {
                 transform: scale(1.03);
                 // transition: s;
             }
-            & h2{
+
+            & h2 {
                 letter-spacing: 1px;
                 text-transform: uppercase;
                 font-family: 'Fjalla One', sans-serif;
@@ -493,32 +519,40 @@ body {
                 font-size: 10px;
                 bottom: 0px;
             }
-            &__top{
+
+            &__top {
                 width: 110%;
                 height: 5px;
                 background: $cup-top;
             }
-            &__middle{
-                &__large{
+
+            &__middle {
+                &__large {
                     width: 100%;
                     height: 90px;
                     clip-path: polygon(1% 0%, 100% 0%, 85% 100%, 15% 100%);
+                    -webkit-clip-path: polygon(1% 0%, 100% 0%, 85% 100%, 15% 100%);
                     background: $cup;
                 }
-                &__medium{
+
+                &__medium {
                     width: 100%;
                     height: 75px;
                     clip-path: polygon(1% 0%, 100% 0%, 85% 100%, 15% 100%);
+                    -webkit-clip-path: polygon(1% 0%, 100% 0%, 85% 100%, 15% 100%);
                     background: $cup;
                 }
-                &__small{
+
+                &__small {
                     width: 100%;
                     height: 60px;
                     clip-path: polygon(1% 0%, 100% 0%, 85% 100%, 15% 100%);
+                    -webkit-clip-path: polygon(1% 0%, 100% 0%, 85% 100%, 15% 100%);
                     background: $cup;
                 }
             }
-            &__bot{
+
+            &__bot {
                 width: 60%;
                 height: 5px;
                 background: $cup-top;
@@ -762,6 +796,49 @@ body {
             &:hover {
                 cursor: pointer;
                 border: solid 0.5px white;
+            }
+        }
+    }
+
+    &__done {
+        position: absolute;
+        animation-name: board-title;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 53%;
+
+        &__text {
+            font-weight: 100;
+            letter-spacing: 1px;
+            line-height: 20px;
+            display: flex;
+            text-align: center;
+            align-items: center;
+            // background: red;
+            width: 42%;
+            height: 50%;
+
+            & p {
+                color: white;
+                font-family: 'Fjalla One', sans-serif;
+            }
+        }
+
+        &__social {
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            // background: blue;
+            width: 100%;
+            height: 20%;
+
+            & a {
+                margin: 0px 20px 0px 20px;
             }
         }
     }

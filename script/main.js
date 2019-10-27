@@ -29,6 +29,7 @@ let boardFlavor = document.querySelector('.board__flavor')
 let boardTopping = document.querySelector('.board__topping')
 let boardStraw = document.querySelector('.board__straw')
 let boardLabel = document.querySelector('.board__label')
+let boardDone = document.querySelector('.board__done')
 // DISTRIB
 let distrib = document.querySelector('.main__machine__middle__distrib')
 let bubble = document.querySelectorAll('.main__machine__middle__distrib__topping__bubble')
@@ -206,6 +207,7 @@ trash.addEventListener('click', function () {
 
 strawButton.forEach(strawButton => {
     strawButton.addEventListener('click', () => {
+        stickSound.play()
         // strawSound.play()
         straw.classList.add("straw-animation")
         straw.style.background = strawButton.getAttribute("data")
@@ -221,10 +223,12 @@ strawButton.forEach(strawButton => {
         // }
         activeButton = strawButton
         // boardStraw.classList.remove("hidden")
+        boardTitle.querySelector(".done").classList.remove("hidden")
         boardTitle.querySelector('.label').classList.add("hidden")
         boardTitle.querySelector(".straw").classList.add("hidden")
         boardFlavor.classList.add("hidden")
         boardLabel.classList.add("hidden")
+        boardDone.classList.remove("hidden")
     })
 })
 
