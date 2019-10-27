@@ -75,7 +75,7 @@ a {
 
 .main {
     --width_cup: 180px;
-    --height_cup: 210px;
+    --height_cup: 270px;
     --width_machine: 500px;
     --height_machine: 550px;
     display: flex;
@@ -1103,20 +1103,59 @@ a {
 
 // RESPONSIVE 
 
-@media (max-width: 768px) {
+@media (max-width: 812px) {
+
     //TYPO
-    a{
+    a {
         font-size: 10px;
     }
 
     // MACHINE + CUP
     .main {
-        --width_cup: 180px;
-        --height_cup: 210px;
+        --width_cup: 120px;
+        --height_cup: 160px;
         --width_machine: 300px;
         --height_machine: 330px;
-    }
 
+        &__cup {
+            margin-top: -35px;
+        }
+
+        &__machine__middle__distrib {
+            width: 70px;
+            height: 35px;
+
+            &__topping {
+                width: 80px;
+                height: 45px;
+
+                &__bubble {
+                    height: 16px;
+                    width: 16px;
+                }
+
+                &__bubble-6 {
+                    left: 65px;
+                }
+
+                &__bubble-4 {
+                    left: 8px;
+                }
+
+                &__bubble-3 {
+                    right: 29px;
+                }
+            }
+        }
+
+        &__machine__middle__liquid {
+            // background : red;
+            // height : 5%;
+            // width: 10px;
+            top: 35px;
+
+        }
+    }
 
     //BOARD
 
@@ -1185,7 +1224,8 @@ a {
         margin: 0px 15px 0px 15px;
         width: 50px;
         height: 65px;
-        & h2{
+
+        & h2 {
             font-size: 8px;
         }
     }
@@ -1205,19 +1245,92 @@ a {
             height: 20px;
         }
     }
-    .board__done{
-        &__text{
+
+    .board__done {
+        &__text {
             width: 90%;
-            height: 70%; 
-            & p{
+            height: 70%;
+
+            & p {
                 font-size: 10px;
                 line-height: 14px;
             }
         }
-        &__social{
-            & a{
+
+        &__social {
+            & a {
                 margin: 0px 5px 0px 5px;
             }
         }
     }
+
+    // ANIMATION
+    .distrib-topping {
+        animation-name: bubble-rain-resp;
+    }
+
+    .distrib-animation {
+        animation-name: distrib-liquid-resp;
+    }
+}
+
+
+@keyframes bubble-rain-resp {
+    0% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+
+    70% {
+        transform: translateY(270px);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(268px);
+        opacity: 1;
+    }
+}
+
+//Liquid distrib animation from the machine
+@keyframes distrib-liquid-resp {
+    0% {
+        height: 0px;
+        animation-timing-function: cubic-bezier(0.3, 1, 0.3, 1);
+    }
+
+    20% {
+        height: 80%;
+        animation-timing-function: cubic-bezier(0.5, 1, 0.5, 1);
+    }
+
+    20% {
+        bottom: 25px;
+        height: 80%;
+        animation-timing-function: cubic-bezier(1, 1, 1, 1);
+    }
+
+    50% {
+        animation-timing-function: cubic-bezier(0.2, 1, 0.2, 1);
+        top: 35px;
+    }
+
+    80% {
+        bottom: calc(--var(height_cup) - 10%);
+        opacity: 0.5;
+    }
+
+    95% {
+        height: 35%;
+        opacity: 0;
+    }
+
+    100% {
+        animation-timing-function: cubic-bezier(0.1, 1, 0.1, 1);
+        opacity: 0;
+        top: 60%;
+        height: 0px;
+    }
+
+
 }
