@@ -1,7 +1,8 @@
 // COLOR PALETTE
 
 $backgroud:rgb(231, 218, 218);
-$board:rgb(182, 162, 162);
+// $board:rgb(182, 162, 162);
+$board:rgb(151, 138, 138);
 $coffee:rgba(156, 132, 109, 1);
 $button:#4e4444;
 
@@ -9,7 +10,7 @@ $button:#4e4444;
 
 $machine-top:white;
 $machine-middle:#BCB0AF;
-$machine-support:#282323;
+$dark-coffee:#282323;
 $machine-bot:white;
 $machine-button:#282323;
 $darkcoffee:rgb(146, 133, 133);
@@ -38,8 +39,11 @@ $strawberry:repeating-linear-gradient(20deg, white, white 10px, $berry 10px, $be
 $strawmango:repeating-linear-gradient(20deg, $coffee, $coffee 10px, $mango 10px, $mango 20px);
 $strawcherry:repeating-linear-gradient(20deg, $lychee, $lychee 10px, $cherry 10px, $cherry 20px);
 
+// COLOR PALETTE > WINDOW
+$sky : linear-gradient(#c8dcff, #eeeffc);
+$glass : rgba(255, 255, 255, 0.445);
+
 body {
-    background: $backgroud;
     margin: 0;
     width: 100vw;
     height: 100vh;
@@ -78,11 +82,45 @@ a {
     --height_cup: 270px;
     --width_machine: 500px;
     --height_machine: 550px;
+    --width_window: 350px;
+    --height_window: 450px;
+    background: $backgroud;
     display: flex;
     justify-content: center;
     align-items: flex-end;
     width: 100vw;
     height: 65vh;
+
+    &__window {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35%;
+        height: 65vh;
+
+        // background: red;
+        &__form {
+            width: var(--width_window);
+            height: var(--height_window);
+            background: $sky;
+            border: 10px solid $dark-coffee;
+        }
+
+        &__glass {
+            position: absolute;
+            width: var(--width_window);
+            height: var(--height_window);
+            background: $glass;
+            border: 10px solid $dark-coffee;
+        }
+    }
+
+    &__music {
+        width: 35%;
+        height: 65vh;
+        // background: blue;
+    }
 
     &__machine {
         display: flex;
@@ -340,7 +378,7 @@ a {
         &__support {
             width: 95%;
             height: 2.5%;
-            background: $machine-support;
+            background: $dark-coffee;
             border-radius: 10px;
         }
 
@@ -1118,14 +1156,40 @@ a {
         --height_machine: 330px;
 
         &__cup {
-            margin-top: -35px;
+            margin-top: -36px;
+
+            &__top{
+                height: 8px;
+            }
+
+            &__body__label {
+                height: 35px;
+            }
+
+            &__body__contain{
+                width: 25px;
+                height: 25px;
+            }
+            &__body__liquid{
+                bottom: 9px;
+            }
         }
 
         &__machine__middle__distrib {
-            width: 70px;
+            width: 60px;
             height: 35px;
+            &__top{
+                height: 12px;
+            }
+            &__middle{
+                height: 10px;
+            }
+            &__bot{
+                width: 12px;
+            }
 
             &__topping {
+                top: -8px;
                 width: 80px;
                 height: 45px;
 
@@ -1151,8 +1215,8 @@ a {
         &__machine__middle__liquid {
             // background : red;
             // height : 5%;
-            // width: 10px;
-            top: 35px;
+            width: 7px;
+            top: 25px;
 
         }
     }
@@ -1207,7 +1271,7 @@ a {
     .board__label__button {
         width: 35px;
         height: 35px;
-        margin: 0px 10px 0px 10px;    
+        margin: 0px 10px 0px 10px;
     }
 
     .board__flavor__button {
@@ -1272,6 +1336,12 @@ a {
     .distrib-animation {
         animation-name: distrib-liquid-resp;
     }
+    .change-distrib {
+        animation-name: change-distrib-resp;
+        animation-duration: 1.5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
 }
 
 
@@ -1282,12 +1352,12 @@ a {
     }
 
     70% {
-        transform: translateY(270px);
+        transform: translateY(178px);
         opacity: 1;
     }
 
     100% {
-        transform: translateY(268px);
+        transform: translateY(177px);
         opacity: 1;
     }
 }
@@ -1305,14 +1375,14 @@ a {
     }
 
     20% {
-        bottom: 12px;
+        bottom: 0px;
         height: 80%;
         animation-timing-function: cubic-bezier(1, 1, 1, 1);
     }
 
     50% {
         animation-timing-function: cubic-bezier(0.2, 1, 0.2, 1);
-        top: 35px;
+        top: 25px;
     }
 
     80% {
@@ -1321,7 +1391,7 @@ a {
     }
 
     95% {
-        height: 5%;
+        height: 25%;
         opacity: 0;
     }
 
@@ -1333,4 +1403,25 @@ a {
     }
 
 
+}
+
+@keyframes change-distrib-resp {
+    0% {
+        transform: translateY(0%);
+    }
+
+    50% {
+        transform: translateY(-100%);
+        width: 80px;
+    }
+
+    60% {
+        transform: translateY(-100%);
+        width: 150px;
+    }
+
+    100% {
+        transform: translateY(0%);
+        width: 150px;
+    }
 }

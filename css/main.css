@@ -1,5 +1,4 @@
 body {
-  background: #e7dada;
   margin: 0;
   width: 100vw;
   height: 100vh;
@@ -30,11 +29,35 @@ a {
   --height_cup: 270px;
   --width_machine: 500px;
   --height_machine: 550px;
+  --width_window: 350px;
+  --height_window: 450px;
+  background: #e7dada;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   width: 100vw;
   height: 65vh; }
+  .main__window {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    height: 65vh; }
+    .main__window__form {
+      width: var(--width_window);
+      height: var(--height_window);
+      background: linear-gradient(#c8dcff, #eeeffc);
+      border: 10px solid #282323; }
+    .main__window__glass {
+      position: absolute;
+      width: var(--width_window);
+      height: var(--height_window);
+      background: rgba(255, 255, 255, 0.445);
+      border: 10px solid #282323; }
+  .main__music {
+    width: 35%;
+    height: 65vh; }
   .main__machine {
     display: flex;
     flex-direction: column;
@@ -304,7 +327,7 @@ a {
   position: relative;
   width: 100vw;
   height: 35vh;
-  background: #b6a2a2; }
+  background: #978a8a; }
   .board__title {
     display: flex;
     justify-content: center;
@@ -708,11 +731,27 @@ a {
     --width_machine: 300px;
     --height_machine: 330px; }
     .main__cup {
-      margin-top: -35px; }
+      margin-top: -36px; }
+      .main__cup__top {
+        height: 8px; }
+      .main__cup__body__label {
+        height: 35px; }
+      .main__cup__body__contain {
+        width: 25px;
+        height: 25px; }
+      .main__cup__body__liquid {
+        bottom: 9px; }
     .main__machine__middle__distrib {
-      width: 70px;
+      width: 60px;
       height: 35px; }
+      .main__machine__middle__distrib__top {
+        height: 12px; }
+      .main__machine__middle__distrib__middle {
+        height: 10px; }
+      .main__machine__middle__distrib__bot {
+        width: 12px; }
       .main__machine__middle__distrib__topping {
+        top: -8px;
         width: 80px;
         height: 45px; }
         .main__machine__middle__distrib__topping__bubble {
@@ -725,7 +764,8 @@ a {
         .main__machine__middle__distrib__topping__bubble-3 {
           right: 29px; }
     .main__machine__middle__liquid {
-      top: 35px; }
+      width: 7px;
+      top: 25px; }
 
   .board {
     display: flex; }
@@ -794,16 +834,22 @@ a {
     animation-name: bubble-rain-resp; }
 
   .distrib-animation {
-    animation-name: distrib-liquid-resp; } }
+    animation-name: distrib-liquid-resp; }
+
+  .change-distrib {
+    animation-name: change-distrib-resp;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; } }
 @keyframes bubble-rain-resp {
   0% {
     transform: translateY(0px);
     opacity: 1; }
   70% {
-    transform: translateY(270px);
+    transform: translateY(178px);
     opacity: 1; }
   100% {
-    transform: translateY(268px);
+    transform: translateY(177px);
     opacity: 1; } }
 @keyframes distrib-liquid-resp {
   0% {
@@ -813,22 +859,34 @@ a {
     height: 80%;
     animation-timing-function: cubic-bezier(0.5, 1, 0.5, 1); }
   20% {
-    bottom: 12px;
+    bottom: 0px;
     height: 80%;
     animation-timing-function: cubic-bezier(1, 1, 1, 1); }
   50% {
     animation-timing-function: cubic-bezier(0.2, 1, 0.2, 1);
-    top: 35px; }
+    top: 25px; }
   80% {
     bottom: calc(--var(height_cup) - 10%);
     opacity: 0.5; }
   95% {
-    height: 5%;
+    height: 25%;
     opacity: 0; }
   100% {
     animation-timing-function: cubic-bezier(0.1, 1, 0.1, 1);
     opacity: 0;
     top: 50%;
     height: 0px; } }
+@keyframes change-distrib-resp {
+  0% {
+    transform: translateY(0%); }
+  50% {
+    transform: translateY(-100%);
+    width: 80px; }
+  60% {
+    transform: translateY(-100%);
+    width: 150px; }
+  100% {
+    transform: translateY(0%);
+    width: 150px; } }
 
 /*# sourceMappingURL=main.css.map */

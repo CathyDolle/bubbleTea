@@ -57,16 +57,25 @@ var trashSound = new Audio('audio/trash.wav');
 largeSize.addEventListener('click' , () =>{
     cup.classList.remove('hidden')
     main.style.setProperty('--height_cup' , "270px")
+    if (window.innerWidth < 812) {
+        main.style.setProperty('--height_cup' , "170px")
+    }
 })
 
 mediumSize.addEventListener('click' , () =>{
     cup.classList.remove('hidden')
     main.style.setProperty('--height_cup' , "240px")
+    if (window.innerWidth < 812) {
+        main.style.setProperty('--height_cup' , "150px")
+    }
 })
 
 smallSize.addEventListener('click' , () =>{
     cup.classList.remove('hidden')
     main.style.setProperty('--height_cup' , "210px")
+    if (window.innerWidth < 812) {
+        main.style.setProperty('--height_cup' , "130px")
+    }
 })
 
 
@@ -139,10 +148,6 @@ toppingButton.forEach(toppingButton => {
         distribTopping.classList.remove("distrib-topping")
         circleLiquid.style.background = toppingButton.getAttribute("data")
         toppingButton.style.background = toppingButton.getAttribute("data")
-        // if (activeButton != 0) {
-        //     activeButton.style.background = "#4e4444"
-        // }
-        // activeButton = toppingButton
         setTimeout(() => {
             distrib.classList.add("change-distrib")
             // distrib.style.width = "230px"
@@ -211,6 +216,7 @@ strawButton.forEach(strawButton => {
         boardLabel.classList.add("hidden")
         boardTopping.classList.add("hidden")
         boardSize.classList.add("hidden")
+        boardStraw.classList.add("hidden")
         boardDone.classList.remove("hidden")
     })
 })
