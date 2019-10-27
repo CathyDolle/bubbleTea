@@ -34,11 +34,11 @@ let multiButton = document.querySelector('.multi')
 
 // SOUND 
 
-var servSound = new Audio('audio/serv.mp3');
-var toppingSound = new Audio('audio/toppingBubble.mp3');
+var servSound = new Audio('audio/serv2.mp3');
+var toppingSound = new Audio('audio/topping.wav');
 var bubbleSound = new Audio('audio/bubble.mp3');
 var stickSound = new Audio('audio/stick.mp3');
-var strawSound = new Audio('audio/straw2.mp3')
+var trashSound = new Audio('audio/trash.wav')
 // let open = new Audio ('../audio/open.wav');
 
 flavorButton.forEach(flavorButton => {
@@ -133,13 +133,14 @@ multiButton.addEventListener('click', function () {
 
 trash.addEventListener('click', function () {
     window.location.reload();
+    trashSound.play()
 })
 
 // STRAW 
 
 strawButton.forEach(strawButton => {
     strawButton.addEventListener('click', () => {
-        strawSound.play()
+        // strawSound.play()
         straw.classList.add("straw-animation")
         straw.style.background = strawButton.getAttribute("data")
         circleLiquid.style.background = "white"
