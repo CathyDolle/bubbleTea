@@ -53,7 +53,6 @@ a {
         animation-name: window-background;
         animation-duration: 200s;
         animation-iteration-count: infinite;
-        animation-fill-mode: backwards;
         height: 100%;
         width: 200%; }
         .main__left__window__bg img {
@@ -93,8 +92,43 @@ a {
     width: 38%;
     height: 65vh; }
     .main__right__top {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       width: 100%;
       height: 50%; }
+      .main__right__top__clock {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 60px;
+        background: white;
+        border-radius: 5px; }
+        .main__right__top__clock__hour {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          width: 90%;
+          height: 100%; }
+          .main__right__top__clock__hour h3 {
+            margin: 0;
+            font-weight: 200;
+            font-family: 'Fjalla One', sans-serif;
+            color: white;
+            letter-spacing: 6px; }
+        .main__right__top__clock__screen {
+          width: 135px;
+          height: 45px;
+          background: black;
+          border-radius: 3px; }
+      .main__right__top__shelf {
+        width: 350px;
+        height: 10px;
+        background: black; }
     .main__right__bot {
       display: flex;
       justify-content: center;
@@ -109,7 +143,43 @@ a {
         justify-content: flex-end;
         flex-direction: column;
         width: 150px;
-        height: 100%; }
+        height: 70%; }
+        .main__right__bot__player__board {
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          width: 150px;
+          height: 50px; }
+          .main__right__bot__player__board__prev {
+            cursor: pointer;
+            width: 18px;
+            height: 18px; }
+            .main__right__bot__player__board__prev img {
+              height: 100%;
+              width: 100%; }
+          .main__right__bot__player__board__pause {
+            cursor: pointer;
+            position: absolute;
+            width: 18px;
+            height: 18px; }
+            .main__right__bot__player__board__pause img {
+              height: 100%;
+              width: 100%; }
+          .main__right__bot__player__board__play {
+            cursor: pointer;
+            position: absolute;
+            width: 18px;
+            height: 18px; }
+            .main__right__bot__player__board__play img {
+              height: 100%;
+              width: 100%; }
+          .main__right__bot__player__board__next {
+            cursor: pointer;
+            width: 18px;
+            height: 18px; }
+            .main__right__bot__player__board__next img {
+              height: 100%;
+              width: 100%; }
         .main__right__bot__player__box {
           display: flex;
           justify-content: center;
@@ -118,12 +188,13 @@ a {
           height: 150px;
           background: white;
           border-radius: 10px;
-          box-shadow: 10px; }
+          box-shadow: 1px 1px 10px rgba(133, 133, 133, 0.2); }
           .main__right__bot__player__box__disk {
             animation-name: disk-animation;
             animation-duration: 10s;
             animation-iteration-count: infinite;
             animation-timing-function: linear;
+            animation-play-state: paused;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -149,7 +220,7 @@ a {
               border-radius: 90px; }
         .main__right__bot__player__cable {
           width: 5px;
-          height: 150px;
+          height: 100px;
           background: white; }
   .main__machine {
     display: flex;
@@ -532,7 +603,7 @@ a {
       .board__flavor__button:nth-child(3):hover {
         background-color: #d0c0e4; }
       .board__flavor__button:nth-child(4):hover {
-        background-color: #9c846d; }
+        background-color: #503f2f; }
       .board__flavor__button:nth-child(5):hover {
         background-color: #ff9d41; }
       .board__flavor__button:nth-child(6):hover {
@@ -712,10 +783,7 @@ a {
   animation-duration: 6.5s; }
 
 .disk-animation {
-  animation-name: disk-animation;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear; }
+  animation-play-state: running; }
 
 .distrib-topping {
   animation-name: bubble-rain;

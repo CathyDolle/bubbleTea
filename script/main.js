@@ -3,6 +3,12 @@
 const main = document.querySelector('.main')
 
 // BUTTON
+// BUTTON > DISK
+const playButton = document.querySelector('.js-play-button')
+const pauseButton = document.querySelector('.js-pause-button')
+const prevButton = document.querySelector('.js-prev-button')
+const nextButton = document.querySelector('.js-next-button')
+// BUTTON > BOARD
 const sizeButton = document.querySelectorAll('.board__size__button')
 const flavorButton = document.querySelectorAll('.board__flavor__button')
 const toppingButton = document.querySelectorAll('.board__topping__button')
@@ -14,6 +20,9 @@ const cup = document.querySelector('.main__cup')
 const largeSize = document.querySelector('.largeSize')
 const mediumSize = document.querySelector('.mediumSize')
 const smallSize = document.querySelector('.smallSize')
+
+//DISK
+const disk = document.querySelector('.main__right__bot__player__box__disk')
 
 // CUP CONTAIN
 const flavorLiquid = document.querySelector('.main__cup__body__liquid__flavor')
@@ -48,12 +57,15 @@ const multi = document.querySelector('.topping__multi')
 const multiButton = document.querySelector('.multi')
 
 // SOUND 
+//effect
 const servSound = new Audio('audio/serv2.mp3');
 const toppingSound = new Audio('audio/topping.wav');
 const bubbleSound = new Audio('audio/bubble.mp3');
 const stickSound = new Audio('audio/stick.mp3');
 const trashSound = new Audio('audio/trash.wav');
 // let open = new Audio ('../audio/open.wav');
+//disk music
+const earfQuakeSound = new Audio('audio/earfquake.mp3');
 
 // TRASH
 const trash = document.querySelector('.board__footer__trash')
@@ -65,9 +77,9 @@ const trash = document.querySelector('.board__footer__trash')
 sizeButton.forEach(sizeButton => {
     sizeButton.addEventListener('click', () => {
         stickSound.play()
-        setTimeout(() => {
-            boardSize.classList.add('next-board')
-        }, 100);
+        // setTimeout(() => {
+        //     boardSize.classList.add('next-board')
+        // }, 100);
         boardTitle.querySelector('.size').classList.add('hidden')
         boardTitle.querySelector('.label').classList.remove('hidden')
         boardLabel.classList.remove('hidden')
@@ -104,7 +116,7 @@ labelButton.forEach(labelButton => {
     labelButton.addEventListener('click', () => {
         stickSound.play()
         label.style.background = labelButton.getAttribute('data')
-        activeButton = strawButton
+        // activeButton = strawButton
         // boardStraw.classList.remove('hidden')
         setTimeout(() => {
             boardLabel.classList.add('next-board')
@@ -114,6 +126,7 @@ labelButton.forEach(labelButton => {
         boardTitle.querySelector('.flavor').classList.remove('hidden')
         boardFlavor.classList.remove('hidden')
         boardLabel.classList.add('hidden')
+        boardSize.classList.add('hidden')
     })
 })
 
@@ -137,9 +150,12 @@ flavorButton.forEach(flavorButton => {
         boardTitle.querySelector('.topping').classList.remove('hidden')
         boardTitle.querySelector('.flavor').classList.add('hidden')
         boardTitle.querySelector('.straw').classList.add('hidden')
+        boardTitle.querySelector('.label').classList.add('hidden')
         boardFlavor.classList.add('hidden')
         boardTopping.classList.remove('hidden')
         boardStraw.classList.add('hidden')
+        boardLabel.classList.add('hidden')
+        boardSize.classList.add('hidden')
     })
 })
 
@@ -218,9 +234,49 @@ strawButton.forEach(strawButton => {
     })
 })
 
+//DISK MUSIC PLAY
+//play
+playButton.addEventListener('click' , () =>{
+    disk.classList.add('disk-animation')
+    earfQuakeSound.play()
+    pauseButton.classList.remove('hidden')
+    playButton.classList.add('hidden')
+})
+//pause
+pauseButton.addEventListener('click' , () =>{
+    disk.classList.remove('disk-animation')
+    earfQuakeSound.pause()
+    pauseButton.classList.add('hidden')
+    playButton.classList.remove('hidden')
+})
+
 //FOTTER
 //FOOTER > TRASH
-trash.addEventListener('click', function () {
-    window.location.reload();
+trash.addEventListener('click', () => {
     trashSound.play()
+    // window.location.reload();
+    setTimeout(() => {
+        boardSize.classList.remove('next-board')
+        boardLabel.classList.remove('next-board')
+        boardFlavor.classList.remove('next-board')
+        boardTopping.classList.remove('next-board')
+        boardDone.classList.remove('next-board')
+        boardStraw.classList.remove('next-board')
+        distrib.classList.remove('change-distrib')
+        // boardSize.classList.add('next-board')
+        boardFlavor.classList.add('hidden')
+        boardLabel.classList.add('hidden')
+        boardTopping.classList.add('hidden')
+        boardStraw.classList.add('hidden')
+        boardDone.classList.add('hidden')
+        }, 100);
+    cup.classList.add('hidden')
+    distribTopping.classList.add('hidden')
+    boardTitle.querySelector('.size').classList.remove('hidden')
+    boardTitle.querySelector('.topping').classList.add('hidden')
+    boardTitle.querySelector('.flavor').classList.add('hidden')
+    boardTitle.querySelector('.done').classList.add('hidden')
+    boardTitle.querySelector('.label').classList.add('hidden')
+    boardTitle.querySelector('.straw').classList.add('hidden')
+    boardSize.classList.remove('hidden')
 })
