@@ -56,7 +56,7 @@ var trashSound = new Audio('audio/trash.wav');
 
 largeSize.addEventListener('click' , () =>{
     cup.classList.remove('hidden')
-    main.style.setProperty('--height_cup' , "270px")
+    main.style.setProperty('--height_cup' , "220px")
     if (window.innerWidth < 812) {
         main.style.setProperty('--height_cup' , "170px")
     }
@@ -64,7 +64,7 @@ largeSize.addEventListener('click' , () =>{
 
 mediumSize.addEventListener('click' , () =>{
     cup.classList.remove('hidden')
-    main.style.setProperty('--height_cup' , "240px")
+    main.style.setProperty('--height_cup' , "200px")
     if (window.innerWidth < 812) {
         main.style.setProperty('--height_cup' , "150px")
     }
@@ -72,7 +72,7 @@ mediumSize.addEventListener('click' , () =>{
 
 smallSize.addEventListener('click' , () =>{
     cup.classList.remove('hidden')
-    main.style.setProperty('--height_cup' , "210px")
+    main.style.setProperty('--height_cup' , "180px")
     if (window.innerWidth < 812) {
         main.style.setProperty('--height_cup' , "130px")
     }
