@@ -128,6 +128,9 @@ labelButton.forEach(labelButton => {
         boardLabel.classList.add('hidden')
         boardSize.classList.add('hidden')
     })
+    labelButton.addEventListener('mouseover', () => {
+        label.style.background = labelButton.getAttribute('data')
+    })
 })
 
 // BOARD > FLAVOR > BUTTON
@@ -236,14 +239,14 @@ strawButton.forEach(strawButton => {
 
 //DISK MUSIC PLAY
 //play
-playButton.addEventListener('click' , () =>{
+playButton.addEventListener('click', () => {
     disk.classList.add('disk-animation')
     earfQuakeSound.play()
     pauseButton.classList.remove('hidden')
     playButton.classList.add('hidden')
 })
 //pause
-pauseButton.addEventListener('click' , () =>{
+pauseButton.addEventListener('click', () => {
     disk.classList.remove('disk-animation')
     earfQuakeSound.pause()
     pauseButton.classList.add('hidden')
@@ -269,7 +272,7 @@ trash.addEventListener('click', () => {
         boardTopping.classList.add('hidden')
         boardStraw.classList.add('hidden')
         boardDone.classList.add('hidden')
-        }, 100);
+    }, 100);
     cup.classList.add('hidden')
     distribTopping.classList.add('hidden')
     boardTitle.querySelector('.size').classList.remove('hidden')
