@@ -1,13 +1,11 @@
 // COLOR PALETTE
-
+// COLOR PALETTE > INTERFACE
 $backgroud:rgb(231, 218, 218);
 // $board:rgb(182, 162, 162);
 $board:rgb(151, 138, 138);
-$coffee:rgba(156, 132, 109, 1);
 $button:#4e4444;
 
 // COLOR PALETTE > MACHINE
-
 $machine-top:white;
 $machine-middle:#BCB0AF;
 $dark-coffee:#282323;
@@ -44,6 +42,9 @@ $sky : linear-gradient(#c8dcff, #eeeffc);
 $glass : rgba(255, 255, 255, 0.3);
 $glass-reflect : rgba(255, 255, 255, 0.3);
 
+// COLOR PALETTE > DISK
+$album : rgb(144, 127, 130);
+
 body {
     margin: 0;
     width: 100vw;
@@ -53,6 +54,7 @@ body {
 }
 
 // TYPO
+// TYPO > TEXT BUTTON
 h2 {
     letter-spacing: 1px;
     text-transform: uppercase;
@@ -61,6 +63,7 @@ h2 {
     font-size: 10px;
 }
 
+// TYPO > SOCIAL LINK
 a {
     font-weight: 700;
     text-decoration: none;
@@ -76,8 +79,7 @@ a {
     }
 }
 
-//MAIN
-
+//MAIN (TOP SCREEN)
 .main {
     --width_cup: 150px;
     --height_cup: 220px;
@@ -98,7 +100,7 @@ a {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 35%;
+        width: 38%;
         height: 65vh;
 
         // background: red;
@@ -107,15 +109,17 @@ a {
             height: var(--height_window);
             // background: $sky;
             overflow: hidden;
-            &__bg{
+
+            &__bg {
                 animation-name: window-background;
                 animation-duration: 200s;
                 animation-iteration-count: infinite;
                 animation-fill-mode: backwards;
                 height: 100%;
                 width: 200%;
+
                 // background: red;
-                & img{
+                & img {
                     height: 100%;
                 }
             }
@@ -131,37 +135,124 @@ a {
             height: var(--height_window);
             background: $glass;
             border: 10px solid $dark-coffee;
-            &__reflect{
+
+            &__reflect {
                 background: $glass-reflect;
                 height: 100%;
                 width: 100%;
                 clip-path: polygon(56% 0, 81% 0, 0 59%, 0 40%);
             }
-            &__reflect-2{
+
+            &__reflect-2 {
                 position: absolute;
                 background: $glass-reflect;
                 height: 100%;
                 width: 100%;
-                clip-path: polygon(95% 0, 85% 0, 0 62%, 0 69%);      
+                clip-path: polygon(95% 0, 85% 0, 0 62%, 0 69%);
             }
         }
-        &__plant{
+
+        &__plant {
             z-index: 10;
             bottom: -20;
             // width: 70px;
             height: 320px;
             // background:red;
             position: absolute;
-            & img{
+
+            & img {
                 height: 100%;
             }
         }
     }
 
     &__right {
-        width: 35%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 38%;
         height: 65vh;
+
         // background: blue;
+        &__top {
+            width: 100%;
+            height: 50%;
+            // background: blue;
+        }
+
+        &__bot {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            width: 100%;
+            height: 50%;
+
+            // background: yellow;
+            &__player {
+                position: absolute;
+                justify-content: flex-end;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                flex-direction: column;
+                width: 150px;
+                height: 100%;
+
+                // background: rgb(129, 59, 59);
+                &__box {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 150px;
+                    height: 150px;
+                    background: white;
+                    border-radius: 10px;
+                    box-shadow: 10px;
+
+                    &__disk {
+                        animation-name: disk-animation;
+                        animation-duration: 10s;
+                        animation-iteration-count: infinite;
+                        animation-timing-function: linear;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 80%;
+                        height: 80%;
+                        background: black;
+                        border-radius: 90px;
+
+                        &__album {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 30%;
+                            height: 30%;
+                            background: $album;
+                            border-radius: 90px;
+
+                            & img {
+                                height: 70%;
+                            }
+                        }
+
+                        &__hole {
+                            position: absolute;
+                            width: 4px;
+                            height: 4px;
+                            background: white;
+                            border-radius: 90px;
+                        }
+                    }
+                }
+
+                &__cable {
+                    width: 5px;
+                    height: 150px;
+                    background: white;
+                }
+            }
+        }
     }
 
     &__machine {
@@ -980,6 +1071,14 @@ a {
     animation-duration: 6.5s;
 }
 
+//animation for turn the disk
+.disk-animation {
+    animation-name: disk-animation;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
 //topping animation{
 .distrib-topping {
     animation-name: bubble-rain;
@@ -1021,16 +1120,33 @@ a {
 
 //WINDOW BACKGROUND ANIMATION
 
-@keyframes window-background{
-    0%{
+@keyframes window-background {
+    0% {
         transform: translateX(0%);
     }
-    50%{
+
+    50% {
         transform: translateX(-73%);
     }
-    100%{
+
+    100% {
         transform: translateX(0%);
     }
+}
+
+//Disk turn
+@keyframes disk-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+    // 100%{
+    //     transform: rotate(0deg);
+    // }
 }
 
 //Liquid animation inside the cup
@@ -1200,12 +1316,13 @@ a {
 }
 
 // RESPONSIVE 
-@media (max-width:1100px){
-    .main{
-        &__left{
+@media (max-width:1100px) {
+    .main {
+        &__left {
             display: none;
         }
-        &__right{
+
+        &__right {
             display: none;
         }
     }
@@ -1225,18 +1342,18 @@ a {
         --width_machine: 300px;
         --height_machine: 330px;
 
-        &__left{
+        &__left {
             display: none;
         }
 
-        &__right{
+        &__right {
             display: none;
         }
 
         &__cup {
             margin-top: -36px;
 
-            &__top{
+            &__top {
                 height: 8px;
             }
 
@@ -1244,11 +1361,12 @@ a {
                 height: 35px;
             }
 
-            &__body__contain{
+            &__body__contain {
                 width: 25px;
                 height: 25px;
             }
-            &__body__liquid{
+
+            &__body__liquid {
                 bottom: 9px;
             }
         }
@@ -1256,13 +1374,16 @@ a {
         &__machine__middle__distrib {
             width: 60px;
             height: 35px;
-            &__top{
+
+            &__top {
                 height: 12px;
             }
-            &__middle{
+
+            &__middle {
                 height: 10px;
             }
-            &__bot{
+
+            &__bot {
                 width: 12px;
             }
 
@@ -1414,6 +1535,7 @@ a {
     .distrib-animation {
         animation-name: distrib-liquid-resp;
     }
+
     .change-distrib {
         animation-name: change-distrib-resp;
         animation-duration: 1.5s;

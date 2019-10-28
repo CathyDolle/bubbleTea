@@ -43,7 +43,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 35%;
+    width: 38%;
     height: 65vh; }
     .main__left__window {
       width: var(--width_window);
@@ -87,8 +87,70 @@ a {
       .main__left__plant img {
         height: 100%; }
   .main__right {
-    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 38%;
     height: 65vh; }
+    .main__right__top {
+      width: 100%;
+      height: 50%; }
+    .main__right__bot {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      width: 100%;
+      height: 50%; }
+      .main__right__bot__player {
+        position: absolute;
+        justify-content: flex-end;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        flex-direction: column;
+        width: 150px;
+        height: 100%; }
+        .main__right__bot__player__box {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 150px;
+          height: 150px;
+          background: white;
+          border-radius: 10px;
+          box-shadow: 10px; }
+          .main__right__bot__player__box__disk {
+            animation-name: disk-animation;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            height: 80%;
+            background: black;
+            border-radius: 90px; }
+            .main__right__bot__player__box__disk__album {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 30%;
+              height: 30%;
+              background: #907f82;
+              border-radius: 90px; }
+              .main__right__bot__player__box__disk__album img {
+                height: 70%; }
+            .main__right__bot__player__box__disk__hole {
+              position: absolute;
+              width: 4px;
+              height: 4px;
+              background: white;
+              border-radius: 90px; }
+        .main__right__bot__player__cable {
+          width: 5px;
+          height: 150px;
+          background: white; }
   .main__machine {
     display: flex;
     flex-direction: column;
@@ -649,6 +711,12 @@ a {
   animation-name: distrib-liquid;
   animation-duration: 6.5s; }
 
+.disk-animation {
+  animation-name: disk-animation;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; }
+
 .distrib-topping {
   animation-name: bubble-rain;
   animation-iteration-count: 1;
@@ -683,6 +751,11 @@ a {
     transform: translateX(-73%); }
   100% {
     transform: translateX(0%); } }
+@keyframes disk-animation {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
 @keyframes flavor {
   0% {
     transform: translateY(100%);
