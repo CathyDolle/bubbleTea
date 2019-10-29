@@ -309,9 +309,9 @@ const tick = () => {
     const hours = date.getHours()
     const minutes = date.getMinutes()
     document.querySelector("h3.js-clock").innerText = `${hours} : ${minutes}`
-    if(minutes < 10){
+    if (minutes < 10) {
         document.querySelector("h3.js-clock").innerText = `${hours} : 0${minutes}`
-    }else{
+    } else {
         document.querySelector("h3.js-clock").innerText = `${hours} : ${minutes}`
     }
 }
@@ -359,22 +359,29 @@ trash.addEventListener('click', () => {
 
 // NIGHT MODE
 
-nightMode.addEventListener('click' ,() =>{
+nightMode.addEventListener('click', () => {
     main.style.background = "#615F74"
     board.style.background = "#282738"
     dayMode.classList.remove('hidden')
     nightMode.classList.add('hidden')
-    windowBg.src="images/windowNightBg.svg"
+    windowBg.src = "images/windowNightBg.svg"
     machineMiddle.style.background = "#828096"
     machineMiddleBg.style.background = "#282738"
 })
 
-dayMode.addEventListener('click' ,() =>{
+dayMode.addEventListener('click', () => {
     main.style.background = "rgb(231, 218, 218)"
     board.style.background = "rgb(151, 138, 138)"
     dayMode.classList.add('hidden')
     nightMode.classList.remove('hidden')
-    windowBg.src="images/windowDayBg.svg"
+    windowBg.src = "images/windowDayBg.svg"
     machineMiddle.style.background = "#BCB0AF"
     machineMiddleBg.style.background = "rgb(146, 133, 133)"
+})
+
+// DOOR 
+const exit = document.querySelector('.js-exit')
+
+exit.addEventListener('click', () => {
+    stickSound.play()
 })
