@@ -12,7 +12,13 @@
     <g transform="matrix(1, 0, 0, 1, 3764, 8932)" filter="url(#Rectangle_102)">
       <rect id="Rectangle_102-2" data-name="Rectangle 102" width="233" height="234" transform="translate(24 12)" fill="#fff"/>
     </g>
-    <text id="NJS" transform="translate(3844 9083)" font-size="65" font-family="Kato" letter-spacing="0.1em"><tspan x="0" y="0">NJS</tspan></text>
     <rect id="Rectangle_106" data-name="Rectangle 106" width="94" height="24" transform="translate(3858 8932)" fill="#bc92db" opacity="0.278"/>
+    <g id="NJS" transform="translate(3148.886 8305.191)" style="isolation: isolate">
+      <g id="Groupe_1097" data-name="Groupe 1097" style="isolation: isolate">
+        <path id="Tracé_11909" data-name="Tracé 11909" d="M734.773,768.773a9.142,9.142,0,0,1-2.21,6.436q-2.338,2.6-6.889,2.6h-3.835v-7.736H723.2q3.51,0,3.511-3.25V740.044H710.658v37.765h-7.995V740.044h-4.549v-7.865h15.794v-6.37h8.061v6.37h12.8Z"/>
+        <path id="Tracé_11910" data-name="Tracé 11910" d="M765,754.408h-4.811v20.931a18.184,18.184,0,0,1-3.639,10.79,88.724,88.724,0,0,1-7.151,7.67l-4.419-5.07a40.4,40.4,0,0,0,4.94-5.46,12.2,12.2,0,0,0,2.34-6.89l-.066-21.971h-4.875v-7.994h4.745v-6.37h-4.745v-7.865H765v7.865h-5.005v6.37H765Z"/>
+        <path id="Tracé_11911" data-name="Tracé 11911" d="M813.487,740.044H792.622q-3.705,0-5.3,1.4t-1.592,4.973h27.69v12.545q0,9.75-6.955,14.689-6.109,4.357-16.445,4.356-1.753,0-6.044-.13-3.9-.066-6.111-.065v-7.736h9.361q18.262,0,18.329-12.675l-.065-3.054H777.867v-9.62a12.263,12.263,0,0,1,3.705-9.231,12.111,12.111,0,0,1,8.645-3.314h23.27Z"/>
+      </g>
+    </g>
   </g>
 </svg>
