@@ -68,9 +68,9 @@ const trashSound = new Audio('audio/trash.wav');
 //disk music
 // const earfQuakeSound = new Audio('audio/earfquake.mp3');
 const playlist = [
-    new Audio("audio/bossa.mp3"),
-    new Audio("audio/earfquake.mp3"),
     new Audio("audio/softly.mp3"),
+    new Audio("audio/earfquake.mp3"),
+    new Audio("audio/bossa.mp3"),
     new Audio("audio/technicolor.mp3")
 ]
 let playlistStateIndex = 0
@@ -281,17 +281,30 @@ nextButton.addEventListener("click", () => {
 })
 //prev
 prevButton.addEventListener("click", () => {
-    disk.classList.add('disk-animation')
-    pauseButton.classList.remove('hidden')
-    playButton.classList.add('hidden')
+    disk.classList.add("disk-animation")
+    pauseButton.classList.remove("hidden")
+    playButton.classList.add("hidden")
     playlist[playlistStateIndex].currentTime = 0
     playlist[playlistStateIndex].pause()
-    playlistStateIndex = (playlistStateIndex - 1) % playlist.length
+    if(playlistStateIndex === 0){
+        playlistStateIndex = playlist.length - 1
+    }else{
+        playlistStateIndex--
+    }
     playlist[playlistStateIndex].play()
-    // if (playStateIndex === 0) {
-    //     playStateIndex = playlist.length - 1
-    // }
 })
+// prevButton.addEventListener("click", () => {
+//     disk.classList.add('disk-animation')
+//     pauseButton.classList.remove('hidden')
+//     playButton.classList.add('hidden')
+//     playlist[playlistStateIndex].currentTime = 0
+//     playlist[playlistStateIndex].pause()
+//     playlistStateIndex = (playlistStateIndex - 1) % playlist.length
+//     playlist[playlistStateIndex].play()
+//     if (playStateIndex === 0) {
+//         playStateIndex = 3
+//     }
+// })
 //autoplay
 playlist.forEach((sound) => {
     sound.addEventListener("ended", () => {
