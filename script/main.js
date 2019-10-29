@@ -309,6 +309,11 @@ const tick = () => {
     const hours = date.getHours()
     const minutes = date.getMinutes()
     document.querySelector("h3.js-clock").innerText = `${hours} : ${minutes}`
+    if(minutes < 10){
+        document.querySelector("h3.js-clock").innerText = `${hours} : 0${minutes}`
+    }else{
+        document.querySelector("h3.js-clock").innerText = `${hours} : ${minutes}`
+    }
 }
 window.setInterval(tick, 1000)
 

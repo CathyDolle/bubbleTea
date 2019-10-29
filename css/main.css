@@ -98,33 +98,41 @@ a {
       align-items: center;
       width: 100%;
       height: 50%; }
-      .main__right__top__clock {
-        position: relative;
+      .main__right__top__onShelf {
         display: flex;
         justify-content: center;
-        align-items: center;
-        width: 150px;
-        height: 60px;
-        background: white;
-        border-radius: 5px; }
-        .main__right__top__clock__hour {
+        align-items: flex-end; }
+        .main__right__top__onShelf__clock {
+          position: relative;
           display: flex;
-          align-items: center;
           justify-content: center;
-          position: absolute;
-          width: 90%;
-          height: 100%; }
-          .main__right__top__clock__hour h3 {
-            margin: 0;
-            font-weight: 200;
-            font-family: 'Fjalla One', sans-serif;
-            color: white;
-            letter-spacing: 6px; }
-        .main__right__top__clock__screen {
-          width: 135px;
-          height: 45px;
-          background: black;
-          border-radius: 3px; }
+          align-items: center;
+          width: 150px;
+          height: 60px;
+          background: white;
+          border-radius: 5px; }
+          .main__right__top__onShelf__clock__hour {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            width: 90%;
+            height: 100%; }
+            .main__right__top__onShelf__clock__hour h3 {
+              margin: 0;
+              font-weight: 200;
+              font-family: 'Fjalla One', sans-serif;
+              color: white;
+              letter-spacing: 6px; }
+          .main__right__top__onShelf__clock__screen {
+            width: 135px;
+            height: 45px;
+            background: black;
+            border-radius: 3px; }
+        .main__right__top__onShelf__plant {
+          height: 120px; }
+          .main__right__top__onShelf__plant img {
+            height: 100%; }
       .main__right__top__shelf {
         width: 350px;
         height: 10px;
