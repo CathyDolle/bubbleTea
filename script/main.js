@@ -65,7 +65,18 @@ const stickSound = new Audio('audio/stick.mp3');
 const trashSound = new Audio('audio/trash.wav');
 // let open = new Audio ('../audio/open.wav');
 //disk music
-const earfQuakeSound = new Audio('audio/earfquake.mp3');
+// const earfQuakeSound = new Audio('audio/earfquake.mp3');
+const playlist = [
+    new Audio("audio/bossa.mp3"),
+    new Audio("audio/earfquake.mp3"),
+    new Audio("audio/softly.mp3"),
+    new Audio("audio/technicolor.mp3")
+]
+let playlistStateIndex = 0
+
+
+// var song = new Audio()
+// var currentSong = 0;
 
 // TRASH
 const trash = document.querySelector('.board__footer__trash')
@@ -239,18 +250,38 @@ strawButton.forEach(strawButton => {
 
 //DISK MUSIC PLAY
 //play
+
 playButton.addEventListener('click', () => {
     disk.classList.add('disk-animation')
-    earfQuakeSound.play()
+    playlist[playlistStateIndex].play()
     pauseButton.classList.remove('hidden')
     playButton.classList.add('hidden')
 })
 //pause
 pauseButton.addEventListener('click', () => {
     disk.classList.remove('disk-animation')
-    earfQuakeSound.pause()
+    playlist[playlistStateIndex].pause()
     pauseButton.classList.add('hidden')
     playButton.classList.remove('hidden')
+})
+//next
+nextButton.addEventListener("click", () => {
+    playlist[playlistStateIndex].pause()
+    playlistStateIndex =(playlistStateIndex + 1) % playlist.length
+    playlist[playlistStateIndex].play()
+})
+//prev
+prevButton.addEventListener("click", () => {
+    playlist[playlistStateIndex].pause()
+    playlistStateIndex = (playlistStateIndex - 1) % playlist.length
+    playlist[playlistStateIndex].play()
+})
+//autoplay
+playlist.forEach((sound) => {
+    sound.addEventListener("ended", () => {
+        (playlistStateIndex + 1) % playlist.length
+        playlist[playlistStateIndex].play()
+    })
 })
 
 //FOTTER
