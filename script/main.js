@@ -117,7 +117,7 @@ mediumSize.addEventListener('click', () => {
 // BOARD > CUP SIZE > small
 smallSize.addEventListener('click', () => {
     cup.classList.remove('hidden')
-    main.style.setProperty('--height_cup', '180px')
+    main.style.setProperty('--height_cup', '185px')
     if (window.innerWidth < 812) {
         main.style.setProperty('--height_cup', '130px')
     }
