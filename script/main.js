@@ -293,18 +293,6 @@ prevButton.addEventListener("click", () => {
     }
     playlist[playlistStateIndex].play()
 })
-// prevButton.addEventListener("click", () => {
-//     disk.classList.add('disk-animation')
-//     pauseButton.classList.remove('hidden')
-//     playButton.classList.add('hidden')
-//     playlist[playlistStateIndex].currentTime = 0
-//     playlist[playlistStateIndex].pause()
-//     playlistStateIndex = (playlistStateIndex - 1) % playlist.length
-//     playlist[playlistStateIndex].play()
-//     if (playStateIndex === 0) {
-//         playStateIndex = 3
-//     }
-// })
 //autoplay
 playlist.forEach((sound) => {
     sound.addEventListener("ended", () => {
@@ -312,6 +300,15 @@ playlist.forEach((sound) => {
         playlist[playlistStateIndex].play()
     })
 })
+
+// CLOCK
+const tick = () => {
+    const date = new Date()
+    const hours = date.getHours()
+    const minutes = date.getMinutes()
+    document.querySelector("h3.js-clock").innerText = `${hours} : ${minutes}`
+}
+window.setInterval(tick, 1000)
 
 //FOTTER
 //FOOTER > TRASH
