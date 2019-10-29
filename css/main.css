@@ -5,6 +5,11 @@ body {
   overflow-y: hidden;
   overflow-x: hidden; }
 
+@font-face {
+  font-family: 'Kato';
+  src: url("../fonts/Kato.woff2") format("woff2"), url("../fonts/Kato.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
 h2 {
   letter-spacing: 1px;
   text-transform: uppercase;
