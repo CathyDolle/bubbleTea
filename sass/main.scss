@@ -54,14 +54,6 @@ body {
     overflow-x: hidden;
 }
 
-// TYPO
-@font-face {
-    font-family: 'Kato';
-    src: url('../fonts/Kato.woff2') format('woff2'),
-        url('../fonts/Kato.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
 // TYPO > TEXT BUTTON
 h2 {
     letter-spacing: 1px;
@@ -1221,6 +1213,24 @@ a {
         height: 50%;
         margin-bottom: 25px;
         // background: red;
+
+        &__exit {
+            margin: 0px 6px 0px 6px;
+            cursor: pointer;
+            width: 30px;
+            height: 27px;
+            margin-bottom: 5px;
+        }
+
+        & img {
+            width: 100%;
+            height: 100%;
+
+            &:hover {
+                transition: 0.3s;
+                transform: scale(1.1);
+            }
+        }
 
         &__trash {
             margin: 0px 6px 0px 6px;
