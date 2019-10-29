@@ -271,6 +271,9 @@ pauseButton.addEventListener('click', () => {
 })
 //next
 nextButton.addEventListener("click", () => {
+    disk.classList.add('disk-animation')
+    pauseButton.classList.remove('hidden')
+    playButton.classList.add('hidden')
     playlist[playlistStateIndex].currentTime = 0
     playlist[playlistStateIndex].pause()
     playlistStateIndex = (playlistStateIndex + 1) % playlist.length
@@ -278,10 +281,16 @@ nextButton.addEventListener("click", () => {
 })
 //prev
 prevButton.addEventListener("click", () => {
+    disk.classList.add('disk-animation')
+    pauseButton.classList.remove('hidden')
+    playButton.classList.add('hidden')
     playlist[playlistStateIndex].currentTime = 0
     playlist[playlistStateIndex].pause()
     playlistStateIndex = (playlistStateIndex - 1) % playlist.length
     playlist[playlistStateIndex].play()
+    // if (playStateIndex === 0) {
+    //     playStateIndex = playlist.length - 1
+    // }
 })
 //autoplay
 playlist.forEach((sound) => {
