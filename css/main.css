@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  background-image: url("../images/dayBg.svg");
+  background-size: cover; }
+
+.shop-3d {
+  --width: 300px;
+  --height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  perspective: 800px; }
+
+.shop-3d * {
+  transform-style: preserve-3d; }
+
+.shop-3d .face {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  top: calc(var(--width)/-2);
+  left: calc(var(--width)/-2);
+  position: absolute;
+  width: var(--width);
+  height: var(--height);
+  opacity: 0.25;
+  color: white; }
+
+.shop-3d .face-x-pos {
+  transform: rotateY(90deg) translateZ(calc(var(--width)/2)); }
+
+.shop-3d .face-x-neg {
+  background: #41fa5a;
+  transform: rotateY(-90deg) translateZ(calc(var(--width)/2)); }
+
+.shop-3d .face-y-pos {
+  background: #2824ff;
+  transform: rotateX(90deg) translateZ(calc(var(--height)/2)); }
+
+.shop-3d .face-y-neg {
+  background: #fff12e;
+  transform: rotateX(-90deg) translateZ(calc(var(--height)/2)); }
+
+.shop-3d .face-z-pos {
+  background: #ff34b1;
+  transform: rotateY(0deg) translateZ(calc(var(--width)/2)); }
+
+.shop-3d .face-z-neg {
+  background: #52ebff;
+  transform: rotateY(180deg) translateZ(calc(var(--width)/2)); }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    background-image: url("../images/dayBg.svg");
+    background-size: cover;
+}
+
+
+.shop-3d {
+    --width: 300px;
+    --height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    perspective: 800px;
+}
+
+.shop-3d *{
+    transform-style: preserve-3d;
+}
+
+.shop-3d .face {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    top: calc(var(--width)/-2);
+    left: calc(var(--width)/-2);
+    position: absolute;
+    width: var(--width);
+    height: var(--height);
+    opacity: 0.25;
+    color:white;
+}
+
+.shop-3d .face-x-pos {
+    transform: rotateY(90deg) translateZ(calc(var(--width)/2));
+}
+
+.shop-3d .face-x-neg {
+    background: rgb(65, 250, 90);
+    transform: rotateY(-90deg) translateZ(calc(var(--width)/2));
+    // width: calc(var(--width)/-2);
+}
+
+.shop-3d .face-y-pos {
+    background: rgb(40, 36, 255);
+    transform: rotateX(90deg) translateZ(calc(var(--height)/2));
+}
+
+.shop-3d .face-y-neg {
+    background: rgb(255, 241, 46);
+    transform: rotateX(-90deg) translateZ(calc(var(--height)/2));
+}
+
+.shop-3d .face-z-pos {
+    background: rgb(255, 52, 177);
+    transform: rotateY(0deg) translateZ(calc(var(--width)/2));
+}
+
+.shop-3d .face-z-neg {
+    background: rgb(82, 235, 255);
+    transform: rotateY(180deg) translateZ(calc(var(--width)/2));
+}
