@@ -34,6 +34,7 @@ const circleLiquid = document.querySelector('.main__machine__top__circle__liquid
 const straw = document.querySelector('.main__cup__straw')
 
 // BOARD
+const board = document.querySelector('.board')
 const boardTitle = document.querySelector('.board__title')
 const boardSize = document.querySelector('.board__size')
 const boardFlavor = document.querySelector('.board__flavor')
@@ -74,13 +75,14 @@ const playlist = [
     new Audio("audio/technicolor.mp3")
 ]
 let playlistStateIndex = 0
-
-
-// var song = new Audio()
-// var currentSong = 0;
-
 // TRASH
 const trash = document.querySelector('.board__footer__trash')
+// NIGHT MODE
+const nightMode = document.querySelector('.js-night')
+const dayMode = document.querySelector('.js-day')
+const windowBg = document.querySelector('.js-windowBg')
+const machineMiddle = document.querySelector('.js-middle')
+const machineMiddleBg = document.querySelector('.js-middle-bg')
 
 // EVENT LISTENER CLICK
 // BOARD 
@@ -286,9 +288,9 @@ prevButton.addEventListener("click", () => {
     playButton.classList.add("hidden")
     playlist[playlistStateIndex].currentTime = 0
     playlist[playlistStateIndex].pause()
-    if(playlistStateIndex === 0){
+    if (playlistStateIndex === 0) {
         playlistStateIndex = playlist.length - 1
-    }else{
+    } else {
         playlistStateIndex--
     }
     playlist[playlistStateIndex].play()
@@ -296,7 +298,7 @@ prevButton.addEventListener("click", () => {
 //autoplay
 playlist.forEach((sound) => {
     sound.addEventListener("ended", () => {
-        (playlistStateIndex + 1) % playlist.length
+        playlistStateIndex = (playlistStateIndex + 1) % playlist.length
         playlist[playlistStateIndex].play()
     })
 })
@@ -348,4 +350,26 @@ trash.addEventListener('click', () => {
     boardTitle.querySelector('.label').classList.add('hidden')
     boardTitle.querySelector('.straw').classList.add('hidden')
     boardSize.classList.remove('hidden')
+})
+
+// NIGHT MODE
+
+nightMode.addEventListener('click' ,() =>{
+    main.style.background = "#615F74"
+    board.style.background = "#282738"
+    dayMode.classList.remove('hidden')
+    nightMode.classList.add('hidden')
+    windowBg.src="images/windowNightBg.svg"
+    machineMiddle.style.background = "#828096"
+    machineMiddleBg.style.background = "#282738"
+})
+
+dayMode.addEventListener('click' ,() =>{
+    main.style.background = "rgb(231, 218, 218)"
+    board.style.background = "rgb(151, 138, 138)"
+    dayMode.classList.add('hidden')
+    nightMode.classList.remove('hidden')
+    windowBg.src="images/windowDayBg.svg"
+    machineMiddle.style.background = "#BCB0AF"
+    machineMiddleBg.style.background = "rgb(146, 133, 133)"
 })

@@ -113,7 +113,7 @@ a {
 
             &__bg {
                 animation-name: window-background;
-                animation-duration: 200s;
+                animation-duration: 120s;
                 animation-iteration-count: infinite;
                 height: 100%;
                 width: 200%;
@@ -172,6 +172,7 @@ a {
         justify-content: center;
         width: 38%;
         height: 65vh;
+
         // background: blue;
         &__top {
             display: flex;
@@ -180,8 +181,9 @@ a {
             align-items: center;
             width: 100%;
             height: 50%;
+
             // background: blue;
-            &__clock{
+            &__clock {
                 position: relative;
                 display: flex;
                 justify-content: center;
@@ -190,7 +192,8 @@ a {
                 height: 60px;
                 background: white;
                 border-radius: 5px;
-                &__hour{
+
+                &__hour {
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -198,7 +201,8 @@ a {
                     // background: green;
                     width: 90%;
                     height: 100%;
-                    & h3{
+
+                    & h3 {
                         margin: 0;
                         font-weight: 200;
                         font-family: 'Fjalla One', sans-serif;
@@ -206,14 +210,16 @@ a {
                         letter-spacing: 6px;
                     }
                 }
-                &__screen{
+
+                &__screen {
                     width: 135px;
                     height: 45px;
                     background: black;
                     border-radius: 3px;
                 }
             }
-            &__shelf{
+
+            &__shelf {
                 width: 350px;
                 height: 10px;
                 background: black;
@@ -238,56 +244,66 @@ a {
                 flex-direction: column;
                 width: 150px;
                 height: 70%;
-                &__board{
+
+                &__board {
                     display: flex;
                     align-items: center;
                     justify-content: space-around;
                     // background: red;
                     width: 150px;
                     height: 50px;
-                    &__prev{
+
+                    &__prev {
                         cursor: pointer;
                         width: 18px;
                         height: 18px;
+
                         // background: blue;
-                        & img{
+                        & img {
                             height: 100%;
                             width: 100%;
                         }
                     }
-                    &__pause{
+
+                    &__pause {
                         cursor: pointer;
                         position: absolute;
                         width: 18px;
                         height: 18px;
+
                         // background: black;
-                        & img{
+                        & img {
                             height: 100%;
                             width: 100%;
                         }
                     }
-                    &__play{
+
+                    &__play {
                         cursor: pointer;
                         position: absolute;
                         width: 18px;
                         height: 18px;
+
                         // background: yellow;
-                        & img{
+                        & img {
                             height: 100%;
                             width: 100%;
                         }
                     }
-                    &__next{
+
+                    &__next {
                         cursor: pointer;
                         width: 18px;
                         height: 18px;
+
                         // background: pink;
-                        & img{
+                        & img {
                             height: 100%;
                             width: 100%;
                         }
                     }
                 }
+
                 // background: rgb(129, 59, 59);
                 &__box {
                     display: flex;
@@ -312,6 +328,26 @@ a {
                         height: 80%;
                         background: black;
                         border-radius: 90px;
+
+                        &__light,
+                        &__light-alt {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+                            z-index: 5;
+                            border-radius: 50%;
+                            animation: reflection 20s infinite ease-in-out;
+                        }
+
+                        &__light {
+                            background-image: linear-gradient(top, transparent, rgba(255, 255, 255, 0.3), transparent);
+                        }
+
+                        &__light-alt {
+                            background-image: linear-gradient(-160deg, transparent 40%, rgba(255, 255, 255, 0.1) 50%, transparent 60%);
+                        }
 
                         &__album {
                             display: flex;
@@ -1122,11 +1158,31 @@ a {
         width: 100%;
         height: 50%;
         margin-bottom: 25px;
+        // background: red;
 
         &__trash {
+            margin: 0px 6px 0px 6px;
             cursor: pointer;
             width: 30px;
             height: 30px;
+            margin-bottom: 5px;
+        }
+
+        & img {
+            width: 100%;
+            height: 100%;
+
+            &:hover {
+                transition: 0.3s;
+                transform: scale(1.1);
+            }
+        }
+        &__night,
+        &__day {
+            margin: 0px 6px 0px 6px;
+            cursor: pointer;
+            width: 30px;
+            height: 27px;
             margin-bottom: 5px;
         }
 
