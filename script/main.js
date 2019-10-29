@@ -232,7 +232,7 @@ strawButton.forEach(strawButton => {
         stickSound.play()
         // strawSound.play()
         straw.classList.add('straw-animation')
-        // straw.style.background = strawButton.getAttribute('data')
+        straw.style.background = strawButton.getAttribute('data')
         circleLiquid.style.background = 'white'
         setTimeout(() => {
             // distrib.style.width = '0px'
