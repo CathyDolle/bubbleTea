@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="281" height="283" viewBox="0 0 281 283">
+  <defs>
+    <filter id="Rectangle_103" x="0" y="1" width="281" height="282" filterUnits="userSpaceOnUse">
+      <feOffset dy="13" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Groupe_1090" data-name="Groupe 1090" transform="translate(-4119 -9027)">
+    <g id="Groupe_1089" data-name="Groupe 1089" transform="translate(0 117)">
+      <g transform="matrix(1, 0, 0, 1, 4119, 8910)" filter="url(#Rectangle_103)">
+        <rect id="Rectangle_103-2" data-name="Rectangle 103" width="233" height="234" transform="translate(24 12)" fill="#fff"/>
+      </g>
+      <g id="Groupe_1088" data-name="Groupe 1088" transform="translate(4211.184 8964.506)">
+        <g id="Groupe_1032" data-name="Groupe 1032" transform="translate(42.678 125.502)">
+          <g id="Groupe_1031" data-name="Groupe 1031" transform="translate(0)">
+            <g id="Groupe_1030" data-name="Groupe 1030">
+              <g id="Groupe_1027" data-name="Groupe 1027" transform="translate(11.793 6.853)">
+                <path id="Tracé_11869" data-name="Tracé 11869" d="M302.975,859.022l.031,11.074,9.638-5.565-.031-11.074Z" transform="translate(-302.975 -853.457)"/>
+              </g>
+              <g id="Groupe_1028" data-name="Groupe 1028" transform="translate(0 5.565)">
+                <path id="Tracé_11870" data-name="Tracé 11870" d="M372.371,852.609l-11.793-6.853.031,11.074,11.793,6.853Z" transform="translate(-360.578 -845.755)"/>
+              </g>
+              <g id="Groupe_1029" data-name="Groupe 1029">
+                <path id="Tracé_11871" data-name="Tracé 11871" d="M324.594,819.352,312.8,812.5l-9.638,5.564,11.793,6.853Z" transform="translate(-303.163 -812.499)"/>
+              </g>
+            </g>
+          </g>
+        </g>
+        <g id="Groupe_1038" data-name="Groupe 1038" transform="translate(66.759 111.497)">
+          <g id="Groupe_1037" data-name="Groupe 1037" transform="translate(0)">
+            <g id="Groupe_1036" data-name="Groupe 1036">
+              <g id="Groupe_1033" data-name="Groupe 1033" transform="translate(11.793 6.853)">
+                <path id="Tracé_11872" data-name="Tracé 11872" d="M159.056,775.322l.031,11.074,9.638-5.565-.031-11.074Z" transform="translate(-159.056 -769.757)"/>
+              </g>
+              <g id="Groupe_1034" data-name="Groupe 1034" transform="translate(0 5.565)">
+                <path id="Tracé_11873" data-name="Tracé 11873" d="M228.452,768.909l-11.793-6.853.031,11.074,11.793,6.854Z" transform="translate(-216.659 -762.056)"/>
+              </g>
+              <g id="Groupe_1035" data-name="Groupe 1035">
+                <path id="Tracé_11874" data-name="Tracé 11874" d="M180.675,735.652,168.882,728.8l-9.638,5.565,11.793,6.854Z" transform="translate(-159.244 -728.799)"/>
+              </g>
+            </g>
+          </g>
+        </g>
+        <g id="Groupe_1070" data-name="Groupe 1070" transform="translate(0 0)">
+          <g id="Groupe_1069" data-name="Groupe 1069" transform="translate(0)">
+            <g id="Groupe_1042" data-name="Groupe 1042" transform="translate(3.044 59.772)">
+              <g id="Groupe_1039" data-name="Groupe 1039" transform="translate(45.993 26.728)">
+                <path id="Tracé_11875" data-name="Tracé 11875" d="M129.289,604.844l.1,35.978,44.064-25.44-.1-35.977Z" transform="translate(-129.289 -579.404)" fill="#0c0c0c"/>
+              </g>
+              <g id="Groupe_1040" data-name="Groupe 1040" transform="translate(0 25.44)">
+                <path id="Tracé_11876" data-name="Tracé 11876" d="M438.624,598.435l-45.993-26.728.1,35.977,45.993,26.728Z" transform="translate(-392.631 -571.707)" fill="#050505"/>
+              </g>
+              <g id="Groupe_1041" data-name="Groupe 1041" transform="translate(0)">
+                <path id="Tracé_11877" data-name="Tracé 11877" d="M219.955,446.395l-45.993-26.728L129.9,445.107l45.993,26.728Z" transform="translate(-129.899 -419.667)" fill="#030303"/>
+              </g>
+            </g>
+            <g id="Groupe_1064" data-name="Groupe 1064" transform="translate(0.027 9.519)">
+              <g id="Groupe_1043" data-name="Groupe 1043" transform="translate(47.088 11.015)">
+                <path id="Tracé_11878" data-name="Tracé 11878" d="M175.565,211.893l-45.993-26.728.047,16.573,45.993,26.728Z" transform="translate(-129.572 -185.165)" fill="#080808"/>
+              </g>
+              <g id="Groupe_1044" data-name="Groupe 1044" transform="translate(3.073 27.589)">
+                <path id="Tracé_11879" data-name="Tracé 11879" d="M219.628,310.942l-45.993-26.728-44.063,25.439,45.993,26.728Z" transform="translate(-129.572 -284.214)" fill="#050505"/>
+              </g>
+              <g id="Groupe_1045" data-name="Groupe 1045" transform="translate(32.099 28.016)">
+                <path id="Tracé_11880" data-name="Tracé 11880" d="M224.878,313.495l-45.993-26.728-8.148,4.7L216.73,318.2Z" transform="translate(-170.737 -286.767)" fill="#44382f"/>
+              </g>
+              <g id="Groupe_1046" data-name="Groupe 1046" transform="translate(40.221 18.653)">
+                <path id="Tracé_11881" data-name="Tracé 11881" d="M216.73,257.539l-45.993-26.728.027,9.363L216.757,266.9Z" transform="translate(-170.737 -230.811)" fill="#645446"/>
+              </g>
+              <g id="Groupe_1047" data-name="Groupe 1047" transform="translate(32.073 18.653)">
+                <path id="Tracé_11882" data-name="Tracé 11882" d="M225.037,257.54l-45.993-26.728-8.148,4.7,45.993,26.728Z" transform="translate(-170.896 -230.812)"/>
+              </g>
+              <g id="Groupe_1048" data-name="Groupe 1048" transform="translate(78.066 45.381)">
+                <path id="Tracé_11883" data-name="Tracé 11883" d="M170.737,395.253l.027,9.363,8.148-4.7-.027-9.363Z" transform="translate(-170.737 -390.549)"/>
+              </g>
+              <g id="Groupe_1049" data-name="Groupe 1049" transform="translate(32.073 23.357)">
+                <path id="Tracé_11884" data-name="Tracé 11884" d="M265.426,285.654l-45.993-26.728.027,9.363,45.993,26.728Z" transform="translate(-219.433 -258.926)"/>
+              </g>
+              <g id="Groupe_1050" data-name="Groupe 1050" transform="translate(9.634 40.986)">
+                <path id="Tracé_11885" data-name="Tracé 11885" d="M359.141,391.011l-45.993-26.728-8.148,4.7,45.993,26.728Z" transform="translate(-305 -364.284)" fill="#44382f"/>
+              </g>
+              <g id="Groupe_1051" data-name="Groupe 1051" transform="translate(17.755 31.624)">
+                <path id="Tracé_11886" data-name="Tracé 11886" d="M350.993,335.056,305,308.328l.027,9.363,45.993,26.728Z" transform="translate(-305 -308.328)" fill="#645446"/>
+              </g>
+              <g id="Groupe_1052" data-name="Groupe 1052" transform="translate(9.607 31.624)">
+                <path id="Tracé_11887" data-name="Tracé 11887" d="M359.3,335.056l-45.993-26.728-8.148,4.7,45.993,26.728Z" transform="translate(-305.159 -308.328)"/>
+              </g>
+              <g id="Groupe_1053" data-name="Groupe 1053" transform="translate(9.607 36.328)">
+                <path id="Tracé_11888" data-name="Tracé 11888" d="M399.689,363.171,353.7,336.443l.027,9.363,45.993,26.728Z" transform="translate(-353.696 -336.443)"/>
+              </g>
+              <g id="Groupe_1054" data-name="Groupe 1054" transform="translate(3.026 36.455)">
+                <path id="Tracé_11889" data-name="Tracé 11889" d="M438.9,363.93,392.908,337.2l.047,16.573L438.948,380.5Z" transform="translate(-392.908 -337.202)" fill="#645446"/>
+              </g>
+              <g id="Groupe_1055" data-name="Groupe 1055" transform="translate(49.019 37.743)">
+                <path id="Tracé_11890" data-name="Tracé 11890" d="M173.636,344.9l-44.063,25.439.047,16.573,44.063-25.439Zm-14.989,21.7-.027-9.363,8.148-4.7.027,9.363-8.148,4.7m-22.466,12.97-.027-9.362,8.148-4.7.027,9.363-8.148,4.7" transform="translate(-129.573 -344.903)" fill="#cfaa8e"/>
+              </g>
+              <g id="Groupe_1056" data-name="Groupe 1056" transform="translate(3.026 11.015)">
+                <path id="Tracé_11891" data-name="Tracé 11891" d="M219.909,211.894l-45.993-26.728-44.063,25.439,45.993,26.728Z" transform="translate(-129.854 -185.166)" fill="#44382f"/>
+              </g>
+              <g id="Groupe_1057" data-name="Groupe 1057" transform="translate(46.019 35.8)">
+                <path id="Tracé_11892" data-name="Tracé 11892" d="M160.149,372.518l-.111-39.232-50.321,29.053.111,39.232,2.88-1.663,44.064-25.44ZM156.78,335.23l.047,16.573-44.063,25.439-.047-16.573L156.78,335.23" transform="translate(-109.717 -333.286)" fill="#121212"/>
+              </g>
+              <g id="Groupe_1058" data-name="Groupe 1058" transform="translate(55.6 58.351)">
+                <path id="Tracé_11893" data-name="Tracé 11893" d="M313.175,477.428l-8.148,4.7L305,472.77l8.148-4.7Z" transform="translate(-305 -468.066)"/>
+              </g>
+              <g id="Groupe_1059" data-name="Groupe 1059" transform="translate(0.026 9.072)">
+                <path id="Tracé_11894" data-name="Tracé 11894" d="M206.695,200.276,160.7,173.548,110.381,202.6l45.993,26.728Z" transform="translate(-110.381 -173.548)" fill="#050505"/>
+              </g>
+              <g id="Groupe_1060" data-name="Groupe 1060" transform="translate(45.993 26.728)">
+                <path id="Tracé_11895" data-name="Tracé 11895" d="M110.382,308.122l.026,9.072,50.321-29.053-.026-9.072Z" transform="translate(-110.382 -279.07)" fill="#85090e"/>
+              </g>
+              <g id="Groupe_1061" data-name="Groupe 1061" transform="translate(0.026 38.124)">
+                <path id="Tracé_11896" data-name="Tracé 11896" d="M456.446,373.907l-45.993-26.728.111,39.232,45.993,26.728Z" transform="translate(-410.453 -347.179)" fill="#080808"/>
+              </g>
+              <g id="Groupe_1062" data-name="Groupe 1062" transform="translate(0)">
+                <path id="Tracé_11897" data-name="Tracé 11897" d="M206.849,146.06l-45.993-26.728-50.321,29.053,45.993,26.728Z" transform="translate(-110.535 -119.332)" fill="#310600"/>
+              </g>
+              <g id="Groupe_1063" data-name="Groupe 1063" transform="translate(0 29.053)">
+                <path id="Tracé_11898" data-name="Tracé 11898" d="M457.111,319.691l-45.993-26.728.026,9.072,45.993,26.728Z" transform="translate(-411.118 -292.963)" fill="#440900"/>
+              </g>
+            </g>
+            <g id="Groupe_1068" data-name="Groupe 1068">
+              <g id="Groupe_1065" data-name="Groupe 1065" transform="translate(45.993 26.728)">
+                <path id="Tracé_11899" data-name="Tracé 11899" d="M160.856,222.182l-50.321,29.053.027,9.519L160.883,231.7Z" transform="translate(-110.535 -222.182)" fill="#121212"/>
+              </g>
+              <g id="Groupe_1066" data-name="Groupe 1066">
+                <path id="Tracé_11900" data-name="Tracé 11900" d="M207.01,89.172,161.017,62.444,110.7,91.5l45.993,26.728Z" transform="translate(-110.696 -62.444)" fill="#050505"/>
+              </g>
+              <g id="Groupe_1067" data-name="Groupe 1067" transform="translate(0 29.053)">
+                <path id="Tracé_11901" data-name="Tracé 11901" d="M457.264,262.8l-45.993-26.728.027,9.519,45.993,26.728Z" transform="translate(-411.272 -236.075)" fill="#080808"/>
+              </g>
+            </g>
+          </g>
+        </g>
+        <g id="Groupe_1080" data-name="Groupe 1080" transform="translate(14.682 95.386)">
+          <g id="Groupe_1079" data-name="Groupe 1079">
+            <g id="Groupe_1078" data-name="Groupe 1078">
+              <g id="Groupe_1071" data-name="Groupe 1071" transform="translate(10.614 22.888)">
+                <path id="Tracé_11902" data-name="Tracé 11902" d="M499.806,777.589l5.9-3.427.014-4.866-5.9,3.427Z" transform="translate(-499.806 -769.297)" fill="#8e7764"/>
+              </g>
+              <g id="Groupe_1072" data-name="Groupe 1072" transform="translate(0 20.059)">
+                <path id="Tracé_11903" data-name="Tracé 11903" d="M535.057,752.39l-.014,4.994,10.614,6.128.014-4.866v-.128Z" transform="translate(-535.043 -752.39)" fill="#b79880"/>
+              </g>
+              <g id="Groupe_1073" data-name="Groupe 1073" transform="translate(10.627 22.76)">
+                <path id="Tracé_11904" data-name="Tracé 11904" d="M499.8,772.088l5.9-3.427v-.128l-5.9,3.426Z" transform="translate(-499.803 -768.534)" fill="#8e7764"/>
+              </g>
+              <g id="Groupe_1074" data-name="Groupe 1074" transform="translate(0.014 16.632)">
+                <path id="Tracé_11905" data-name="Tracé 11905" d="M510.417,741.466l5.9-3.427L505.7,731.911l-5.9,3.427Z" transform="translate(-499.803 -731.911)" fill="#c7a489"/>
+              </g>
+              <g id="Groupe_1075" data-name="Groupe 1075" transform="translate(10.627 6.128)">
+                <path id="Tracé_11906" data-name="Tracé 11906" d="M499.521,689.319l5.9-3.427.048-16.76-5.9,3.427Z" transform="translate(-499.521 -669.132)" fill="#050505"/>
+              </g>
+              <g id="Groupe_1076" data-name="Groupe 1076" transform="translate(0.014 3.427)">
+                <path id="Tracé_11907" data-name="Tracé 11907" d="M534.809,652.989l-.047,16.632,10.614,6.128v.128l.047-16.76Z" transform="translate(-534.761 -652.989)" fill="#050505"/>
+              </g>
+              <g id="Groupe_1077" data-name="Groupe 1077" transform="translate(0.061)">
+                <path id="Tracé_11908" data-name="Tracé 11908" d="M510.135,642.064l5.9-3.427-10.614-6.128-5.9,3.427Z" transform="translate(-499.521 -632.51)" fill="#050505"/>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <rect id="Rectangle_104" data-name="Rectangle 104" width="94" height="24" transform="translate(4213 9027)" fill="#bc92db" opacity="0.278"/>
+  </g>
+</svg>

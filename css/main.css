@@ -145,14 +145,13 @@ a {
       width: 100%;
       height: 50%; }
       .main__right__bot__player {
-        position: absolute;
         justify-content: flex-end;
         display: flex;
         align-items: center;
         justify-content: flex-end;
         flex-direction: column;
         width: 150px;
-        height: 70%; }
+        height: 120%; }
         .main__right__bot__player__board {
           display: flex;
           align-items: center;
@@ -242,8 +241,32 @@ a {
               border-radius: 90px; }
         .main__right__bot__player__cable {
           width: 5px;
-          height: 100px;
+          height: 30%;
           background: white; }
+      .main__right__bot__poster {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 200px;
+        height: 120%; }
+        .main__right__bot__poster__njs {
+          width: 100px;
+          height: 100px; }
+          .main__right__bot__poster__njs img {
+            width: 100%;
+            transition-duration: 0.4s; }
+            .main__right__bot__poster__njs img:hover {
+              transform: scale(1.03); }
+        .main__right__bot__poster__inP {
+          margin-left: 30%;
+          width: 100px;
+          height: 100px; }
+          .main__right__bot__poster__inP img {
+            width: 100%;
+            transition-duration: 0.4s; }
+            .main__right__bot__poster__inP img:hover {
+              transform: scale(1.03); }
   .main__machine {
     display: flex;
     flex-direction: column;

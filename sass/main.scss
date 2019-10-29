@@ -186,6 +186,7 @@ a {
                 display: flex;
                 justify-content: center;
                 align-items: flex-end;
+
                 &__clock {
                     position: relative;
                     display: flex;
@@ -221,10 +222,12 @@ a {
                         border-radius: 3px;
                     }
                 }
-                &__plant{
+
+                &__plant {
                     height: 120px;
                     width: 60px;
-                    & img{
+
+                    & img {
                         height: 100%;
                     }
                 }
@@ -250,14 +253,14 @@ a {
 
             // background: yellow;
             &__player {
-                position: absolute;
+                // position: absolute;
                 justify-content: flex-end;
                 display: flex;
                 align-items: center;
                 justify-content: flex-end;
                 flex-direction: column;
                 width: 150px;
-                height: 70%;
+                height: 120%;
 
                 &__board {
                     display: flex;
@@ -389,8 +392,44 @@ a {
 
                 &__cable {
                     width: 5px;
-                    height: 100px;
+                    height: 30%;
                     background: white;
+                }
+            }
+
+            &__poster {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 200px;
+                height: 120%;
+
+                // background: red;
+                &__njs {
+                    width: 100px;
+                    height: 100px;
+
+                    & img {
+                        width: 100%;
+                        transition-duration: 0.4s;
+                        &:hover {
+                            transform: scale(1.03);
+                        }
+                    }
+                }
+                &__inP {
+                    margin-left: 30%;
+                    width: 100px;
+                    height: 100px;
+
+                    & img {
+                        width: 100%;
+                        transition-duration: 0.4s;
+                        &:hover {
+                            transform: scale(1.03);
+                        }
+                    }
                 }
             }
         }
