@@ -271,12 +271,14 @@ pauseButton.addEventListener('click', () => {
 })
 //next
 nextButton.addEventListener("click", () => {
+    playlist[playlistStateIndex].currentTime = 0
     playlist[playlistStateIndex].pause()
     playlistStateIndex = (playlistStateIndex + 1) % playlist.length
     playlist[playlistStateIndex].play()
 })
 //prev
 prevButton.addEventListener("click", () => {
+    playlist[playlistStateIndex].currentTime = 0
     playlist[playlistStateIndex].pause()
     playlistStateIndex = (playlistStateIndex - 1) % playlist.length
     playlist[playlistStateIndex].play()
