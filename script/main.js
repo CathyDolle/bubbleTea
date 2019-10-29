@@ -14,6 +14,7 @@ const flavorButton = document.querySelectorAll('.board__flavor__button')
 const toppingButton = document.querySelectorAll('.board__topping__button')
 const strawButton = document.querySelectorAll('.board__straw__button')
 const labelButton = document.querySelectorAll('.board__label__button')
+// let activeButton = 0
 
 // CUP SIZE
 const cup = document.querySelector('.main__cup')
@@ -150,7 +151,7 @@ flavorButton.forEach(flavorButton => {
         servSound.play()
         flavorLiquid.classList.remove('flavor-animation')
         distribLiquid.classList.remove('distrib-animation')
-        flavorButton.style.background = flavorButton.getAttribute('data')
+        // flavorButton.style.background = flavorButton.getAttribute('data')
         circleLiquid.style.background = flavorButton.getAttribute('data')
         flavorLiquid.style.background = flavorButton.getAttribute('data')
         distribLiquid.style.background = flavorButton.getAttribute('data')
@@ -161,6 +162,10 @@ flavorButton.forEach(flavorButton => {
             // distrib.Child(distrib.children).style.background = 'pink'
         }, 100);
         // next 
+        // if (activeButton != 0) {
+        //     activeButton.style.background = "#4e4444"
+        // }
+        // activeButton = flavorButton
         boardTitle.querySelector('.topping').classList.remove('hidden')
         boardTitle.querySelector('.flavor').classList.add('hidden')
         boardTitle.querySelector('.straw').classList.add('hidden')
@@ -182,7 +187,7 @@ toppingButton.forEach(toppingButton => {
         }, 200)
         distribTopping.classList.remove('distrib-topping')
         circleLiquid.style.background = toppingButton.getAttribute('data')
-        toppingButton.style.background = toppingButton.getAttribute('data')
+        // toppingButton.style.background = toppingButton.getAttribute('data')
         setTimeout(() => {
             distrib.classList.add('change-distrib')
             // distrib.style.width = '230px'
@@ -227,7 +232,7 @@ strawButton.forEach(strawButton => {
         stickSound.play()
         // strawSound.play()
         straw.classList.add('straw-animation')
-        straw.style.background = strawButton.getAttribute('data')
+        // straw.style.background = strawButton.getAttribute('data')
         circleLiquid.style.background = 'white'
         setTimeout(() => {
             // distrib.style.width = '0px'
@@ -314,6 +319,7 @@ trash.addEventListener('click', () => {
     distrib.classList.remove('change-distrib')
     // distrib.classList.remove('hidden')
     distribBot.style.width = '20%'
+    // flavorButton.style.background = "#4e4444"
     boardTitle.querySelector('.size').classList.remove('hidden')
     boardTitle.querySelector('.topping').classList.add('hidden')
     boardTitle.querySelector('.flavor').classList.add('hidden')
