@@ -85,6 +85,12 @@ const dayMode = document.querySelector('.js-day')
 const windowBg = document.querySelector('.js-windowBg')
 const machineMiddle = document.querySelector('.js-middle')
 const machineMiddleBg = document.querySelector('.js-middle-bg')
+// WORK
+const work = document.querySelector('.js-work')
+// WORK 3D
+const poster3D = document.querySelector('.js-poster-3D')
+const work3D = document.querySelector('.js-work3D')
+const workClose = document.querySelector('.js-work-close')
 
 // EVENT LISTENER CLICK
 // BOARD 
@@ -383,9 +389,13 @@ dayMode.addEventListener('click', () => {
     machineMiddleBg.style.background = "rgb(146, 133, 133)"
 })
 
-// DOOR 
-const exit = document.querySelector('.js-exit')
+//WORK POSTER
+poster3D.addEventListener('click', () =>{
+    work.classList.remove('hidden')
+    work3D.classList.remove('hidden')
+})
 
-exit.addEventListener('click', () => {
-    stickSound.play()
+workClose.addEventListener('click' , () =>{
+    work.classList.add('hidden')
+    work3D.classList.add('hidden')
 })
