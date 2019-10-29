@@ -360,6 +360,7 @@ trash.addEventListener('click', () => {
 // NIGHT MODE
 
 nightMode.addEventListener('click', () => {
+    stickSound.play()
     main.style.background = "#615F74"
     board.style.background = "#282738"
     dayMode.classList.remove('hidden')
@@ -370,6 +371,7 @@ nightMode.addEventListener('click', () => {
 })
 
 dayMode.addEventListener('click', () => {
+    stickSound.play()
     main.style.background = "rgb(231, 218, 218)"
     board.style.background = "rgb(151, 138, 138)"
     dayMode.classList.add('hidden')
