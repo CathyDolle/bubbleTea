@@ -272,7 +272,7 @@ pauseButton.addEventListener('click', () => {
 //next
 nextButton.addEventListener("click", () => {
     playlist[playlistStateIndex].pause()
-    playlistStateIndex =(playlistStateIndex + 1) % playlist.length
+    playlistStateIndex = (playlistStateIndex + 1) % playlist.length
     playlist[playlistStateIndex].play()
 })
 //prev
@@ -294,6 +294,9 @@ playlist.forEach((sound) => {
 trash.addEventListener('click', () => {
     trashSound.play()
     // window.location.reload();
+    tapioca.classList.add('hidden')
+    jelly.classList.add('hidden')
+    multi.classList.add('hidden')
     setTimeout(() => {
         boardSize.classList.remove('next-board')
         boardLabel.classList.remove('next-board')
@@ -306,9 +309,6 @@ trash.addEventListener('click', () => {
         flavorLiquid.classList.remove('flavor-animation')
         straw.style.background = ('transparent')
         label.style.background = ('transparent')
-        tapioca.classList.add('hidden')
-        jelly.classList.add('hidden')
-        multi.classList.add('hidden')
         boardFlavor.classList.add('hidden')
         boardLabel.classList.add('hidden')
         boardTopping.classList.add('hidden')
