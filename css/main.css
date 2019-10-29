@@ -130,7 +130,8 @@ a {
             background: black;
             border-radius: 3px; }
         .main__right__top__onShelf__plant {
-          height: 120px; }
+          height: 120px;
+          width: 60px; }
           .main__right__top__onShelf__plant img {
             height: 100%; }
       .main__right__top__shelf {
