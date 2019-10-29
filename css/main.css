@@ -9,7 +9,7 @@ h2 {
   letter-spacing: 1px;
   text-transform: uppercase;
   font-family: 'Fjalla One', sans-serif;
-  color: white;
+  color: #dfdbdb;
   font-size: 10px; }
 
 a {
@@ -18,7 +18,7 @@ a {
   letter-spacing: 1px;
   text-transform: uppercase;
   font-family: 'Fjalla One', sans-serif;
-  color: #4e4444;
+  color: white;
   font-size: 12px; }
   a:hover {
     cursor: pointer;
@@ -244,11 +244,12 @@ a {
           height: 30%;
           background: white; }
       .main__right__bot__poster {
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 200px;
+        width: 250px;
         height: 120%; }
         .main__right__bot__poster__njs {
           width: 100px;
@@ -260,14 +261,27 @@ a {
             .main__right__bot__poster__njs img:hover {
               transform: scale(1.03); }
         .main__right__bot__poster__inP {
-          margin-left: 30%;
+          margin-top: 10%;
+          margin-left: 20%;
           width: 100px;
-          height: 100px; }
+          height: 100px;
+          z-index: 10; }
           .main__right__bot__poster__inP img {
             width: 100%;
             height: 100%;
             transition-duration: 0.4s; }
             .main__right__bot__poster__inP img:hover {
+              transform: scale(1.03); }
+        .main__right__bot__poster__3D {
+          position: absolute;
+          right: 0;
+          width: 100px;
+          height: 100px; }
+          .main__right__bot__poster__3D img {
+            width: 100%;
+            height: 100%;
+            transition-duration: 0.4s; }
+            .main__right__bot__poster__3D img:hover {
               transform: scale(1.03); }
   .main__machine {
     display: flex;
