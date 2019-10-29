@@ -230,8 +230,8 @@ strawButton.forEach(strawButton => {
         straw.style.background = strawButton.getAttribute('data')
         circleLiquid.style.background = 'white'
         setTimeout(() => {
-            distrib.style.width = '0px'
-            distribBot.style.width = '0px'
+            // distrib.style.width = '0px'
+            // distribBot.style.width = '0px'
             boardStraw.classList.add('next-board')
         }, 100);
         activeButton = strawButton
@@ -298,6 +298,12 @@ trash.addEventListener('click', () => {
         boardStraw.classList.remove('next-board')
         distrib.classList.remove('change-distrib')
         // boardSize.classList.add('next-board')
+        flavorLiquid.classList.remove('flavor-animation')
+        straw.style.background = ('transparent')
+        label.style.background = ('transparent')
+        tapioca.classList.add('hidden')
+        jelly.classList.add('hidden')
+        multi.classList.add('hidden')
         boardFlavor.classList.add('hidden')
         boardLabel.classList.add('hidden')
         boardTopping.classList.add('hidden')
@@ -305,7 +311,9 @@ trash.addEventListener('click', () => {
         boardDone.classList.add('hidden')
     }, 100);
     cup.classList.add('hidden')
-    distribTopping.classList.add('hidden')
+    distrib.classList.remove('change-distrib')
+    // distrib.classList.remove('hidden')
+    distribBot.style.width = '20%'
     boardTitle.querySelector('.size').classList.remove('hidden')
     boardTitle.querySelector('.topping').classList.add('hidden')
     boardTitle.querySelector('.flavor').classList.add('hidden')
