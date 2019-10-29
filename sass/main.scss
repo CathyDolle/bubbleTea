@@ -1,17 +1,17 @@
 // COLOR PALETTE
 // COLOR PALETTE > INTERFACE
-$backgroud:rgb(231, 218, 218);
+$backgroud:#615F74;
 // $board:rgb(182, 162, 162);
-$board:rgb(151, 138, 138);
+$board:#282738;
 $button:#4e4444;
 
 // COLOR PALETTE > MACHINE
 $machine-top:white;
-$machine-middle:#BCB0AF;
+$machine-middle:#828096;
 $dark-coffee:#282323;
 $machine-bot:white;
 $machine-button:#282323;
-$darkcoffee:rgb(146, 133, 133);
+$darkcoffee:#282738;
 
 // COLOR PALETTE > CUP
 $cup:rgba(255, 255, 255, 0.2);
@@ -834,7 +834,7 @@ a {
 
 // WORK :D
 .work {
-    background: rgba(128, 119, 246, 0.342);
+    background: rgba(141, 133, 252, 0.247);
     z-index: 100;
     transform: translateY(-100%);
     position: absolute;

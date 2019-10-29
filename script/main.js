@@ -322,6 +322,11 @@ const tick = () => {
     } else {
         document.querySelector("h3.js-clock").innerText = `${hours} : ${minutes}`
     }
+    if (hours < 10) {
+        document.querySelector("h3.js-clock").innerText = `0${hours} : ${minutes}`
+    } else {
+        document.querySelector("h3.js-clock").innerText = `${hours} : ${minutes}`
+    }
 }
 window.setInterval(tick, 1000)
 
@@ -391,11 +396,13 @@ dayMode.addEventListener('click', () => {
 
 //WORK POSTER
 poster3D.addEventListener('click', () =>{
+    stickSound.play()
     work.classList.remove('hidden')
     work3D.classList.remove('hidden')
 })
 
 workClose.addEventListener('click' , () =>{
+    stickSound.play()
     work.classList.add('hidden')
     work3D.classList.add('hidden')
 })

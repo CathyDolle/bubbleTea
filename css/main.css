@@ -32,7 +32,7 @@ a {
   --width_window: 350px;
   --height_window: 450px;
   position: relative;
-  background: #e7dada;
+  background: #615F74;
   display: flex;
   justify-content: center;
   align-items: flex-end;
@@ -321,14 +321,14 @@ a {
         left: 7%;
         height: 9%;
         width: 2%;
-        background: #BCB0AF; }
+        background: #828096; }
       .main__machine__top__square-2 {
         position: absolute;
         top: 57%;
         left: 16%;
         height: 9%;
         width: 2%;
-        background: #BCB0AF; }
+        background: #828096; }
       .main__machine__top__circle {
         display: flex;
         justify-content: center;
@@ -349,7 +349,7 @@ a {
       align-items: flex-end;
       width: 90%;
       height: 70%;
-      background: #BCB0AF; }
+      background: #828096; }
       .main__machine__middle__liquid {
         width: 10px;
         top: 40px;
@@ -460,7 +460,7 @@ a {
       .main__machine__middle__bg {
         width: 90%;
         height: 80%;
-        background: #928585;
+        background: #282738;
         border-radius: 20px 20px 0px 0px; }
     .main__machine__support {
       width: 95%;
@@ -548,7 +548,7 @@ a {
       right: 25%; }
 
 .work {
-  background: rgba(128, 119, 246, 0.342);
+  background: rgba(141, 133, 252, 0.247);
   z-index: 100;
   transform: translateY(-100%);
   position: absolute;
@@ -626,7 +626,7 @@ a {
   position: relative;
   width: 100vw;
   height: 35vh;
-  background: #978a8a; }
+  background: #282738; }
   .board__title {
     display: flex;
     justify-content: center;
