@@ -1467,7 +1467,7 @@ a {
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        width: 100%;
+        width: 600px;
         height: 53%;
 
         &__text {
@@ -2062,12 +2062,12 @@ a {
 
     .board__done {
         &__text {
-            width: 90%;
+            width: 600px;
             height: 70%;
 
             & p {
                 font-size: 10px;
-                line-height: 14px;
+                line-height: 24px;
             }
         }
 

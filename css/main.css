@@ -994,7 +994,7 @@ a {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 600px;
     height: 53%; }
     .board__done__text {
       font-weight: 100;
@@ -1322,11 +1322,11 @@ a {
       height: 20px; }
 
   .board__done__text {
-    width: 90%;
+    width: 600px;
     height: 70%; }
     .board__done__text p {
       font-size: 10px;
-      line-height: 14px; }
+      line-height: 24px; }
   .board__done__social a {
     margin: 0px 5px 0px 5px; }
 
