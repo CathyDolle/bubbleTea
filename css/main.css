@@ -994,7 +994,7 @@ a {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    width: 600px;
+    width: 100%;
     height: 53%; }
     .board__done__text {
       font-weight: 100;
@@ -1003,7 +1003,7 @@ a {
       display: flex;
       text-align: center;
       align-items: center;
-      width: 42%;
+      width: 600px;
       height: 50%; }
       .board__done__text p {
         color: white;

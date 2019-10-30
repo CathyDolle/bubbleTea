@@ -1467,7 +1467,7 @@ a {
         justify-content: center;
         flex-direction: column;
         align-items: center;
-        width: 600px;
+        width: 100%;
         height: 53%;
 
         &__text {
@@ -1478,7 +1478,7 @@ a {
             text-align: center;
             align-items: center;
             // background: red;
-            width: 42%;
+            width: 600px;
             height: 50%;
 
             & p {
