@@ -150,7 +150,7 @@ a {
         align-items: center;
         justify-content: flex-end;
         flex-direction: column;
-        width: 200px;
+        width: 210px;
         height: 350px; }
         .main__right__bot__player__board {
           display: flex;
@@ -697,6 +697,24 @@ a {
       .work__myLogo__close img {
         width: 100%;
         height: 100%; }
+  .work__recipe {
+    position: relative;
+    width: 550px;
+    height: 700px;
+    background: white; }
+    .work__recipe img {
+      width: 100%;
+      height: 100%; }
+    .work__recipe__close {
+      cursor: pointer;
+      top: 20px;
+      right: 20px;
+      position: absolute;
+      height: 30px;
+      width: 30px; }
+      .work__recipe__close img {
+        width: 100%;
+        height: 100%; }
 
 .board {
   display: flex;
@@ -748,7 +766,7 @@ a {
         font-family: 'Fjalla One', sans-serif; }
     .board__welcome__button {
       cursor: pointer;
-      width: 130px;
+      width: 125px;
       height: 40px;
       display: flex;
       justify-content: center;

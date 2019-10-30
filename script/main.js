@@ -96,6 +96,9 @@ const work3DClose = document.querySelector('.js-work-3D-close')
 const posterLogo = document.querySelector('.js-poster-logo')
 const workLogo = document.querySelector('.js-work-logo')
 const workLogoClose = document.querySelector('.js-work-logo-close')
+const posterRecipe = document.querySelector('.js-poster-recipe')
+const workRecipe = document.querySelector('.js-work-recipe')
+const workRecipeClose = document.querySelector('.js-work-recipe-close')
 
 // EVENT LISTENER CLICK
 // BOARD 
@@ -422,16 +425,24 @@ posterLogo.addEventListener('click', () =>{
     workLogo.classList.remove('hidden')
 })
 
+posterRecipe.addEventListener('click', () =>{
+    stickSound.play()
+    work.classList.remove('hidden')
+    workRecipe.classList.remove('hidden')
+})
+
 //CLOSE WINDOW 
 
 work3DClose.addEventListener('click' , quit)
 workLogoClose.addEventListener('click' , quit)
+workRecipeClose.addEventListener('click' , quit)
 
 function quit(){
     stickSound.play()
     work.classList.add('hidden')
     workLogo.classList.add('hidden')
     work3D.classList.add('hidden')
+    workRecipe.classList.add('hidden')
 }
 
 document.addEventListener('keyup', event => {
