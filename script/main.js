@@ -187,11 +187,6 @@ flavorButton.forEach(flavorButton => {
             boardFlavor.classList.add('next-board')
             // distrib.Child(distrib.children).style.background = 'pink'
         }, 100);
-        // next 
-        // if (activeButton != 0) {
-        //     activeButton.style.background = "#4e4444"
-        // }
-        // activeButton = flavorButton
         boardTitle.querySelector('.topping').classList.remove('hidden')
         boardTitle.querySelector('.flavor').classList.add('hidden')
         boardTitle.querySelector('.straw').classList.add('hidden')
@@ -423,14 +418,20 @@ posterLogo.addEventListener('click', () =>{
     workLogo.classList.remove('hidden')
 })
 
-work3DClose.addEventListener('click' , () =>{
-    stickSound.play()
-    work.classList.add('hidden')
-    work3D.classList.add('hidden')
-})
+//CLOSE WINDOW 
 
-workLogoClose.addEventListener('click' , () =>{
+work3DClose.addEventListener('click' , quit)
+workLogoClose.addEventListener('click' , quit)
+
+function quit(){
     stickSound.play()
     work.classList.add('hidden')
     workLogo.classList.add('hidden')
+    work3D.classList.add('hidden')
+}
+
+document.addEventListener('keyup', event => {
+    if (event.key == 'Escape') {
+        quit()
+    }
 })

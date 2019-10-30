@@ -80,8 +80,8 @@ a {
         clip-path: polygon(95% 0, 85% 0, 0 62%, 0 69%); }
     .main__left__plant {
       z-index: 10;
-      bottom: -20;
-      height: 320px;
+      bottom: 0;
+      height: 300px;
       position: absolute; }
       .main__left__plant img {
         height: 100%; }
@@ -702,10 +702,11 @@ a {
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #7a8bac; }
+      background: #95aad4; }
       .board__welcome__button:hover {
         background: #a7b8db; }
       .board__welcome__button h2 {
+        color: white;
         font-size: 15px;
         letter-spacing: 4px; }
   .board__size {
@@ -794,13 +795,13 @@ a {
         cursor: pointer;
         transform: scale(1.08); }
       .board__flavor__button:nth-child(1):hover {
-        background-color: #8fad75; }
+        background-color: #a2ce7c; }
       .board__flavor__button:nth-child(2):hover {
         background-color: #90a1da; }
       .board__flavor__button:nth-child(3):hover {
         background-color: #d0c0e4; }
       .board__flavor__button:nth-child(4):hover {
-        background-color: #503f2f; }
+        background-color: #eeeeee; }
       .board__flavor__button:nth-child(5):hover {
         background-color: #ff9d41; }
       .board__flavor__button:nth-child(6):hover {
