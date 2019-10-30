@@ -43,7 +43,7 @@ $glass : rgba(255, 255, 255, 0.3);
 $glass-reflect : rgba(255, 255, 255, 0.3);
 
 // COLOR PALETTE > DISK
-$album : rgb(144, 127, 130);
+$album : rgb(140, 130, 185);
 $shadow : rgba(133, 133, 133, 0.2);
 
 body {
@@ -834,7 +834,7 @@ a {
 
 // WORK :D
 .work {
-    background: rgba(141, 133, 252, 0.247);
+    background: rgba(0, 0, 0, 0.7);
     z-index: 100;
     transform: translateY(-100%);
     position: absolute;
@@ -878,6 +878,7 @@ a {
                 animation-name: cube-animation;
                 animation-duration: 30s;
                 animation-iteration-count: infinite;
+                animation-timing-function: linear;
 
                 &__face {
                     display: flex;
@@ -890,7 +891,7 @@ a {
                     width: var(--size);
                     height: var(--size);
                     color: white;
-                    opacity: 0.8;
+                    opacity: 0.9;
 
                     &-x-pos {
                         background-image: url("../images/x-pos.svg");

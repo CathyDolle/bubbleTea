@@ -2,12 +2,12 @@
   <defs>
     <linearGradient id="linear-gradient" x1="0.442" y1="1.089" x2="0.558" y2="-0.089" gradientUnits="objectBoundingBox">
       <stop offset="0" stop-color="#0b1267"/>
-      <stop offset="0" stop-color="#8383b7"/>
-      <stop offset="0.414" stop-color="#150b40"/>
+      <stop offset="0" stop-color="#5e47a8"/>
+      <stop offset="0.414" stop-color="#0f0633"/>
       <stop offset="1"/>
     </linearGradient>
   </defs>
-  <g id="Groupe_225" data-name="Groupe 225" transform="translate(-2760.15 -7916)">
+  <g id="Groupe_110" data-name="Groupe 110" transform="translate(-2760.15 -7916)">
     <g id="Groupe_109" data-name="Groupe 109" transform="translate(2760.15 7916)">
       <g id="_15" data-name="15">
         <g id="Layer_11">

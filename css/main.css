@@ -229,7 +229,7 @@ a {
               align-items: center;
               width: 30%;
               height: 30%;
-              background: #907f82;
+              background: #8c82b9;
               border-radius: 90px; }
               .main__right__bot__player__box__disk__album img {
                 height: 70%; }
@@ -548,7 +548,7 @@ a {
       right: 25%; }
 
 .work {
-  background: rgba(141, 133, 252, 0.247);
+  background: rgba(0, 0, 0, 0.7);
   z-index: 100;
   transform: translateY(-100%);
   position: absolute;
@@ -583,7 +583,8 @@ a {
       .work__3D__cube-3d__y-axis {
         animation-name: cube-animation;
         animation-duration: 30s;
-        animation-iteration-count: infinite; }
+        animation-iteration-count: infinite;
+        animation-timing-function: linear; }
         .work__3D__cube-3d__y-axis__face {
           display: flex;
           justify-content: center;
@@ -595,7 +596,7 @@ a {
           width: var(--size);
           height: var(--size);
           color: white;
-          opacity: 0.8; }
+          opacity: 0.9; }
           .work__3D__cube-3d__y-axis__face-x-pos {
             background-image: url("../images/x-pos.svg");
             background-size: cover;
