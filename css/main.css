@@ -809,7 +809,7 @@ a {
       margin: 0px 18px 0px 18px;
       width: 75px;
       height: 75px;
-      background-color: #4e4444;
+      background-color: #1f1f1f;
       border-radius: 90px;
       transition: 0.3s; }
       .board__flavor__button h2 {
@@ -854,7 +854,7 @@ a {
       margin: 0px 18px 0px 18px;
       width: 70px;
       height: 85px;
-      background-color: #4e4444;
+      background-color: #1f1f1f;
       border-radius: 0 15px 0 15px;
       transition: 0.3s; }
       .board__topping__button h2 {
