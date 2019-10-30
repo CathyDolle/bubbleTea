@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="281" height="288.392" viewBox="0 0 281 288.392">
+  <defs>
+    <filter id="Rectangle_103" x="0" y="6.392" width="281" height="282" filterUnits="userSpaceOnUse">
+      <feOffset dy="13" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Groupe_1095" data-name="Groupe 1095" transform="translate(-4578 -8926.608)">
+    <g id="Groupe_1091" data-name="Groupe 1091" transform="translate(459 -95)">
+      <g id="Groupe_1089" data-name="Groupe 1089" transform="translate(0 117)">
+        <g transform="matrix(1, 0, 0, 1, 4119, 8904.61)" filter="url(#Rectangle_103)">
+          <rect id="Rectangle_103-2" data-name="Rectangle 103" width="233" height="234" transform="translate(24 17.39)" fill="#fff"/>
+        </g>
+      </g>
+      <rect id="Rectangle_104" data-name="Rectangle 104" width="94" height="24" transform="matrix(0.788, 0.616, -0.616, 0.788, 4323.352, 9021.608)" fill="#92aedb" opacity="0.278"/>
+      <rect id="Rectangle_105" data-name="Rectangle 105" width="94" height="24" transform="matrix(0.788, 0.616, -0.616, 0.788, 4134.352, 9216.608)" fill="#92aedb" opacity="0.278"/>
+    </g>
+    <g id="Groupe_1158" data-name="Groupe 1158" transform="translate(4470.407 8838.002)">
+      <g id="Groupe_2982" data-name="Groupe 2982" transform="translate(193.662 152.543)">
+        <path id="Tracé_121" data-name="Tracé 121" d="M4025.623-2036.091l-61.961,36.343v71.64l61.961,36v-23.764l-43.208-22.733v-50.254l43.208-22.962Z" transform="translate(-3963.662 2036.091)"/>
+        <path id="Tracé_143" data-name="Tracé 143" d="M16035.54,5805.6l27.454,11.067v49.786l-27.454,10.573Z" transform="translate(-15956.007 -5769.198)"/>
+      </g>
+    </g>
+  </g>
+</svg>

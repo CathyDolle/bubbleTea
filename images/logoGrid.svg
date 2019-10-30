@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="500" viewBox="0 0 500 500">
+  <defs>
+    <clipPath id="clip-iPad_1">
+      <rect width="500" height="500"/>
+    </clipPath>
+  </defs>
+  <g id="iPad_1" data-name="iPad – 1" clip-path="url(#clip-iPad_1)">
+    <g id="Groupe_2985" data-name="Groupe 2985" transform="translate(-8834 -10950)">
+      <g id="Groupe_2984" data-name="Groupe 2984" transform="translate(8834.225 10949.899)">
+        <path id="Tracé_12142" data-name="Tracé 12142" d="M4301.007-1732.752v-303.315l132.127,76.208v151.9Z" transform="translate(-4049.034 2129.104)" fill="none" opacity="0.738"/>
+        <path id="Tracé_12143" data-name="Tracé 12143" d="M4094.193-2036.091l-130.531,76.563v150.922l130.531,75.839v-50.062l-91.025-47.891v-105.868l91.025-48.374Z" transform="translate(-3841.957 2129.119)" fill="#ada6e2"/>
+        <path id="Tracé_12144" data-name="Tracé 12144" d="M4301.007-1732.752v-303.315l132.127,76.208v151.9Z" transform="translate(-4049.034 2129.104)" fill="none"/>
+        <path id="Tracé_12145" data-name="Tracé 12145" d="M16035.539,5805.6l57.84,23.313v104.884l-57.84,22.274Z" transform="translate(-15746.282 -5635.889)" fill="#ada6e2"/>
+      </g>
+      <text id="CATHY_DOLLE" data-name="CATHY 
+DOLLE" transform="translate(8834.05 11395)" fill="#ada6e2" font-size="20" font-family="Lato-Bold, Lato" font-weight="700"><tspan x="0" y="0">C</tspan><tspan y="0" fill="#fff">ATHY </tspan><tspan x="0" y="29">D</tspan><tspan y="29" fill="#fff">OLLE</tspan></text>
+      <text id="negative_space" data-name="negative space" transform="translate(8881.05 11447)" fill="#fff" font-size="15" font-family="Lato-Light, Lato" font-weight="300"><tspan x="-46.774" y="0">negative space</tspan></text>
+    </g>
+  </g>
+</svg>

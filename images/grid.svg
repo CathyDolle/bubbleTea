@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="500" viewBox="0 0 500 500">
+  <defs>
+    <clipPath id="clip-iPad_2">
+      <rect width="500" height="500"/>
+    </clipPath>
+  </defs>
+  <g id="iPad_2" data-name="iPad – 2" clip-path="url(#clip-iPad_2)">
+    <g id="Groupe_2985" data-name="Groupe 2985" transform="translate(-8834 -10950)">
+      <g id="Groupe_2984" data-name="Groupe 2984" transform="translate(8834.225 10949.899)">
+        <path id="Tracé_12142" data-name="Tracé 12142" d="M4301.007-1732.752v-303.315l132.127,76.208v151.9Z" transform="translate(-4049.034 2129.104)" fill="none" opacity="0.738"/>
+        <path id="Tracé_12144" data-name="Tracé 12144" d="M4301.007-1732.752v-303.315l132.127,76.208v151.9Z" transform="translate(-4049.034 2129.104)" fill="none"/>
+        <g id="Groupe_2986" data-name="Groupe 2986" transform="translate(0 0)">
+          <line id="Ligne_2" data-name="Ligne 2" x2="499.776" transform="translate(0 169.658)" fill="none" stroke="#c3c3c3" stroke-width="1"/>
+          <line id="Ligne_3" data-name="Ligne 3" x2="499.776" transform="translate(0 192.654)" fill="none" stroke="#c3c3c3" stroke-width="1"/>
+          <line id="Ligne_4" data-name="Ligne 4" x2="499.776" transform="translate(0 297.923)" fill="none" stroke="#c3c3c3" stroke-width="1"/>
+          <line id="Ligne_5" data-name="Ligne 5" x2="499.776" transform="translate(0 320.409)" fill="none" stroke="#c3c3c3" stroke-width="1"/>
+          <line id="Ligne_6" data-name="Ligne 6" y2="500.798" transform="translate(251.932)" fill="none" stroke="#c3c3c3" stroke-width="1"/>
+          <line id="Ligne_7" data-name="Ligne 7" y2="500.798" transform="translate(121.623)" fill="none" stroke="#c3c3c3" stroke-width="1"/>
+          <line id="Ligne_8" data-name="Ligne 8" y2="500.798" transform="translate(383.774)" fill="none" stroke="#c3c3c3" stroke-width="1"/>
+          <line id="Ligne_9" data-name="Ligne 9" y2="500.798" transform="translate(346.982)" fill="none" stroke="#c3c3c3" stroke-width="1"/>
+          <line id="Ligne_10" data-name="Ligne 10" y2="500.798" transform="translate(289.237)" fill="none" stroke="#c3c3c3" stroke-width="1"/>
+          <line id="Ligne_11" data-name="Ligne 11" y2="500.798" transform="translate(161.481)" fill="none" stroke="#c3c3c3" stroke-width="1"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

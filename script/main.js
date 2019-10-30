@@ -92,13 +92,17 @@ const work = document.querySelector('.js-work')
 // WORK 3D
 const poster3D = document.querySelector('.js-poster-3D')
 const work3D = document.querySelector('.js-work3D')
-const workClose = document.querySelector('.js-work-close')
+const work3DClose = document.querySelector('.js-work-3D-close')
+const posterLogo = document.querySelector('.js-poster-logo')
+const workLogo = document.querySelector('.js-work-logo')
+const workLogoClose = document.querySelector('.js-work-logo-close')
 
 // EVENT LISTENER CLICK
 // BOARD 
 // BOARD > WELCOME BUTTON
 welcomeButton.forEach(welcomeButton => {
     welcomeButton.addEventListener('click', () => {
+        trash.classList.remove('hidden')
         stickSound.play()
         boardTitle.querySelector('.welcome').classList.add('hidden')
         boardTitle.querySelector('.size').classList.remove('hidden')
@@ -360,26 +364,26 @@ trash.addEventListener('click', () => {
         flavorLiquid.classList.remove('flavor-animation')
         straw.style.background = ('transparent')
         label.style.background = ('transparent')
-        boardWelcome.classList.remove('hidden')
+        boardWelcome.classList.add('hidden')
         boardFlavor.classList.add('hidden')
         boardLabel.classList.add('hidden')
         boardTopping.classList.add('hidden')
         boardStraw.classList.add('hidden')
         boardDone.classList.add('hidden')
-        boardSize.classList.add('hidden')
+        boardSize.classList.remove('hidden')
     }, 100);
     cup.classList.add('hidden')
     distrib.classList.remove('change-distrib')
     // distrib.classList.remove('hidden')
     distribBot.style.width = '20%'
     // flavorButton.style.background = "#4e4444"
-    boardTitle.querySelector('.welcome').classList.remove('hidden')
+    boardTitle.querySelector('.welcome').classList.add('hidden')
     boardTitle.querySelector('.topping').classList.add('hidden')
     boardTitle.querySelector('.flavor').classList.add('hidden')
     boardTitle.querySelector('.done').classList.add('hidden')
     boardTitle.querySelector('.label').classList.add('hidden')
     boardTitle.querySelector('.straw').classList.add('hidden')
-    boardTitle.querySelector('.size').classList.add('hidden')
+    boardTitle.querySelector('.size').classList.remove('hidden')
 })
 
 // NIGHT MODE
@@ -413,8 +417,20 @@ poster3D.addEventListener('click', () =>{
     work3D.classList.remove('hidden')
 })
 
-workClose.addEventListener('click' , () =>{
+posterLogo.addEventListener('click', () =>{
+    stickSound.play()
+    work.classList.remove('hidden')
+    workLogo.classList.remove('hidden')
+})
+
+work3DClose.addEventListener('click' , () =>{
     stickSound.play()
     work.classList.add('hidden')
     work3D.classList.add('hidden')
+})
+
+workLogoClose.addEventListener('click' , () =>{
+    stickSound.play()
+    work.classList.add('hidden')
+    workLogo.classList.add('hidden')
 })

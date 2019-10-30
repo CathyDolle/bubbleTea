@@ -548,7 +548,7 @@ a {
       right: 25%; }
 
 .work {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
   z-index: 100;
   transform: translateY(-100%);
   position: absolute;
@@ -619,6 +619,33 @@ a {
             background-image: url("../images/z-neg.svg");
             background-size: cover;
             transform: rotateY(180deg) translateZ(calc(var(--size)/2)); }
+  .work__myLogo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 500px; }
+    .work__myLogo__logo {
+      width: 80%;
+      height: 80%; }
+    .work__myLogo__grid {
+      animation-name: board-title;
+      animation-duration: 5s;
+      animation-iteration-count: 1;
+      position: absolute;
+      width: 80%;
+      height: 80%; }
+    .work__myLogo__close {
+      cursor: pointer;
+      top: 20px;
+      right: 20px;
+      position: absolute;
+      height: 30px;
+      width: 30px; }
+      .work__myLogo__close img {
+        width: 100%;
+        height: 100%; }
 
 .board {
   display: flex;
@@ -676,13 +703,15 @@ a {
       justify-content: center;
       align-items: center;
       background: #7a8bac; }
+      .board__welcome__button:hover {
+        background: #a7b8db; }
       .board__welcome__button h2 {
         font-size: 15px;
         letter-spacing: 4px; }
   .board__size {
     position: absolute;
     animation-name: board-button;
-    animation-duration: 2s;
+    animation-duration: 1.5s;
     animation-iteration-count: 1;
     display: flex;
     justify-content: center;
@@ -736,7 +765,7 @@ a {
   .board__flavor {
     position: absolute;
     animation-name: board-button;
-    animation-duration: 3s;
+    animation-duration: 1.5s;
     animation-iteration-count: 1;
     display: flex;
     justify-content: center;
@@ -781,7 +810,7 @@ a {
   .board__topping {
     position: absolute;
     animation-name: board-button;
-    animation-duration: 3s;
+    animation-duration: 1.5s;
     animation-iteration-count: 1;
     display: flex;
     justify-content: center;
@@ -818,7 +847,7 @@ a {
   .board__straw {
     position: absolute;
     animation-name: board-button;
-    animation-duration: 3s;
+    animation-duration: 1.5s;
     animation-iteration-count: 1;
     display: flex;
     justify-content: center;
@@ -857,7 +886,7 @@ a {
   .board__label {
     position: absolute;
     animation-name: board-button;
-    animation-duration: 3s;
+    animation-duration: 1.5s;
     animation-iteration-count: 1;
     display: flex;
     justify-content: center;
@@ -995,7 +1024,7 @@ a {
 
 .next-board {
   animation-name: next-board;
-  animation-duration: 3s;
+  animation-duration: 1.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards; }
 
