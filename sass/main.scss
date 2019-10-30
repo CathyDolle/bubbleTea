@@ -503,7 +503,6 @@ a {
                     position: absolute;
                     right: 75px;
                     bottom: 80px;
-
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -890,7 +889,7 @@ a {
 
 // WORK :D
 .work {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.85);
     z-index: 100;
     transform: translateY(-100%);
     position: absolute;
@@ -1032,7 +1031,7 @@ a {
         position: relative;
         width: 550px;
         height: 700px;
-        background: white;
+        // background: white;
 
         & img {
             width: 100%;
@@ -1041,8 +1040,8 @@ a {
 
         &__close {
             cursor: pointer;
-            top: 20px;
-            right: 20px;
+            top: 0px;
+            right: 0px;
             position: absolute;
             height: 30px;
             width: 30px;
