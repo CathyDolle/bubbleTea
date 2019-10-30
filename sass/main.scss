@@ -1055,8 +1055,8 @@ a {
             display: flex;
             align-items: center;
             // background: red;
-            width: 42%;
-            height: 50%;
+            width: 600px;
+            height: 65%;
 
             & p {
                 text-align: center;
@@ -1476,8 +1476,8 @@ a {
         &__trash {
             margin: 0px 6px 0px 6px;
             cursor: pointer;
-            width: 30px;
-            height: 30px;
+            width: 26px;
+            height: 26px;
             margin-bottom: 5px;
         }
 
@@ -1659,7 +1659,7 @@ a {
 
     80% {
         bottom: calc(--var(height_cup) - 10%);
-        opacity: 0.5;
+        opacity: 0.3;
     }
 
     95% {

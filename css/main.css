@@ -718,8 +718,8 @@ a {
       line-height: 23px;
       display: flex;
       align-items: center;
-      width: 42%;
-      height: 50%; }
+      width: 600px;
+      height: 65%; }
       .board__welcome__text p {
         text-align: center;
         color: white;
@@ -999,8 +999,8 @@ a {
     .board__footer__trash {
       margin: 0px 6px 0px 6px;
       cursor: pointer;
-      width: 30px;
-      height: 30px;
+      width: 26px;
+      height: 26px;
       margin-bottom: 5px; }
     .board__footer img {
       width: 100%;
@@ -1103,7 +1103,7 @@ a {
     top: 40px; }
   80% {
     bottom: calc(--var(height_cup) - 10%);
-    opacity: 0.5; }
+    opacity: 0.3; }
   95% {
     height: 35%;
     opacity: 0; }

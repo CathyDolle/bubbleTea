@@ -102,7 +102,6 @@ const workLogoClose = document.querySelector('.js-work-logo-close')
 // BOARD > WELCOME BUTTON
 welcomeButton.forEach(welcomeButton => {
     welcomeButton.addEventListener('click', () => {
-        trash.classList.remove('hidden')
         stickSound.play()
         boardTitle.querySelector('.welcome').classList.add('hidden')
         boardTitle.querySelector('.size').classList.remove('hidden')
@@ -115,6 +114,7 @@ welcomeButton.forEach(welcomeButton => {
 sizeButton.forEach(sizeButton => {
     sizeButton.addEventListener('click', () => {
         stickSound.play()
+        trash.classList.remove('hidden')
         setTimeout(() => {
             boardSize.classList.add('next-board')
         }, 100);
@@ -342,7 +342,7 @@ window.setInterval(tick, 1000)
 //FOTTER
 //FOOTER > TRASH
 trash.addEventListener('click', () => {
-    trashSound.play()
+    stickSound.play()
     // window.location.reload();
     tapioca.classList.add('hidden')
     jelly.classList.add('hidden')
@@ -383,18 +383,10 @@ trash.addEventListener('click', () => {
 
 // NIGHT MODE
 
-nightMode.addEventListener('click', () => {
-    stickSound.play()
-    main.style.background = "#615F74"
-    board.style.background = "#282738"
-    dayMode.classList.remove('hidden')
-    nightMode.classList.add('hidden')
-    windowBg.src = "images/windowNightBg.svg"
-    machineMiddle.style.background = "#828096"
-    machineMiddleBg.style.background = "#282738"
-})
+nightMode.addEventListener('click', night)
+dayMode.addEventListener('click', day)
 
-dayMode.addEventListener('click', () => {
+function day(){
     stickSound.play()
     main.style.background = "rgb(231, 218, 218)"
     board.style.background = "rgb(151, 138, 138)"
@@ -403,7 +395,19 @@ dayMode.addEventListener('click', () => {
     windowBg.src = "images/windowDayBg.svg"
     machineMiddle.style.background = "#BCB0AF"
     machineMiddleBg.style.background = "rgb(146, 133, 133)"
-})
+}
+
+function night(){
+    stickSound.play()
+    main.style.background = "#615F74"
+    board.style.background = "#282738"
+    dayMode.classList.remove('hidden')
+    nightMode.classList.add('hidden')
+    windowBg.src = "images/windowNightBg.svg"
+    machineMiddle.style.background = "#828096"
+    machineMiddleBg.style.background = "#282738"
+}
+
 
 //WORK POSTER
 poster3D.addEventListener('click', () =>{
