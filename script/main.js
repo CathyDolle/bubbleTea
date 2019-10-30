@@ -322,11 +322,11 @@ const tick = () => {
     } else {
         document.querySelector("h3.js-clock").innerText = `${hours} : ${minutes}`
     }
-    if (hours < 10) {
-        document.querySelector("h3.js-clock").innerText = `0${hours} : ${minutes}`
-    } else {
-        document.querySelector("h3.js-clock").innerText = `${hours} : ${minutes}`
-    }
+    // if (hours < 10) {
+    //     document.querySelector("h3.js-clock").innerText = `0${hours} : ${minutes}`
+    // } else {
+    //     document.querySelector("h3.js-clock").innerText = `${hours} : ${minutes}`
+    // }
 }
 window.setInterval(tick, 1000)
 
