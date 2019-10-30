@@ -257,8 +257,8 @@ a {
                 align-items: center;
                 justify-content: flex-end;
                 flex-direction: column;
-                width: 150px;
-                height: 120%;
+                width: 200px;
+                height: 350px;
 
                 &__board {
                     display: flex;
@@ -396,16 +396,21 @@ a {
             }
 
             &__poster {
+                padding: 5px;
                 position: relative;
                 display: flex;
+                flex-wrap: wrap;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                width: 250px;
-                height: 120%;
+                width: 300px;
+                height: 340px;
 
                 // background: red;
                 &__njs {
+                    top: 40px;
+                    left: 40px;
+                    position: absolute;
                     width: 100px;
                     height: 100px;
 
@@ -421,11 +426,13 @@ a {
                 }
 
                 &__inP {
-                    margin-top: 2%;
-                    margin-left: 20%;
+                    position: absolute;
+                    // margin-top: 2%;
+                    top: 100px;
+                   left: 90px;
                     width: 100px;
                     height: 100px;
-                    z-index: 4;
+                    z-index: 10;
 
                     & img {
                         width: 100%;
@@ -440,8 +447,8 @@ a {
 
                 &__3D {
                     position: absolute;
-                    right: 0;
-                    top: 20%;
+                    right: 45px;
+                    top: 65px;
                     width: 100px;
                     height: 100px;
                     z-index: 3;
@@ -458,16 +465,16 @@ a {
                 }
 
                 &__text {
+                    position: absolute;
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     position: relative;
-                    margin-top: -10%;
-                    margin-left: -15%;
-                    right: 0;
+                    top: 90px;
+                    right: 40px;
                     width: 100px;
                     height: 100px;
-                    z-index: 10;
+                    z-index: 12;
 
                     & img {
                         width: 100%;
@@ -489,6 +496,29 @@ a {
                         margin: 0;
                         color: black;
                         font-family: 'Source Code Pro', monospace;
+                    }
+                }
+
+                &__recipe {
+                    position:absolute;
+                    right: 75px;
+                    bottom: 80px;
+                
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100px;
+                    height: 100px;
+                    z-index: 11;
+                    
+                    & img {
+                        width: 100%;
+                        height: 100%;
+                        transition-duration: 0.4s;
+
+                        &:hover {
+                            transform: scale(1.03);
+                        }
                     }
                 }
             }

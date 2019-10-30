@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="281" height="291.869" viewBox="0 0 281 291.869">
+  <defs>
+    <filter id="Rectangle_103" x="0" y="9.869" width="281" height="282" filterUnits="userSpaceOnUse">
+      <feOffset dy="13" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Groupe_2995" data-name="Groupe 2995" transform="translate(-4578 -8923.131)">
+    <g id="Groupe_1091" data-name="Groupe 1091" transform="translate(459 -95)">
+      <g id="Groupe_1089" data-name="Groupe 1089" transform="translate(0 117)">
+        <g transform="matrix(1, 0, 0, 1, 4119, 8901.13)" filter="url(#Rectangle_103)">
+          <rect id="Rectangle_103-2" data-name="Rectangle 103" width="233" height="234" transform="translate(24 20.87)" fill="#fff"/>
+        </g>
+      </g>
+      <rect id="Rectangle_104" data-name="Rectangle 104" width="94" height="24" transform="translate(4123.242 9074.701) rotate(-37)" fill="#ed0fff" opacity="0.278"/>
+    </g>
+    <text id="In_progress_" data-name="In progress…" transform="translate(4632 9064)" fill="rgba(255,255,255,0.87)" font-size="24" font-family="SourceCodePro-Regular, Source Code Pro"><tspan x="0" y="0">In progress…</tspan></text>
+  </g>
+</svg>

@@ -150,8 +150,8 @@ a {
         align-items: center;
         justify-content: flex-end;
         flex-direction: column;
-        width: 150px;
-        height: 120%; }
+        width: 200px;
+        height: 350px; }
         .main__right__bot__player__board {
           display: flex;
           align-items: center;
@@ -244,14 +244,19 @@ a {
           height: 30%;
           background: white; }
       .main__right__bot__poster {
+        padding: 5px;
         position: relative;
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 250px;
-        height: 120%; }
+        width: 300px;
+        height: 340px; }
         .main__right__bot__poster__njs {
+          top: 40px;
+          left: 40px;
+          position: absolute;
           width: 100px;
           height: 100px; }
           .main__right__bot__poster__njs img {
@@ -261,11 +266,12 @@ a {
             .main__right__bot__poster__njs img:hover {
               transform: scale(1.03); }
         .main__right__bot__poster__inP {
-          margin-top: 2%;
-          margin-left: 20%;
+          position: absolute;
+          top: 100px;
+          left: 90px;
           width: 100px;
           height: 100px;
-          z-index: 4; }
+          z-index: 10; }
           .main__right__bot__poster__inP img {
             width: 100%;
             height: 100%;
@@ -274,8 +280,8 @@ a {
               transform: scale(1.03); }
         .main__right__bot__poster__3D {
           position: absolute;
-          right: 0;
-          top: 20%;
+          right: 45px;
+          top: 65px;
           width: 100px;
           height: 100px;
           z-index: 3; }
@@ -286,16 +292,16 @@ a {
             .main__right__bot__poster__3D img:hover {
               transform: scale(1.03); }
         .main__right__bot__poster__text {
+          position: absolute;
           display: flex;
           justify-content: center;
           align-items: center;
           position: relative;
-          margin-top: -10%;
-          margin-left: -15%;
-          right: 0;
+          top: 90px;
+          right: 40px;
           width: 100px;
           height: 100px;
-          z-index: 10; }
+          z-index: 12; }
           .main__right__bot__poster__text img {
             width: 100%;
             height: 100%;
@@ -312,6 +318,22 @@ a {
             margin: 0;
             color: black;
             font-family: 'Source Code Pro', monospace; }
+        .main__right__bot__poster__recipe {
+          position: absolute;
+          right: 75px;
+          bottom: 80px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100px;
+          height: 100px;
+          z-index: 11; }
+          .main__right__bot__poster__recipe img {
+            width: 100%;
+            height: 100%;
+            transition-duration: 0.4s; }
+            .main__right__bot__poster__recipe img:hover {
+              transform: scale(1.03); }
   .main__machine {
     display: flex;
     flex-direction: column;
