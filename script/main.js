@@ -9,6 +9,7 @@ const pauseButton = document.querySelector('.js-pause-button')
 const prevButton = document.querySelector('.js-prev-button')
 const nextButton = document.querySelector('.js-next-button')
 // BUTTON > BOARD
+const welcomeButton = document.querySelectorAll('.board__welcome__button')
 const sizeButton = document.querySelectorAll('.board__size__button')
 const flavorButton = document.querySelectorAll('.board__flavor__button')
 const toppingButton = document.querySelectorAll('.board__topping__button')
@@ -36,6 +37,7 @@ const straw = document.querySelector('.main__cup__straw')
 // BOARD
 const board = document.querySelector('.board')
 const boardTitle = document.querySelector('.board__title')
+const boardWelcome = document.querySelector('.board__welcome')
 const boardSize = document.querySelector('.board__size')
 const boardFlavor = document.querySelector('.board__flavor')
 const boardTopping = document.querySelector('.board__topping')
@@ -94,18 +96,28 @@ const workClose = document.querySelector('.js-work-close')
 
 // EVENT LISTENER CLICK
 // BOARD 
+// BOARD > WELCOME BUTTON
+welcomeButton.forEach(welcomeButton => {
+    welcomeButton.addEventListener('click', () => {
+        stickSound.play()
+        boardTitle.querySelector('.welcome').classList.add('hidden')
+        boardTitle.querySelector('.size').classList.remove('hidden')
+        boardSize.classList.remove('hidden')
+        boardWelcome.classList.add('hidden')
+    })
+})
 // BOARD > CUP SIZE
 // BOARD > CUP SIZE > Button
 sizeButton.forEach(sizeButton => {
     sizeButton.addEventListener('click', () => {
         stickSound.play()
-        // setTimeout(() => {
-        //     boardSize.classList.add('next-board')
-        // }, 100);
+        setTimeout(() => {
+            boardSize.classList.add('next-board')
+        }, 100);
         boardTitle.querySelector('.size').classList.add('hidden')
         boardTitle.querySelector('.label').classList.remove('hidden')
         boardLabel.classList.remove('hidden')
-        boardSize.classList.add('hidden')
+        // boardSize.classList.add('hidden')
     })
 })
 // BOARD > CUP SIZE > large
@@ -147,8 +159,8 @@ labelButton.forEach(labelButton => {
         boardTitle.querySelector('.straw').classList.add('hidden')
         boardTitle.querySelector('.flavor').classList.remove('hidden')
         boardFlavor.classList.remove('hidden')
-        boardLabel.classList.add('hidden')
         boardSize.classList.add('hidden')
+        // boardLabel.classList.add('hidden')
     })
     labelButton.addEventListener('mouseover', () => {
         label.style.background = labelButton.getAttribute('data')
@@ -180,11 +192,11 @@ flavorButton.forEach(flavorButton => {
         boardTitle.querySelector('.flavor').classList.add('hidden')
         boardTitle.querySelector('.straw').classList.add('hidden')
         boardTitle.querySelector('.label').classList.add('hidden')
-        boardFlavor.classList.add('hidden')
         boardTopping.classList.remove('hidden')
         boardStraw.classList.add('hidden')
         boardLabel.classList.add('hidden')
         boardSize.classList.add('hidden')
+        // boardFlavor.classList.add('hidden')
     })
 })
 
@@ -211,8 +223,8 @@ toppingButton.forEach(toppingButton => {
         boardTitle.querySelector('.topping').classList.add('hidden')
         boardStraw.classList.remove('hidden')
         boardFlavor.classList.add('hidden')
-        boardTopping.classList.add('hidden')
         boardSize.classList.add('hidden')
+        // boardTopping.classList.add('hidden')
     })
 })
 
@@ -316,17 +328,15 @@ const tick = () => {
     const date = new Date()
     const hours = date.getHours()
     const minutes = date.getMinutes()
-    document.querySelector("h3.js-clock").innerText = `${hours} : ${minutes}`
-    if (minutes < 10) {
+    if(minutes < 10 && hours < 10){
+        document.querySelector("h3.js-clock").innerText = `0${hours} : 0${minutes}`
+    }else if(minutes < 10 && hours > 10){
         document.querySelector("h3.js-clock").innerText = `${hours} : 0${minutes}`
-    } else {
+    }else if(minutes > 10 && hours < 10){
+        document.querySelector("h3.js-clock").innerText = `0${hours} : ${minutes}`
+    }else{
         document.querySelector("h3.js-clock").innerText = `${hours} : ${minutes}`
     }
-    // if (hours < 10) {
-    //     document.querySelector("h3.js-clock").innerText = `0${hours} : ${minutes}`
-    // } else {
-    //     document.querySelector("h3.js-clock").innerText = `${hours} : ${minutes}`
-    // }
 }
 window.setInterval(tick, 1000)
 
@@ -350,24 +360,26 @@ trash.addEventListener('click', () => {
         flavorLiquid.classList.remove('flavor-animation')
         straw.style.background = ('transparent')
         label.style.background = ('transparent')
+        boardWelcome.classList.remove('hidden')
         boardFlavor.classList.add('hidden')
         boardLabel.classList.add('hidden')
         boardTopping.classList.add('hidden')
         boardStraw.classList.add('hidden')
         boardDone.classList.add('hidden')
+        boardSize.classList.add('hidden')
     }, 100);
     cup.classList.add('hidden')
     distrib.classList.remove('change-distrib')
     // distrib.classList.remove('hidden')
     distribBot.style.width = '20%'
     // flavorButton.style.background = "#4e4444"
-    boardTitle.querySelector('.size').classList.remove('hidden')
+    boardTitle.querySelector('.welcome').classList.remove('hidden')
     boardTitle.querySelector('.topping').classList.add('hidden')
     boardTitle.querySelector('.flavor').classList.add('hidden')
     boardTitle.querySelector('.done').classList.add('hidden')
     boardTitle.querySelector('.label').classList.add('hidden')
     boardTitle.querySelector('.straw').classList.add('hidden')
-    boardSize.classList.remove('hidden')
+    boardTitle.querySelector('.size').classList.add('hidden')
 })
 
 // NIGHT MODE

@@ -645,9 +645,43 @@ a {
       text-transform: uppercase;
       color: white;
       margin: 0; }
-  .board__size {
+  .board__welcome {
     position: absolute;
     animation-name: board-title;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 53%; }
+    .board__welcome__text {
+      font-weight: 100;
+      letter-spacing: 1px;
+      line-height: 23px;
+      display: flex;
+      align-items: center;
+      width: 42%;
+      height: 50%; }
+      .board__welcome__text p {
+        text-align: center;
+        color: white;
+        font-family: 'Fjalla One', sans-serif; }
+    .board__welcome__button {
+      cursor: pointer;
+      width: 130px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #7a8bac; }
+      .board__welcome__button h2 {
+        font-size: 15px;
+        letter-spacing: 4px; }
+  .board__size {
+    position: absolute;
+    animation-name: board-button;
     animation-duration: 2s;
     animation-iteration-count: 1;
     display: flex;
@@ -1124,6 +1158,16 @@ a {
   .board {
     display: flex; }
 
+  .board__welcome__text {
+    width: 90%; }
+    .board__welcome__text p {
+      font-size: 12px;
+      line-height: 15px; }
+  .board__welcome__button {
+    margin-top: 4px;
+    width: 100px;
+    height: 35px; }
+
   .board__size__button {
     height: 80px;
     width: 40px; }
@@ -1141,7 +1185,8 @@ a {
       height: 40px; }
 
   .board__title {
-    margin-top: 25px; }
+    margin-top: 25px;
+    height: 28%; }
     .board__title h1 {
       font-size: 12px; }
 
@@ -1174,6 +1219,9 @@ a {
     .board__footer__trash {
       width: 20px;
       height: 20px; }
+    .board__footer__night {
+      width: 20px;
+      height: 20px; }
 
   .board__done__text {
     width: 90%;
@@ -1183,6 +1231,10 @@ a {
       line-height: 14px; }
   .board__done__social a {
     margin: 0px 5px 0px 5px; }
+
+  img.js-day {
+    width: 20px;
+    height: 20px; }
 
   .distrib-topping {
     animation-name: bubble-rain-resp; }

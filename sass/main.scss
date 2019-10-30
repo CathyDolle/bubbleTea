@@ -586,16 +586,6 @@ a {
                     z-index: 10;
                 }
 
-                // DISTRIB LIQUID
-
-                // &__liquid {
-                //     background : red;
-                //     height : 100%;
-                //     width: 10px;
-                //     top: 55px;
-                //     position: absolute;
-                // }
-
                 // DISTRIB BUBBLE
 
                 &__topping {
@@ -850,14 +840,16 @@ a {
         height: 550px;
         // background: rgba(255, 255, 255, 1);
         border-radius: 30px;
-        &__close{
+
+        &__close {
             cursor: pointer;
             top: 20px;
             right: 20px;
             position: absolute;
             height: 30px;
             width: 30px;
-            & img{
+
+            & img {
                 width: 100%;
                 height: 100%;
             }
@@ -969,9 +961,55 @@ a {
         }
     }
 
-    &__size {
+    &__welcome {
         position: absolute;
         animation-name: board-title;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 53%;
+
+        &__text {
+            font-weight: 100;
+            letter-spacing: 1px;
+            line-height: 23px;
+            display: flex;
+            align-items: center;
+            // background: red;
+            width: 42%;
+            height: 50%;
+
+            & p {
+                text-align: center;
+                color: white;
+                font-family: 'Fjalla One', sans-serif;
+            }
+        }
+
+        &__button {
+            cursor: pointer;
+            width: 130px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: rgb(122, 139, 172);
+
+            // background: black;
+            & h2 {
+                font-size: 15px;
+                letter-spacing: 4px;
+            }
+        }
+    }
+
+    &__size {
+        position: absolute;
+        animation-name: board-button;
         animation-duration: 2s;
         animation-iteration-count: 1;
         display: flex;
@@ -1782,6 +1820,22 @@ a {
         // background: black;
     }
 
+    .board__welcome {
+        &__text {
+            width: 90%;
+
+            & p {
+                font-size: 12px;
+                line-height: 15px;
+            }
+        }
+        &__button{
+            margin-top: 4px;
+            width: 100px;
+            height: 35px;
+        }
+    }
+
     .board__size__button {
         height: 80px;
         width: 40px;
@@ -1816,6 +1870,7 @@ a {
     .board__title {
         // background: blue;
         margin-top: 25px;
+        height: 28%;
 
         & h1 {
             font-size: 12px;
@@ -1862,6 +1917,11 @@ a {
             width: 20px;
             height: 20px;
         }
+
+        &__night {
+            width: 20px;
+            height: 20px;
+        }
     }
 
     .board__done {
@@ -1880,6 +1940,11 @@ a {
                 margin: 0px 5px 0px 5px;
             }
         }
+    }
+
+    img.js-day {
+        width: 20px;
+        height: 20px;
     }
 
     // ANIMATION
