@@ -71,11 +71,11 @@ const trashSound = new Audio('audio/trash.wav');
 //disk music
 // const earfQuakeSound = new Audio('audio/earfquake.mp3');
 const playlist = [
-    new Audio("audio/lanterns.mp3"),
+    new Audio("audio/bossa.mp3"),
     new Audio("audio/dreams.mp3"),
     new Audio("audio/softly.mp3"),
     new Audio("audio/earfquake.mp3"),
-    new Audio("audio/bossa.mp3"),
+    new Audio("audio/lanterns.mp3"),
     new Audio("audio/technicolor.mp3")
 ]
 let playlistStateIndex = 0
