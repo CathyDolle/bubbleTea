@@ -892,7 +892,7 @@ a:hover {
   line-height: 23px;
   display: flex;
   align-items: center;
-  width: 600px;
+  width: 650px;
   height: 65%;
 }
 .board__welcome__text p {
@@ -1249,7 +1249,7 @@ a:hover {
   text-align: center;
   align-items: center;
   width: 600px;
-  height: 50%;
+  height: 60%;
 }
 .board__done__text p {
   color: white;
