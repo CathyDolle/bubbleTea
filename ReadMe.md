@@ -1,6 +1,8 @@
 # Cathy DOLLE - Bubble Tea Maker
 
 ## Features
+*Website on responsive*
+
 You can do your own bubble tea and change :
 - size
 - label
