@@ -530,7 +530,7 @@ a {
     position: absolute;
     width: var(--width_cup);
     height: var(--height_cup);
-    margin-top: -48px;
+    margin-bottom: 52px;
     z-index: 3; }
     .main__cup__top {
       width: 110%;
@@ -1217,7 +1217,7 @@ a {
     .main__right {
       display: none; }
     .main__cup {
-      margin-top: -36px; }
+      margin-bottom: 52px; }
       .main__cup__top {
         height: 8px; }
       .main__cup__body__label {

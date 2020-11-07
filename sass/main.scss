@@ -794,7 +794,7 @@ a {
         position: absolute;
         width: var(--width_cup);
         height: var(--height_cup);
-        margin-bottom: -48px;
+        margin-bottom: 52px;
         z-index: 3;
 
         &__top {
@@ -1879,7 +1879,7 @@ a {
         }
 
         &__cup {
-            margin-bottom: -36px;
+            margin-bottom: 52px;
 
             &__top {
                 height: 8px;
